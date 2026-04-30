@@ -1,0 +1,30 @@
+/* ── ABOUT ── */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:start;
+}
+.about-text p{
+  color:var(--gray2);
+  line-height:1.8;
+  margin-bottom:1.2rem;
+  font-weight:300;
+  font-size:0.97rem;
+}
+.about-text p strong{color:var(--white);font-weight:500}
+.about-cards{
+  display:grid;grid-template-columns:1fr 1fr;gap:1rem;
+  margin-top:2rem;
+}
+.about-card{
+  padding:1.2rem;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:8px;
+  transition:border-color var(--transition),transform var(--transition);
+}
+.about-card:hover{border-color:rgba(0,201,167,0.35);transform:translateY(-3px)}
+.about-card-icon{font-size:1.3rem;margin-bottom:0.5rem}
+.about-card-title{font-size:0.85rem;font-weight:600;margin-bottom:0.25rem;color:var(--white)}
+.about-card-text{font-size:0.75rem;color:var(--gray3);line-height:1.5}
