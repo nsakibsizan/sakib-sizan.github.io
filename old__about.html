@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About — Najmus Sakib Sizan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{border:none;background:none;cursor:pointer;font:inherit}
+:root{--navy:#050d1a;--navy2:#0a1628;--navy3:#0f2040;--teal:#00c9a7;--teal-glow:rgba(0,201,167,0.18);--teal-glow2:rgba(0,201,167,0.08);--white:#f5f7fa;--gray1:#e2e8f0;--gray2:#94a3b8;--gray3:#64748b;--gray4:#334155;--slate:#1e293b;--card-bg:#0d1f38;--card-border:rgba(0,201,167,0.12);--font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace;--transition:0.3s cubic-bezier(0.4,0,0.2,1);}
+body{font-family:var(--font-body);background:var(--navy);color:var(--white);overflow-x:hidden;cursor:none;}
+#cursor{width:10px;height:10px;background:var(--teal);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s,background 0.2s;}
+#cursor-ring{width:36px;height:36px;border:1.5px solid rgba(0,201,167,0.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:opacity 0.2s;}
+#progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--teal),#6ee7b7);width:0%;z-index:1001;}
+#loader{position:fixed;inset:0;background:var(--navy);display:flex;align-items:center;justify-content:center;z-index:9997;transition:opacity 0.6s,visibility 0.6s;}
+#loader.hidden{opacity:0;visibility:hidden}
+.loader-text{font-family:var(--font-display);font-size:clamp(3rem,8vw,6rem);font-weight:800;color:transparent;-webkit-text-stroke:1.5px var(--teal);letter-spacing:-0.02em;animation:loaderPulse 1.6s ease-in-out infinite;}
+@keyframes loaderPulse{0%,100%{opacity:0.3;transform:scale(0.97)}50%{opacity:1;transform:scale(1)}}
+#navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;height:68px;display:flex;align-items:center;justify-content:space-between;transition:background var(--transition),border-color var(--transition);border-bottom:1px solid transparent;}
+#navbar.scrolled{background:rgba(5,13,26,0.88);backdrop-filter:blur(18px);border-color:var(--card-border);}
+.nav-logo{font-family:var(--font-display);font-weight:800;font-size:1.1rem;display:flex;align-items:center;gap:8px;}
+.nav-logo span{color:var(--teal);font-size:1.3rem;}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
+.nav-links a{font-size:0.85rem;font-weight:500;color:var(--gray2);letter-spacing:0.02em;transition:color var(--transition);position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform var(--transition);}
+.nav-links a:hover,.nav-links a.active{color:var(--white)}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-cv{padding:8px 18px;border:1px solid var(--teal);border-radius:4px;font-size:0.82rem;font-weight:500;color:var(--teal)!important;transition:background var(--transition),color var(--transition)!important;}
+.nav-cv:hover{background:var(--teal);color:var(--navy)!important}.nav-cv::after{display:none!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--gray2);}
+#mobile-menu{position:fixed;inset:0;background:rgba(5,13,26,0.97);backdrop-filter:blur(20px);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;transform:translateX(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);}
+#mobile-menu.open{transform:none}
+#mobile-menu a{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--gray2);transition:color var(--transition);}
+#mobile-menu a:hover{color:var(--teal)}
+#mobile-close{position:absolute;top:24px;right:5%;font-size:1.5rem;color:var(--gray3);cursor:pointer;}
+/* PAGE HERO */
+.page-hero{padding:150px 5% 80px;position:relative;overflow:hidden;}
+.page-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 80% 50%,rgba(0,201,167,0.06) 0%,transparent 70%);}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,201,167,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,201,167,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at 80% 50%,black 0%,transparent 65%);}
+.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:center;}
+.page-label{font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.15em;color:var(--teal);text-transform:uppercase;margin-bottom:0.75rem;}
+.page-title{font-family:var(--font-display);font-weight:800;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:-0.03em;line-height:1.05;margin-bottom:1rem;}
+.page-title .accent{color:var(--teal);}
+.page-desc{font-size:1rem;color:var(--gray3);max-width:520px;line-height:1.75;font-weight:300;margin-bottom:1.5rem;}
+/* PROFILE CARD */
+.profile-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:2rem;text-align:center;}
+.profile-avatar{width:120px;height:120px;border-radius:50%;background:var(--navy3);border:3px solid rgba(0,201,167,0.3);margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--teal);box-shadow:0 0 40px rgba(0,201,167,0.15);}
+.profile-name{font-family:var(--font-display);font-weight:700;font-size:1.1rem;margin-bottom:0.3rem;}
+.profile-role{font-size:0.78rem;color:var(--teal);font-family:var(--font-mono);margin-bottom:1.2rem;}
+.profile-stats{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;}
+.profile-stat{background:rgba(0,0,0,0.2);border-radius:8px;padding:0.75rem;}
+.profile-stat-num{font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--teal);}
+.profile-stat-label{font-size:0.65rem;color:var(--gray3);letter-spacing:0.04em;text-transform:uppercase;}
+/* SECTIONS */
+section{padding:80px 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.15em;color:var(--teal);text-transform:uppercase;margin-bottom:0.75rem;}
+.section-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-0.02em;margin-bottom:0.5rem;}
+.section-sub{color:var(--gray3);font-size:0.95rem;font-weight:300;}
+.section-header{margin-bottom:3rem}
+.divider{width:40px;height:2px;background:linear-gradient(90deg,var(--teal),transparent);margin:1rem 0;}
+section.alt{background:var(--navy2);}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-up.visible{opacity:1;transform:none}
+.fade-delay-1{transition-delay:0.1s}.fade-delay-2{transition-delay:0.2s}.fade-delay-3{transition-delay:0.3s}
+/* ABOUT CONTENT */
+.about-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.about-text p{color:var(--gray2);line-height:1.85;margin-bottom:1.2rem;font-weight:300;font-size:0.97rem;}
+.about-text p strong{color:var(--white);font-weight:500;}
+.highlight-box{background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid var(--teal);border-radius:0 10px 10px 0;padding:1.2rem 1.5rem;margin:2rem 0;}
+.highlight-box p{margin:0;font-size:0.9rem;color:var(--gray2);font-style:italic;line-height:1.7;}
+/* SKILLS */
+.skills-section .skills-filter{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;}
+.skills-filter button{padding:6px 16px;font-size:0.78rem;font-weight:500;border:1px solid var(--gray4);border-radius:3px;color:var(--gray3);transition:var(--transition);letter-spacing:0.04em;}
+.skills-filter button.active,.skills-filter button:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-glow2);}
+.skills-grid{display:flex;flex-wrap:wrap;gap:0.7rem;}
+.skill-tag{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;font-size:0.8rem;font-weight:500;border:1px solid var(--card-border);border-radius:4px;background:var(--card-bg);color:var(--gray2);transition:border-color var(--transition),color var(--transition),transform var(--transition);cursor:default;}
+.skill-tag:hover{border-color:var(--teal);color:var(--white);transform:translateY(-2px);}
+/* WHAT I DO */
+.what-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.what-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:12px;padding:2rem 1.5rem;text-align:center;transition:border-color var(--transition),transform var(--transition);}
+.what-card:hover{border-color:rgba(0,201,167,0.4);transform:translateY(-5px);}
+.what-icon{font-size:2.2rem;margin-bottom:1rem;}
+.what-title{font-family:var(--font-display);font-weight:700;font-size:1.1rem;margin-bottom:0.75rem;}
+.what-text{font-size:0.82rem;color:var(--gray3);line-height:1.65;}
+/* TIMELINE */
+.timeline{position:relative;padding-left:2rem;}
+.timeline::before{content:'';position:absolute;left:0;top:8px;bottom:0;width:1px;background:linear-gradient(to bottom,var(--teal),transparent);}
+.timeline-item{position:relative;margin-bottom:2rem;padding-left:1.8rem;}
+.timeline-dot{position:absolute;left:-2.4rem;top:8px;width:10px;height:10px;border-radius:50%;background:var(--teal);border:2px solid var(--navy);box-shadow:0 0 0 3px rgba(0,201,167,0.2);}
+.tl-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;padding:1.3rem 1.5rem;transition:border-color var(--transition);}
+.tl-card:hover{border-color:rgba(0,201,167,0.3);}
+.tl-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:0.4rem;}
+.tl-role{font-size:0.95rem;font-weight:600;color:var(--white);}
+.tl-date{font-size:0.7rem;font-family:var(--font-mono);color:var(--gray3);white-space:nowrap;}
+.tl-org{font-size:0.82rem;color:var(--teal);margin-bottom:0.5rem;}
+.tl-badge{display:inline-flex;font-size:0.62rem;font-weight:600;letter-spacing:0.06em;padding:2px 8px;border-radius:2px;background:rgba(0,201,167,0.1);color:var(--teal);margin-bottom:0.6rem;}
+.tl-badge.blue{background:rgba(96,165,250,0.1);color:#60a5fa;}
+.tl-tags{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.tl-tag{font-size:0.68rem;padding:2px 8px;border:1px solid var(--gray4);border-radius:2px;color:var(--gray3);}
+.tl-desc{font-size:0.8rem;color:var(--gray3);line-height:1.6;margin-top:0.5rem;}
+/* CERTS & ACHIEVEMENTS */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.cert-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;padding:1.3rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color var(--transition),transform var(--transition);}
+.cert-card:hover{border-color:rgba(0,201,167,0.3);transform:translateY(-3px);}
+.cert-icon{width:40px;height:40px;border-radius:8px;background:var(--teal-glow2);border:1px solid var(--card-border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.cert-title{font-size:0.87rem;font-weight:600;color:var(--white);margin-bottom:0.3rem;line-height:1.35;}
+.cert-issuer{font-size:0.73rem;color:var(--teal);font-family:var(--font-mono);margin-bottom:0.25rem;}
+.cert-date{font-size:0.68rem;color:var(--gray3);}
+.achieve-card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;padding:1.3rem 1.5rem;display:flex;gap:1rem;align-items:center;transition:border-color var(--transition),transform var(--transition);}
+.achieve-card:hover{border-color:rgba(0,201,167,0.3);transform:translateX(5px);}
+.achieve-medal{font-size:1.5rem;flex-shrink:0;}
+.achieve-title{font-size:0.87rem;font-weight:600;color:var(--white);margin-bottom:0.25rem;}
+.achieve-sub{font-size:0.75rem;color:var(--gray3);}
+footer{border-top:1px solid var(--card-border);padding:2.5rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-logo{font-family:var(--font-display);font-weight:800;font-size:0.9rem;color:var(--gray3);}
+.footer-logo span{color:var(--teal)}
+.footer-copy{font-size:0.75rem;color:var(--gray4);}
+.footer-socials{display:flex;gap:0.75rem;}
+.footer-social{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:1px solid var(--gray4);border-radius:4px;color:var(--gray3);font-size:0.75rem;transition:border-color var(--transition),color var(--transition);font-weight:700;}
+.footer-social:hover{border-color:var(--teal);color:var(--teal)}
+.back-top{display:flex;align-items:center;gap:6px;font-size:0.75rem;color:var(--gray3);cursor:pointer;transition:color var(--transition);}
+.back-top:hover{color:var(--teal)}
+@media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}.nav-cv{display:none}.page-hero-inner{grid-template-columns:1fr}.profile-card{display:none}.about-intro-grid{grid-template-columns:1fr}.what-grid{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}footer{flex-direction:column;text-align:center}}
+@media(max-width:500px){.what-grid{grid-template-columns:1fr}section{padding:60px 5%}}
+</style>
+</head>
+<body>
+<div id="cursor"></div><div id="cursor-ring"></div><div id="progress-bar"></div>
+<div id="loader"><div class="loader-text">NSS</div></div>
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"><span>✦</span> Sakib Sizan</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://drive.google.com/file/d/1VYp4LhLpj9msqJow5zJTWwNQ7M-P3p-l/view" target="_blank" class="nav-cv">↓ Download CV</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div id="mobile-menu">
+  <span id="mobile-close" onclick="closeMenu()">✕</span>
+  <a href="index.html" onclick="closeMenu()">Home</a>
+  <a href="about.html" onclick="closeMenu()">About</a>
+  <a href="research.html" onclick="closeMenu()">Research</a>
+  <a href="projects.html" onclick="closeMenu()">Projects</a>
+  <a href="blog.html" onclick="closeMenu()">Blog</a>
+  <a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-label">// who I am</div>
+      <h1 class="page-title">About <span class="accent">Me</span></h1>
+      <p class="page-desc">Researcher, engineer, and leader — building intelligent systems and making meaningful contributions at the frontier of technology.</p>
+      <a href="https://drive.google.com/file/d/1VYp4LhLpj9msqJow5zJTWwNQ7M-P3p-l/view" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:13px 28px;background:var(--teal);color:var(--navy);font-weight:600;font-size:0.87rem;border-radius:4px;">↓ Download Full CV</a>
+    </div>
+    <div class="profile-card fade-up">
+      <div class="profile-avatar">NSS</div>
+      <div class="profile-name">Najmus Sakib Sizan</div>
+      <div class="profile-role">Software Support Engineer · BJIT Ltd</div>
+      <div class="profile-stats">
+        <div class="profile-stat"><div class="profile-stat-num">92+</div><div class="profile-stat-label">Citations</div></div>
+        <div class="profile-stat"><div class="profile-stat-num">h-5</div><div class="profile-stat-label">h-index</div></div>
+        <div class="profile-stat"><div class="profile-stat-num">8+</div><div class="profile-stat-label">Papers</div></div>
+        <div class="profile-stat"><div class="profile-stat-num">4+</div><div class="profile-stat-label">Yrs Exp</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT TEXT + SKILLS -->
+<section>
+  <div class="section-inner">
+    <div class="about-intro-grid">
+      <div class="about-text fade-up">
+        <div class="section-label">// my story</div>
+        <h2 class="section-title">Passionate technologist <span style="color:var(--teal)">at the frontier</span></h2>
+        <div class="divider"></div>
+        <p>I'm <strong>Najmus Sakib Sizan</strong>, a Software Support Engineer at BJIT Limited, currently pursuing an M.Phil in Computer Science and Engineering at Jagannath University, Dhaka, under the supervision of Prof. Dr. Md. Abu Layek.</p>
+        <p>My professional journey spans software support, data migration, and technical implementation across enterprise environments including SAP and Teamcenter ecosystems. I specialise in bridging the gap between complex technical systems and real-world operational needs.</p>
+        <p>On the research front, my work explores the <strong>convergence of IoT, Blockchain, and Machine Learning</strong> — particularly how these technologies can secure and automate agricultural and industrial systems. My publications span IEEE, Elsevier, and Springer, accumulating 92+ citations.</p>
+        <div class="highlight-box">
+          <p>"I'm driven by continuous learning and dedicated to applying cutting-edge technology to solve real-world problems. My goal is to make meaningful contributions in the rapidly evolving field of technology and innovation."</p>
+        </div>
+        <p>Beyond technical work, I've led student communities as <strong>President of the Green University Computer Club (GUCC)</strong>, mentored CSE students, and served as Executive Member of BASIS Student Forum — building a career defined by both technical depth and community impact.</p>
+      </div>
+      <div class="skills-section fade-up fade-delay-2">
+        <div class="section-label" style="margin-bottom:1rem">// technical skills</div>
+        <div class="skills-filter" id="skillFilter">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="programming">Programming</button>
+          <button data-filter="web">Web</button>
+          <button data-filter="database">Database</button>
+          <button data-filter="tools">Tools</button>
+          <button data-filter="soft">Soft Skills</button>
+        </div>
+        <div class="skills-grid" id="skillGrid">
+          <span class="skill-tag" data-cat="programming">🔵 Python</span>
+          <span class="skill-tag" data-cat="programming">☕ Java</span>
+          <span class="skill-tag" data-cat="programming">🔧 C</span>
+          <span class="skill-tag" data-cat="programming">📜 Shell Script</span>
+          <span class="skill-tag" data-cat="web">🌐 HTML5</span>
+          <span class="skill-tag" data-cat="web">🎨 CSS3</span>
+          <span class="skill-tag" data-cat="web">⚡ JavaScript</span>
+          <span class="skill-tag" data-cat="web">🅱 Bootstrap</span>
+          <span class="skill-tag" data-cat="database">🗄 SQL Server</span>
+          <span class="skill-tag" data-cat="database">🐬 MySQL</span>
+          <span class="skill-tag" data-cat="database">🐘 PostgreSQL</span>
+          <span class="skill-tag" data-cat="tools">🏢 SAP</span>
+          <span class="skill-tag" data-cat="tools">⚙️ Teamcenter</span>
+          <span class="skill-tag" data-cat="tools">📦 GitHub</span>
+          <span class="skill-tag" data-cat="tools">💻 VS Code</span>
+          <span class="skill-tag" data-cat="tools">📄 LaTeX</span>
+          <span class="skill-tag" data-cat="tools">📊 MS Office</span>
+          <span class="skill-tag" data-cat="tools">🎨 Adobe XD</span>
+          <span class="skill-tag" data-cat="tools">📐 AutoCAD</span>
+          <span class="skill-tag" data-cat="soft">⏱ Time Management</span>
+          <span class="skill-tag" data-cat="soft">🔄 Adaptability</span>
+          <span class="skill-tag" data-cat="soft">👑 Leadership</span>
+          <span class="skill-tag" data-cat="soft">🤝 Collaboration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section class="alt">
+  <div class="section-inner">
+    <div class="section-header fade-up" style="text-align:center;max-width:600px;margin:0 auto 3rem;">
+      <div class="section-label">// what I do</div>
+      <h2 class="section-title">Three pillars of my work</h2>
+      <div class="divider" style="margin:1rem auto;"></div>
+    </div>
+    <div class="what-grid">
+      <div class="what-card fade-up">
+        <div class="what-icon">🔬</div>
+        <div class="what-title">Research</div>
+        <div class="what-text">Publishing in IEEE, Elsevier, and Springer on IoT security, blockchain platforms, and ML-driven agriculture. Affiliated with JnU ITRRC Cybersecurity Research Lab as Senior Research Fellow.</div>
+      </div>
+      <div class="what-card fade-up fade-delay-1">
+        <div class="what-icon">⚙️</div>
+        <div class="what-title">Engineering</div>
+        <div class="what-text">Providing enterprise software support, data migration, and technical implementation for complex ERP and PLM environments including SAP and Siemens Teamcenter ecosystems.</div>
+      </div>
+      <div class="what-card fade-up fade-delay-2">
+        <div class="what-icon">🏛️</div>
+        <div class="what-title">Leadership</div>
+        <div class="what-text">Leading student communities, mentoring junior engineers, and coordinating tech operations across organizations. Former President of Green University Computer Club (GUCC).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP EXPERIENCE -->
+<section>
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <div class="section-label">// leadership</div>
+      <h2 class="section-title">Community & Leadership</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline fade-up">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header"><div class="tl-role">Student Mentor</div><div class="tl-date">Oct 2020 — Jan 2022</div></div>
+          <div class="tl-org">Dept. of Computer Science and Engineering, GUB</div>
+          <div class="tl-desc">Guided undergraduate students through academic challenges, research orientation, and career development in computer science.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header"><div class="tl-role">President</div><div class="tl-date">2020 & 2021 ExCom</div></div>
+          <div class="tl-org">Green University Computer Club (GUCC)</div>
+          <div class="tl-badge">2 Terms</div>
+          <div class="tl-desc">Led the university's premier tech club — organizing hackathons, tech talks, workshops, and industry events for 500+ members.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header"><div class="tl-role">Joint Information Secretary</div><div class="tl-date">2019 ExCom</div></div>
+          <div class="tl-org">Green University Computer Club (GUCC)</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header"><div class="tl-role">Executive Member</div><div class="tl-date">2019 ExCom</div></div>
+          <div class="tl-org">BASIS Student Forum</div>
+          <div class="tl-desc">Represented student interests at Bangladesh's largest ICT trade body and helped organize national-level technology events.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="tl-card">
+          <div class="tl-header"><div class="tl-role">Executive Member</div><div class="tl-date">2018 ExCom</div></div>
+          <div class="tl-org">YES Student Branch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="alt">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <div class="section-label">// certifications</div>
+      <h2 class="section-title">Certifications & Training</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid2 fade-up">
+      <div class="cert-card">
+        <div class="cert-icon">☁️</div>
+        <div><div class="cert-title">AWS Cloud Practitioner Essentials</div><div class="cert-issuer">Amazon Web Services</div><div class="cert-date">Online · Completed</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🔐</div>
+        <div><div class="cert-title">Cybersecurity Fundamentals</div><div class="cert-issuer">IBM / Coursera</div><div class="cert-date">Online · Completed</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🐍</div>
+        <div><div class="cert-title">Python for Data Science & AI</div><div class="cert-issuer">IBM / Coursera</div><div class="cert-date">Online · Completed</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🔗</div>
+        <div><div class="cert-title">Blockchain Basics</div><div class="cert-issuer">SUNY Buffalo / Coursera</div><div class="cert-date">Online · Completed</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🤖</div>
+        <div><div class="cert-title">Machine Learning Specialization</div><div class="cert-issuer">DeepLearning.AI / Coursera</div><div class="cert-date">Online · Completed</div></div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📊</div>
+        <div><div class="cert-title">Data Analysis with Python</div><div class="cert-issuer">IBM / Coursera</div><div class="cert-date">Online · Completed</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section>
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <div class="section-label">// achievements</div>
+      <h2 class="section-title">Milestones & Recognition</h2>
+      <div class="divider"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1rem;" class="fade-up">
+      <div class="achieve-card">
+        <div class="achieve-medal">🏆</div>
+        <div><div class="achieve-title">92+ Google Scholar Citations</div><div class="achieve-sub">Across 8 publications in IEEE, Elsevier, Springer and more · h-index: 5 · i10-index: 2</div></div>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-medal">🎓</div>
+        <div><div class="achieve-title">MSc CGPA 3.81 / 4.00</div><div class="achieve-sub">Master of Science in Computer Science & Engineering · Jagannath University</div></div>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-medal">🎓</div>
+        <div><div class="achieve-title">BSc CGPA 3.73 / 4.00</div><div class="achieve-sub">Bachelor of Science in Computer Science & Engineering · Green University of Bangladesh</div></div>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-medal">👑</div>
+        <div><div class="achieve-title">President — Green University Computer Club</div><div class="achieve-sub">Led 500+ member tech community for two consecutive terms (2020 & 2021)</div></div>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-medal">📄</div>
+        <div><div class="achieve-title">Elsevier Journal Publication</div><div class="achieve-sub">Published in Blockchain: Research and Applications (2025) — a top-tier peer-reviewed journal</div></div>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-medal">🌐</div>
+        <div><div class="achieve-title">International Research Collaborations</div><div class="achieve-sub">Co-authored with researchers from Eui-Nam Huh (Korea), Khondokar Fida Hasan, and others</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><span>✦</span> Sakib Sizan</div>
+  <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
+  <div class="footer-socials">
+    <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social">GS</a>
+    <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social">GH</a>
+    <a href="mailto:nsakibsizan115@gmail.com" class="footer-social">✉</a>
+  </div>
+  <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</div>
+</footer>
+
+<script>
+window.addEventListener('load',()=>{setTimeout(()=>{document.getElementById('loader').classList.add('hidden')},1000);});
+const cur=document.getElementById('cursor'),curRing=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
+function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;curRing.style.left=rx+'px';curRing.style.top=ry+'px';requestAnimationFrame(animRing);}
+animRing();
+document.querySelectorAll('a,button,.cert-card,.achieve-card,.what-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2.5)';cur.style.background='rgba(0,201,167,0.4)';curRing.style.opacity='0.4';});
+  el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';cur.style.background='var(--teal)';curRing.style.opacity='1';});
+});
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  document.getElementById('progress-bar').style.width=((window.scrollY/(h.scrollHeight-h.clientHeight))*100)+'%';
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>30);
+});
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+document.querySelectorAll('#skillFilter button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('#skillFilter button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    document.querySelectorAll('.skill-tag').forEach(tag=>{tag.style.display=(f==='all'||tag.dataset.cat===f)?'inline-flex':'none';});
+  });
+});
+function openMenu(){document.getElementById('mobile-menu').classList.add('open');}
+function closeMenu(){document.getElementById('mobile-menu').classList.remove('open');}
+</script>
+</body>
+</html>
