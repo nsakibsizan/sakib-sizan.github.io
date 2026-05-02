@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Projects by Najmus Sakib Sizan — Research implementations, personal builds, and developer tools in IoT, Blockchain, ML, and Web Development." />
+    <title>Projects — Najmus Sakib Sizan</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/project.css" />
+</head>
+
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="progress-bar"></div>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-text">NSS</div>
+    </div>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo"><span>✦</span> Sakib Sizan</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://drive.google.com/file/d/1VYp4LhLpj9msqJow5zJTWwNQ7M-P3p-l/view" target="_blank"
+                    class="nav-cv">↓ Download CV</a></li>
+        </ul>
+        <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu">
+        <span id="mobile-close" onclick="closeMenu()">✕</span>
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="about.html" onclick="closeMenu()">About</a>
+        <a href="research.html" onclick="closeMenu()">Research</a>
+        <a href="project.html" onclick="closeMenu()">Projects</a>
+        <a href="blog.html" onclick="closeMenu()">Blog</a>
+        <a href="contact.html" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- ═══════════════ PAGE HERO ═══════════════ -->
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <div class="page-hero-label">// projects</div>
+                <h1 class="page-hero-title">From Research<br />to <span class="accent">Real Builds</span></h1>
+                <p class="page-hero-desc">
+                    Practical implementations of my research ideas alongside personal engineering builds
+                    and developer tools. Each project reflects a commitment to solving real-world problems.
+                </p>
+            </div>
+            <div class="project-stats-card">
+                <div class="project-stats-title">Project Overview</div>
+                <div class="project-stats-grid">
+                    <div class="project-stat-item">
+                        <div class="project-stat-num">6+</div>
+                        <div class="project-stat-label">Research</div>
+                    </div>
+                    <div class="project-stat-item">
+                        <div class="project-stat-num">4+</div>
+                        <div class="project-stat-label">Personal</div>
+                    </div>
+                    <div class="project-stat-item">
+                        <div class="project-stat-num">3+</div>
+                        <div class="project-stat-label">Tools</div>
+                    </div>
+                </div>
+                <a href="https://github.com/nsakibsizan" target="_blank" class="project-stats-link">View GitHub Profile
+                    ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════ FEATURED PROJECT ═══════════════ -->
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// featured</div>
+                <h2 class="section-title">Featured Project</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="featured-project fade-up">
+                <div class="featured-img">
+                    <div class="featured-img-text">🌾 IoT + ML + Blockchain</div>
+                </div>
+                <div class="featured-body">
+                    <div class="featured-type">Research · Smart Agriculture</div>
+                    <div class="featured-title">Smart Agriculture Framework 5.0</div>
+                    <div class="featured-desc">
+                        A comprehensive IoT-driven framework combining Machine Learning models and
+                        Blockchain technology for crop prediction and secure automated farming decisions.
+                        Sensor data is collected in real-time, processed through ML pipelines, and stored
+                        on a tamper-proof blockchain ledger for transparency and data integrity.
+                    </div>
+                    <div class="featured-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Blockchain</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                    </div>
+                    <div class="featured-links">
+                        <a href="https://doi.org/10.1109/STI59863.2023.10464478" target="_blank"
+                            class="btn-primary">View IEEE Paper ↗</a>
+                        <a href="https://github.com/nsakibsizan" target="_blank" class="btn-ghost">Source Code ↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ALL PROJECTS ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// all projects</div>
+                <h2 class="section-title">Project Gallery</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="proj-controls fade-up">
+                <div class="proj-filters" id="projFilter">
+                    <button class="proj-filter active" data-cat="all">All Projects</button>
+                    <button class="proj-filter" data-cat="research">Research</button>
+                    <button class="proj-filter" data-cat="personal">Personal</button>
+                    <button class="proj-filter" data-cat="tool">Tools</button>
+                </div>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="projects-grid" id="projGrid">
+
+                <!-- Project 1 -->
+                <div class="project-card p-research visible fade-up" data-cat="research">
+                    <div class="project-img">🛡️</div>
+                    <div class="project-body">
+                        <div class="project-type">Research · Cybersecurity</div>
+                        <div class="project-title">Automated IDOR Vulnerability Detector</div>
+                        <div class="project-desc">Black-box automated detection of Insecure Direct Object Reference
+                            vulnerabilities in web apps. Significantly reduces manual security auditing time.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">Cybersecurity</span>
+                            <span class="proj-tag">Web Security</span>
+                            <span class="proj-tag">Automation</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="research.html" class="proj-link">↗ IEEE Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card p-research visible fade-up fade-delay-1" data-cat="research">
+                    <div class="project-img">🔗</div>
+                    <div class="project-body">
+                        <div class="project-type">Research · Blockchain</div>
+                        <div class="project-title">Blockchain Platform Evaluator for IoT</div>
+                        <div class="project-desc">Comprehensive review and evaluation framework for blockchain platforms
+                            in Industry 5.0 IoT applications. Benchmarks performance, security, and scalability.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">Blockchain</span>
+                            <span class="proj-tag">IoT</span>
+                            <span class="proj-tag">Industry 5.0</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://doi.org/10.1016/j.bcra.2025.100276" target="_blank" class="proj-link">↗
+                                Elsevier Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card p-research visible fade-up fade-delay-2" data-cat="research">
+                    <div class="project-img">💬</div>
+                    <div class="project-body">
+                        <div class="project-type">Research · NLP</div>
+                        <div class="project-title">Social Media Sentiment Analyzer</div>
+                        <div class="project-desc">Multi-model sentiment classification engine for social media posts
+                            using both traditional ML and deep learning pipelines for comparative analysis.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">NLP</span>
+                            <span class="proj-tag">Deep Learning</span>
+                            <span class="proj-tag">Python</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="research.html" class="proj-link">↗ IEEE Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card p-research visible fade-up" data-cat="research">
+                    <div class="project-img">🗣️</div>
+                    <div class="project-body">
+                        <div class="project-type">Research · NLP</div>
+                        <div class="project-title">Bangla Hate Speech Detector</div>
+                        <div class="project-desc">Deep learning-powered system for detecting toxic and hateful content
+                            in Bangla social media text using LSTM, BiLSTM, and CNN architectures.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">NLP</span>
+                            <span class="proj-tag">Deep Learning</span>
+                            <span class="proj-tag">Bangla</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="research.html" class="proj-link">↗ Scopus Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card p-research visible fade-up fade-delay-1" data-cat="research">
+                    <div class="project-img">🚗</div>
+                    <div class="project-body">
+                        <div class="project-type">Research · IoT</div>
+                        <div class="project-title">Road Accident Detection System</div>
+                        <div class="project-desc">IoT-based real-time road accident detection and prevention system
+                            using sensor networks with cloud notification and alert mechanisms.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">IoT</span>
+                            <span class="proj-tag">Cloud</span>
+                            <span class="proj-tag">Arduino</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="research.html" class="proj-link">↗ IEEE Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card p-research visible fade-up fade-delay-2" data-cat="research">
+                    <div class="project-img">🔐</div>
+                    <div class="project-body">
+                        <div class="project-type">Research · Security</div>
+                        <div class="project-title">Post-Quantum Blockchain for IoT</div>
+                        <div class="project-desc">Quantum-resistant blockchain framework designed for IoT ecosystems,
+                            incorporating lattice-based cryptography for future-proof security.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">Blockchain</span>
+                            <span class="proj-tag">PQC</span>
+                            <span class="proj-tag">IoT</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://doi.org/10.1007/978-981-96-6883-0_13" target="_blank" class="proj-link">↗
+                                Springer Paper</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card p-personal visible fade-up" data-cat="personal">
+                    <div class="project-img">🌐</div>
+                    <div class="project-body">
+                        <div class="project-type">Personal · Web</div>
+                        <div class="project-title">Portfolio Website</div>
+                        <div class="project-desc">Modern dark-themed developer portfolio built with vanilla HTML, CSS,
+                            and JavaScript. Features particle animations, custom cursor, and smooth transitions.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">HTML/CSS</span>
+                            <span class="proj-tag">JavaScript</span>
+                            <span class="proj-tag">UI/UX</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nsakibsizan" target="_blank" class="proj-link">↗ GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card p-personal visible fade-up fade-delay-1" data-cat="personal">
+                    <div class="project-img">🏥</div>
+                    <div class="project-body">
+                        <div class="project-type">Personal · Healthcare</div>
+                        <div class="project-title">IoT Health Monitoring System</div>
+                        <div class="project-desc">Cloud-connected IoT system for real-time health monitoring using
+                            wearable sensors with automated alerts and data visualization dashboard.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">IoT</span>
+                            <span class="proj-tag">Healthcare</span>
+                            <span class="proj-tag">Cloud</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nsakibsizan" target="_blank" class="proj-link">↗ GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card p-personal visible fade-up fade-delay-2" data-cat="personal">
+                    <div class="project-img">📱</div>
+                    <div class="project-body">
+                        <div class="project-type">Personal · Full-Stack</div>
+                        <div class="project-title">Task Manager App</div>
+                        <div class="project-desc">Full-stack task management application with user authentication, CRUD
+                            operations, and responsive UI built with React, Node.js, and MongoDB.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">React</span>
+                            <span class="proj-tag">Node.js</span>
+                            <span class="proj-tag">MongoDB</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nsakibsizan" target="_blank" class="proj-link">↗ GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card p-tool visible fade-up" data-cat="tool">
+                    <div class="project-img">📄</div>
+                    <div class="project-body">
+                        <div class="project-type">Tool · Academic</div>
+                        <div class="project-title">CS Research Paper Finder Guide</div>
+                        <div class="project-desc">A comprehensive online guide helping CS researchers find papers across
+                            IEEE Xplore, ACM, Springer, arXiv, and more — with tips and strategies.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">Academic</span>
+                            <span class="proj-tag">Guide</span>
+                            <span class="proj-tag">Research</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="blog.html" class="proj-link">↗ Read Guide</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="project-card p-tool visible fade-up fade-delay-1" data-cat="tool">
+                    <div class="project-img">🛠️</div>
+                    <div class="project-body">
+                        <div class="project-type">Tool · DevOps</div>
+                        <div class="project-title">Automated Deployment Scripts</div>
+                        <div class="project-desc">Collection of shell scripts and CI/CD configurations for automated
+                            deployment workflows. Supports Docker, GitHub Actions, and Linux servers.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">DevOps</span>
+                            <span class="proj-tag">Shell</span>
+                            <span class="proj-tag">Docker</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nsakibsizan" target="_blank" class="proj-link">↗ GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="project-card p-tool visible fade-up fade-delay-2" data-cat="tool">
+                    <div class="project-img">📊</div>
+                    <div class="project-body">
+                        <div class="project-type">Tool · Data Science</div>
+                        <div class="project-title">ML Model Evaluation Toolkit</div>
+                        <div class="project-desc">Python toolkit for evaluating and comparing multiple ML models with
+                            built-in metrics, confusion matrix visualization, and report generation.</div>
+                        <div class="project-tags">
+                            <span class="proj-tag">Python</span>
+                            <span class="proj-tag">ML</span>
+                            <span class="proj-tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/nsakibsizan" target="_blank" class="proj-link">↗ GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TECH STACK USED ═══════════════ -->
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// technologies</div>
+                <h2 class="section-title">Tech Stack Across Projects</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="tech-cloud fade-up">
+                <span class="tech-item">Python</span>
+                <span class="tech-item">JavaScript</span>
+                <span class="tech-item">TensorFlow</span>
+                <span class="tech-item">PyTorch</span>
+                <span class="tech-item">React</span>
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">MongoDB</span>
+                <span class="tech-item">Docker</span>
+                <span class="tech-item">Arduino</span>
+                <span class="tech-item">Raspberry Pi</span>
+                <span class="tech-item">Blockchain</span>
+                <span class="tech-item">Solidity</span>
+                <span class="tech-item">Scikit-learn</span>
+                <span class="tech-item">Firebase</span>
+                <span class="tech-item">MySQL</span>
+                <span class="tech-item">Git</span>
+                <span class="tech-item">Linux</span>
+                <span class="tech-item">REST API</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CTA ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner" style="text-align:center;">
+            <div class="section-label fade-up">// open source</div>
+            <h2 class="section-title fade-up">Want to Collaborate on a Project?</h2>
+            <div class="divider fade-up" style="margin:1rem auto;"></div>
+            <p class="cta-desc fade-up">
+                I'm always looking for interesting open-source projects and research implementations
+                to contribute to. Let's build something together.
+            </p>
+            <div class="cta-btns fade-up fade-delay-1">
+                <a href="contact.html" class="btn-primary">Get in Touch →</a>
+                <a href="https://github.com/nsakibsizan" target="_blank" class="btn-ghost">GitHub Profile ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer>
+        <div class="footer-logo"><span>✦</span> Sakib Sizan</div>
+        <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
+        <div class="footer-socials">
+            <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
+                title="Google Scholar">GS</a>
+            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub">GH</a>
+            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email">✉</a>
+        </div>
+        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

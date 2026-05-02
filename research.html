@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Research publications, affiliations, and academic impact of Najmus Sakib Sizan — IoT, Blockchain, ML, NLP, Cybersecurity." />
+    <title>Research — Najmus Sakib Sizan</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/research.css" />
+</head>
+
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="progress-bar"></div>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-text">NSS</div>
+    </div>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo"><span>✦</span> Sakib Sizan</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html" class="active">Research</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://drive.google.com/file/d/1VYp4LhLpj9msqJow5zJTWwNQ7M-P3p-l/view" target="_blank"
+                    class="nav-cv">↓ Download CV</a></li>
+        </ul>
+        <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu">
+        <span id="mobile-close" onclick="closeMenu()">✕</span>
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="about.html" onclick="closeMenu()">About</a>
+        <a href="research.html" onclick="closeMenu()">Research</a>
+        <a href="project.html" onclick="closeMenu()">Projects</a>
+        <a href="blog.html" onclick="closeMenu()">Blog</a>
+        <a href="contact.html" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- ═══════════════ PAGE HERO ═══════════════ -->
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <div class="page-hero-label">// research</div>
+                <h1 class="page-hero-title">Publications &amp;<br /><span class="accent">Academic Impact</span></h1>
+                <p class="page-hero-desc">
+                    Research at the frontier of intelligent &amp; secure systems — IoT, Blockchain,
+                    Machine Learning, NLP, and Cybersecurity. Published in IEEE, Elsevier, Springer,
+                    and MDPI venues.
+                </p>
+            </div>
+            <div class="scholar-card">
+                <div class="scholar-card-title">Google Scholar</div>
+                <div class="scholar-card-name">Najmus Sakib Sizan</div>
+                <div class="scholar-mini-stats">
+                    <div class="scholar-mini">
+                        <div class="scholar-mini-num">92+</div>
+                        <div class="scholar-mini-label">Citations</div>
+                    </div>
+                    <div class="scholar-mini">
+                        <div class="scholar-mini-num">5</div>
+                        <div class="scholar-mini-label">h-index</div>
+                    </div>
+                    <div class="scholar-mini">
+                        <div class="scholar-mini-num">2</div>
+                        <div class="scholar-mini-label">i10-index</div>
+                    </div>
+                </div>
+                <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank"
+                    class="scholar-link">View Full Profile ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════ RESEARCH STATS ═══════════════ -->
+    <section>
+        <div class="section-inner">
+            <div class="research-stats fade-up">
+                <div class="stat-card">
+                    <div class="stat-num" data-count="92" data-suffix="+">0</div>
+                    <div class="stat-label">Total Citations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" data-count="5">0</div>
+                    <div class="stat-label">h-index</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" data-count="2">0</div>
+                    <div class="stat-label">i10-index</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num" data-count="8">0</div>
+                    <div class="stat-label">Publications</div>
+                </div>
+            </div>
+
+            <!-- RESEARCH INTERESTS -->
+            <div class="section-header fade-up">
+                <div class="section-label">// research interests</div>
+                <h2 class="section-title">Areas of Focus</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="interests-grid fade-up">
+                <div class="interest-tag">🤖 Machine Learning</div>
+                <div class="interest-tag">🧠 Artificial Intelligence</div>
+                <div class="interest-tag">🔗 Blockchain Technology</div>
+                <div class="interest-tag">🔐 Post-Quantum Cryptography</div>
+                <div class="interest-tag">📡 Internet of Things (IoT)</div>
+                <div class="interest-tag">🌾 Smart Agriculture</div>
+                <div class="interest-tag">🛡️ Cybersecurity</div>
+                <div class="interest-tag">🏭 Industry 5.0</div>
+                <div class="interest-tag">📊 Data Analysis</div>
+                <div class="interest-tag">☁️ Cloud Computing</div>
+                <div class="interest-tag">💬 Natural Language Processing</div>
+                <div class="interest-tag">🏥 Healthcare AI</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ PUBLICATIONS ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// publications</div>
+                <h2 class="section-title">All Publications</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="pub-controls fade-up">
+                <div class="pub-filters">
+                    <button class="pub-filter active" data-type="all">All Papers</button>
+                    <button class="pub-filter" data-type="journal">Journals</button>
+                    <button class="pub-filter" data-type="conference">Conferences</button>
+                    <button class="pub-filter" data-type="review">Reviews</button>
+                </div>
+                <div class="pub-count" id="pubCount">Showing 8 papers</div>
+            </div>
+
+            <div class="pub-list">
+
+                <!-- PUB 1 -->
+                <div class="pub-card visible fade-up" data-type="journal">
+                    <div class="pub-number">01</div>
+                    <div class="pub-body">
+                        <div class="pub-badge">Journal</div>
+                        <div class="pub-title">Evaluating blockchain platforms for IoT data management in Industry 5.0:
+                            A comprehensive analysis</div>
+                        <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Khondokar Fida Hasan, Eui-Nam Huh
+                        </div>
+                        <div class="pub-venue">Blockchain: Research and Applications — Elsevier (2025)</div>
+                        <div class="pub-details">
+                            <span class="pub-cite-badge">🔗 Cited: 5</span>
+                            <a href="https://doi.org/10.1016/j.bcra.2025.100276" target="_blank" class="pub-doi">DOI
+                                ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUB 2 -->
+                <div class="pub-card visible fade-up fade-delay-1" data-type="journal">
+                    <div class="pub-number">02</div>
+                    <div class="pub-body">
+                        <div class="pub-badge">Journal</div>
+                        <div class="pub-title">A Blockchain-Based Secure Data-Sharing Scheme for Smart Agriculture</div>
+                        <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, et al.</div>
+                        <div class="pub-venue">Journal of Sensor and Actuator Networks — MDPI (2024)</div>
+                        <div class="pub-details">
+                            <span class="pub-cite-badge">🔗 Cited: 18</span>
+                            <a href="#" target="_blank" class="pub-doi">DOI ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUB 3 -->
+                <div class="pub-card visible fade-up fade-delay-2" data-type="conference">
+                    <div class="pub-number">03</div>
+                    <div class="pub-body">
+                        <div class="pub-badge conf">Conference</div>
+                        <div class="pub-title">Social Media Sentiment Analysis using Machine Learning and Deep Learning
+                        </div>
+                        <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, et al.</div>
+                        <div class="pub-venue">IEEE ICEEICT 2023</div>
+                        <div class="pub-details">
+                            <span class="pub-cite-badge">🔗 Cited: 25</span>
+                            <a href="#" target="_blank" class="pub-doi">DOI ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUB 4 -->
+                <div class="pub-card visible fade-up" data-type="journal">
+                    <div class="pub-number">04</div>
+                    <div class="pub-body">
+                        <div class="pub-badge">Journal</div>
+                        <div class="pub-title">Bangla Hate Speech Detection using Deep Learning Models</div>
+                        <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, et al.</div>
+                        <div class="pub-venue">Bulletin of Electrical Engineering and Informatics — Scopus Indexed
+                            (2022)</div>
+                        <div class="pub-details">
+                            <span class="pub-cite-badge">🔗 Cited: 30</span>
+                            <a href="#" target="_blank" class="pub-doi">DOI ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUB 5 -->
+                <div class="pub-card visible fade-up fade-delay-1" data-type="conference">
+                    <div class="pub-number">05</div>
+                    <div class="pub-body">
+                        <div class="pub-badge conf">Conference</div>
+                        <div class="pub-title">Road Accident Detection &amp; Prevention System using IoT</div>
+                        <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, et al.</div>
+                        <div class="pub-venue">IEEE International Conference (2023)</div>
+                        <div class="pub-details">
+                            <span class="pub-cite-badge">🔗 Cited: 8</span>
+                            <a href="#" target="_blank" class="pub-doi">DOI ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUB 6 -->
+                <div class="pub-card visible fade-up fade-delay-2" data-type="conference">
+                    <div class="pub-number">06</div>
+                    <div class="pub-body">
+                        <div class="pub-badge conf">Conference</div>
+                        <div class="pub-title">Automated IDOR Vulnerability Detection in Web Applications</div>
+                        <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, et al.</div>
+                        <div class="pub-venue">IEEE Conference on Cybersecurity (2024)</div>
+                        <div class="pub-details">
+                            <span class="pub-cite-badge">🔗 Cited: 3</span>
+                            <a href="#" target="_blank" class="pub-doi">DOI ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUB 7 -->
+                <div class="pub-card visible fade-up" data-type="conference">
+                    <div class="pub-number">07</div>
+                    <div class="pub-body">
+                        <div class="pub-badge conf">Conference</div>
+                        <div class="pub-title">Post-Quantum Secure Blockchain Framework for IoT</div>
+                        <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, et al.</div>
+                        <div class="pub-venue">Springer LNNS (2025)</div>
+                        <div class="pub-details">
+                            <span class="pub-cite-badge">🔗 Cited: 1</span>
+                            <a href="https://doi.org/10.1007/978-981-96-6883-0_13" target="_blank" class="pub-doi">DOI
+                                ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUB 8 -->
+                <div class="pub-card visible fade-up fade-delay-1" data-type="review">
+                    <div class="pub-number">08</div>
+                    <div class="pub-body">
+                        <div class="pub-badge review">Review</div>
+                        <div class="pub-title">A Comprehensive Review on Blockchain for IoT Security</div>
+                        <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, et al.</div>
+                        <div class="pub-venue">Under Review — IEEE Access (2025)</div>
+                        <div class="pub-details">
+                            <span class="pub-cite-badge">🔗 Cited: 2</span>
+                            <a href="#" class="pub-doi">Preprint ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ RESEARCH AFFILIATIONS ═══════════════ -->
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// affiliations</div>
+                <h2 class="section-title">Research Affiliations</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="lab-grid fade-up">
+
+                <div class="lab-card">
+                    <div class="lab-badge">Senior Research Fellow</div>
+                    <div class="lab-title">JnU ITRRC Cybersecurity Research Lab</div>
+                    <div class="lab-org">Jagannath University, Dhaka</div>
+                    <div class="lab-period">Jan 2023 — Present</div>
+                    <div class="lab-supervisor">Supervisor: Prof. Dr. Md. Abu Layek</div>
+                    <div class="lab-tags">
+                        <span class="lab-tag">Blockchain</span>
+                        <span class="lab-tag">Machine Learning</span>
+                        <span class="lab-tag">IoT</span>
+                        <span class="lab-tag">Cybersecurity</span>
+                    </div>
+                    <div class="lab-pubs">Conference ×1 · In Submission ×2</div>
+                </div>
+
+                <div class="lab-card">
+                    <div class="lab-badge under">Undergraduate Research Fellow</div>
+                    <div class="lab-title">Research Lab — Green University of Bangladesh</div>
+                    <div class="lab-org">Green University of Bangladesh</div>
+                    <div class="lab-period">Jan 2021 — Feb 2022</div>
+                    <div class="lab-supervisor">Supervisor: Md. Solaiman Mia</div>
+                    <div class="lab-tags">
+                        <span class="lab-tag">IoT</span>
+                        <span class="lab-tag">Cloud Computing</span>
+                        <span class="lab-tag">Smart Systems</span>
+                    </div>
+                    <div class="lab-pubs">Conference ×2 · Journal ×1</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ COLLABORATORS ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// collaborators</div>
+                <h2 class="section-title">Research Collaborators</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="collab-list fade-up">
+
+                <div class="collab-item">
+                    <div class="collab-avatar">EH</div>
+                    <div class="collab-info">
+                        <div class="collab-name">Prof. Eui-Nam Huh</div>
+                        <div class="collab-affiliation">Kyung Hee University, South Korea</div>
+                    </div>
+                    <div class="collab-topic">Blockchain · IoT</div>
+                </div>
+
+                <div class="collab-item">
+                    <div class="collab-avatar">KH</div>
+                    <div class="collab-info">
+                        <div class="collab-name">Khondokar Fida Hasan</div>
+                        <div class="collab-affiliation">Queensland University of Technology, Australia</div>
+                    </div>
+                    <div class="collab-topic">IoT · Security</div>
+                </div>
+
+                <div class="collab-item">
+                    <div class="collab-avatar">AL</div>
+                    <div class="collab-info">
+                        <div class="collab-name">Prof. Dr. Md. Abu Layek</div>
+                        <div class="collab-affiliation">Jagannath University, Dhaka</div>
+                    </div>
+                    <div class="collab-topic">Cybersecurity · ML</div>
+                </div>
+
+                <div class="collab-item">
+                    <div class="collab-avatar">SM</div>
+                    <div class="collab-info">
+                        <div class="collab-name">Md. Solaiman Mia</div>
+                        <div class="collab-affiliation">Green University of Bangladesh</div>
+                    </div>
+                    <div class="collab-topic">IoT · Cloud</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ RESEARCH TIMELINE ═══════════════ -->
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// timeline</div>
+                <h2 class="section-title">Research Journey</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="r-timeline fade-up">
+
+                <div class="r-timeline-item">
+                    <div class="r-timeline-year">2025</div>
+                    <div class="r-timeline-card">
+                        <div class="r-timeline-title">Elsevier &amp; Springer Publications</div>
+                        <div class="r-timeline-desc">Published in Blockchain: Research and Applications (Elsevier) and
+                            Springer LNNS. Expanded into post-quantum cryptography and Industry 5.0.</div>
+                    </div>
+                </div>
+
+                <div class="r-timeline-item">
+                    <div class="r-timeline-year">2024</div>
+                    <div class="r-timeline-card">
+                        <div class="r-timeline-title">MDPI Journal &amp; IEEE Cybersecurity</div>
+                        <div class="r-timeline-desc">Published smart agriculture blockchain paper in MDPI JSAN.
+                            Presented IDOR detection research at IEEE cybersecurity conference.</div>
+                    </div>
+                </div>
+
+                <div class="r-timeline-item">
+                    <div class="r-timeline-year">2023</div>
+                    <div class="r-timeline-card">
+                        <div class="r-timeline-title">IEEE Conferences &amp; NLP Research</div>
+                        <div class="r-timeline-desc">Published sentiment analysis and IoT safety papers at IEEE ICEEICT.
+                            Joined JnU ITRRC Cybersecurity Research Lab.</div>
+                    </div>
+                </div>
+
+                <div class="r-timeline-item">
+                    <div class="r-timeline-year">2022</div>
+                    <div class="r-timeline-card">
+                        <div class="r-timeline-title">First Scopus Publication</div>
+                        <div class="r-timeline-desc">Published Bangla hate speech detection research in Bulletin of EEI.
+                            Began accumulating citations and academic recognition.</div>
+                    </div>
+                </div>
+
+                <div class="r-timeline-item">
+                    <div class="r-timeline-year">2021</div>
+                    <div class="r-timeline-card">
+                        <div class="r-timeline-title">Research Journey Begins</div>
+                        <div class="r-timeline-desc">Joined Green University Research Lab. Started exploring IoT, cloud
+                            computing, and smart system design.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CTA ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner" style="text-align:center;">
+            <div class="section-label fade-up">// collaborate</div>
+            <h2 class="section-title fade-up">Interested in Research Collaboration?</h2>
+            <div class="divider fade-up" style="margin:1rem auto;"></div>
+            <p class="cta-desc fade-up">
+                I'm always open to co-authoring papers, reviewing manuscripts, and collaborating on
+                projects in IoT, Blockchain, ML, and Cybersecurity.
+            </p>
+            <div class="cta-btns fade-up fade-delay-1">
+                <a href="contact.html" class="btn-primary">Get in Touch →</a>
+                <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank"
+                    class="btn-ghost">Google Scholar ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer>
+        <div class="footer-logo"><span>✦</span> Sakib Sizan</div>
+        <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
+        <div class="footer-socials">
+            <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
+                title="Google Scholar">GS</a>
+            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub">GH</a>
+            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email">✉</a>
+        </div>
+        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

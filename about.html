@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="About Najmus Sakib Sizan — Researcher, Software Engineer, ML Enthusiast. Learn about my background, skills, experience and achievements." />
+    <title>About — Najmus Sakib Sizan</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/about.css" />
+</head>
+
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="progress-bar"></div>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-text">NSS</div>
+    </div>
+
+    <!-- ═══════════════ NAVBAR ═══════════════ -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo"><span>✦</span> Sakib Sizan</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://drive.google.com/file/d/1VYp4LhLpj9msqJow5zJTWwNQ7M-P3p-l/view" target="_blank"
+                    class="nav-cv">↓ Download CV</a></li>
+        </ul>
+        <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu">
+        <span id="mobile-close" onclick="closeMenu()">✕</span>
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="about.html" onclick="closeMenu()">About</a>
+        <a href="research.html" onclick="closeMenu()">Research</a>
+        <a href="project.html" onclick="closeMenu()">Projects</a>
+        <a href="blog.html" onclick="closeMenu()">Blog</a>
+        <a href="contact.html" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- ═══════════════ PAGE HERO ═══════════════ -->
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <div class="page-hero-label">// about me</div>
+                <h1 class="page-hero-title">The Story Behind<br />the <span class="accent">Code</span></h1>
+                <p class="page-hero-desc">
+                    A passionate researcher and engineer from Dhaka, Bangladesh — building intelligent
+                    systems at the intersection of IoT, Blockchain &amp; Machine Learning.
+                </p>
+            </div>
+            <div class="profile-card">
+                <div class="profile-avatar">NSS</div>
+                <div class="profile-name">Najmus Sakib Sizan</div>
+                <div class="profile-role">Software Support Engineer</div>
+                <div class="profile-company">BJIT Limited</div>
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <div class="profile-stat-num">92+</div>
+                        <div class="profile-stat-label">Citations</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-num">8</div>
+                        <div class="profile-stat-label">Papers</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-num">5</div>
+                        <div class="profile-stat-label">h-index</div>
+                    </div>
+                </div>
+                <div class="profile-links">
+                    <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank"
+                        class="profile-link-btn">Google Scholar ↗</a>
+                    <a href="https://github.com/nsakibsizan" target="_blank" class="profile-link-btn">GitHub ↗</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════ ABOUT INTRO ═══════════════ -->
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// background</div>
+                <h2 class="section-title">Who I Am</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-intro-grid">
+                <div class="about-text fade-up">
+                    <p>
+                        I'm <strong>Najmus Sakib Sizan</strong>, a Software Support Engineer at
+                        <strong>BJIT Limited</strong> with a deep passion for research in Machine Learning,
+                        Natural Language Processing, IoT, and Blockchain technologies.
+                    </p>
+                    <p>
+                        I completed my B.Sc. in Computer Science &amp; Engineering from
+                        <strong>Daffodil International University</strong> with a CGPA of 3.63/4.00.
+                        During my academic journey, I published <strong>8 research papers</strong> in
+                        reputed journals and conferences, accumulating <strong>92+ citations</strong>
+                        and achieving an <strong>h-index of 5</strong>.
+                    </p>
+                    <p>
+                        My research interests lie at the intersection of artificial intelligence and
+                        real-world applications — from healthcare AI and sentiment analysis to smart
+                        agriculture and decentralized systems.
+                    </p>
+                    <div class="highlight-box">
+                        <p>
+                            "I believe in building technology that bridges the gap between academic research
+                            and practical engineering — creating solutions that truly make an impact."
+                        </p>
+                    </div>
+                </div>
+                <div class="about-side fade-up fade-delay-2">
+                    <div class="info-card">
+                        <div class="info-card-title">Quick Info</div>
+                        <div class="info-card-rows">
+                            <div class="info-row">
+                                <span class="info-label">Full Name</span>
+                                <span class="info-value">Najmus Sakib Sizan</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Dhaka, Bangladesh</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">nsakibsizan115@gmail.com</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Degree</span>
+                                <span class="info-value">B.Sc. in CSE</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">University</span>
+                                <span class="info-value">Daffodil International University</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Languages</span>
+                                <span class="info-value">Bengali, English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ WHAT I DO ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// expertise</div>
+                <h2 class="section-title">What I Do</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="what-grid">
+
+                <div class="what-card fade-up">
+                    <div class="what-icon">🔬</div>
+                    <div class="what-title">Research</div>
+                    <div class="what-desc">
+                        Conducting research in ML, NLP, IoT &amp; Blockchain with publications in
+                        IEEE, MDPI, and Scopus-indexed journals.
+                    </div>
+                </div>
+
+                <div class="what-card fade-up fade-delay-1">
+                    <div class="what-icon">🧠</div>
+                    <div class="what-title">Machine Learning</div>
+                    <div class="what-desc">
+                        Building deep learning models for classification, NLP tasks, sentiment analysis,
+                        and healthcare applications.
+                    </div>
+                </div>
+
+                <div class="what-card fade-up fade-delay-2">
+                    <div class="what-icon">💻</div>
+                    <div class="what-title">Software Engineering</div>
+                    <div class="what-desc">
+                        Full-stack development with modern frameworks, REST APIs, database design,
+                        and cloud deployment.
+                    </div>
+                </div>
+
+                <div class="what-card fade-up fade-delay-3">
+                    <div class="what-icon">🌐</div>
+                    <div class="what-title">IoT &amp; Blockchain</div>
+                    <div class="what-desc">
+                        Designing smart systems with sensor networks and decentralized data-sharing
+                        platforms for agriculture &amp; healthcare.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ SKILLS ═══════════════ -->
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// tech stack</div>
+                <h2 class="section-title">Skills &amp; Tools</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="skills-section">
+                <div class="skills-filter fade-up">
+                    <button class="active" data-filter="all">All</button>
+                    <button data-filter="lang">Languages</button>
+                    <button data-filter="ml">ML / AI</button>
+                    <button data-filter="web">Web</button>
+                    <button data-filter="tool">Tools</button>
+                    <button data-filter="db">Database</button>
+                </div>
+                <div class="skills-grid fade-up fade-delay-1">
+                    <!-- Languages -->
+                    <span class="skill-tag" data-cat="lang">Python</span>
+                    <span class="skill-tag" data-cat="lang">Java</span>
+                    <span class="skill-tag" data-cat="lang">C++</span>
+                    <span class="skill-tag" data-cat="lang">JavaScript</span>
+                    <span class="skill-tag" data-cat="lang">C</span>
+                    <span class="skill-tag" data-cat="lang">PHP</span>
+                    <!-- ML / AI -->
+                    <span class="skill-tag" data-cat="ml">TensorFlow</span>
+                    <span class="skill-tag" data-cat="ml">PyTorch</span>
+                    <span class="skill-tag" data-cat="ml">Keras</span>
+                    <span class="skill-tag" data-cat="ml">Scikit-learn</span>
+                    <span class="skill-tag" data-cat="ml">NLTK</span>
+                    <span class="skill-tag" data-cat="ml">Pandas</span>
+                    <span class="skill-tag" data-cat="ml">NumPy</span>
+                    <span class="skill-tag" data-cat="ml">Matplotlib</span>
+                    <span class="skill-tag" data-cat="ml">OpenCV</span>
+                    <!-- Web -->
+                    <span class="skill-tag" data-cat="web">React</span>
+                    <span class="skill-tag" data-cat="web">Node.js</span>
+                    <span class="skill-tag" data-cat="web">Express</span>
+                    <span class="skill-tag" data-cat="web">HTML/CSS</span>
+                    <span class="skill-tag" data-cat="web">REST API</span>
+                    <span class="skill-tag" data-cat="web">Django</span>
+                    <span class="skill-tag" data-cat="web">Flask</span>
+                    <!-- Tools -->
+                    <span class="skill-tag" data-cat="tool">Git</span>
+                    <span class="skill-tag" data-cat="tool">Docker</span>
+                    <span class="skill-tag" data-cat="tool">Linux</span>
+                    <span class="skill-tag" data-cat="tool">VS Code</span>
+                    <span class="skill-tag" data-cat="tool">Jupyter</span>
+                    <span class="skill-tag" data-cat="tool">Google Colab</span>
+                    <span class="skill-tag" data-cat="tool">Postman</span>
+                    <!-- Database -->
+                    <span class="skill-tag" data-cat="db">MySQL</span>
+                    <span class="skill-tag" data-cat="db">MongoDB</span>
+                    <span class="skill-tag" data-cat="db">Firebase</span>
+                    <span class="skill-tag" data-cat="db">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ EXPERIENCE & EDUCATION ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// journey</div>
+                <h2 class="section-title">Experience &amp; Education</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid2">
+
+                <!-- Experience -->
+                <div class="exp-block fade-up">
+                    <div class="block-label">💼 Experience</div>
+
+                    <div class="exp-card">
+                        <div class="exp-date">2024 — Present</div>
+                        <div class="exp-title">Software Support Engineer</div>
+                        <div class="exp-company">BJIT Limited · Dhaka, Bangladesh</div>
+                        <div class="exp-desc">
+                            Providing technical support, debugging production issues, and collaborating
+                            with development teams to ensure system reliability and performance.
+                        </div>
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-date">2023 — 2024</div>
+                        <div class="exp-title">Research Assistant</div>
+                        <div class="exp-company">Daffodil International University · ML &amp; NLP Lab</div>
+                        <div class="exp-desc">
+                            Conducted research in machine learning and NLP. Published multiple papers
+                            in IEEE and Scopus-indexed journals. Supervised undergraduate research projects.
+                        </div>
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-date">2022 — 2023</div>
+                        <div class="exp-title">Teaching Assistant</div>
+                        <div class="exp-company">Daffodil International University · CSE Department</div>
+                        <div class="exp-desc">
+                            Assisted in conducting lab sessions for programming courses. Mentored
+                            students in data structures, algorithms, and project development.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="edu-block fade-up fade-delay-2">
+                    <div class="block-label">🎓 Education</div>
+
+                    <div class="edu-card">
+                        <div class="edu-date">2019 — 2023</div>
+                        <div class="edu-title">B.Sc. in Computer Science &amp; Engineering</div>
+                        <div class="edu-institution">Daffodil International University</div>
+                        <div class="edu-detail">CGPA: 3.63 / 4.00</div>
+                        <div class="edu-desc">
+                            Specialized in machine learning and IoT. Completed thesis on blockchain-based
+                            secure data sharing for smart agriculture. Active member of the DIU Research Club.
+                        </div>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-date">2016 — 2018</div>
+                        <div class="edu-title">Higher Secondary Certificate (HSC)</div>
+                        <div class="edu-institution">Science Group</div>
+                        <div class="edu-detail">GPA: 5.00 / 5.00</div>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-date">2014 — 2016</div>
+                        <div class="edu-title">Secondary School Certificate (SSC)</div>
+                        <div class="edu-institution">Science Group</div>
+                        <div class="edu-detail">GPA: 5.00 / 5.00</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CERTIFICATIONS ═══════════════ -->
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// certifications</div>
+                <h2 class="section-title">Certifications &amp; Courses</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="cert-grid">
+
+                <div class="cert-card fade-up">
+                    <div class="cert-icon">🏆</div>
+                    <div class="cert-title">Machine Learning Specialization</div>
+                    <div class="cert-issuer">Coursera · Stanford / DeepLearning.AI</div>
+                    <div class="cert-date">2023</div>
+                </div>
+
+                <div class="cert-card fade-up fade-delay-1">
+                    <div class="cert-icon">🏆</div>
+                    <div class="cert-title">Deep Learning Specialization</div>
+                    <div class="cert-issuer">Coursera · DeepLearning.AI</div>
+                    <div class="cert-date">2023</div>
+                </div>
+
+                <div class="cert-card fade-up fade-delay-2">
+                    <div class="cert-icon">🏆</div>
+                    <div class="cert-title">Python for Data Science</div>
+                    <div class="cert-issuer">IBM · Cognitive Class</div>
+                    <div class="cert-date">2022</div>
+                </div>
+
+                <div class="cert-card fade-up fade-delay-3">
+                    <div class="cert-icon">🏆</div>
+                    <div class="cert-title">Web Development Bootcamp</div>
+                    <div class="cert-issuer">Udemy</div>
+                    <div class="cert-date">2021</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ACHIEVEMENTS ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// achievements</div>
+                <h2 class="section-title">Awards &amp; Recognition</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="achieve-grid">
+
+                <div class="achieve-card fade-up">
+                    <div class="achieve-icon">⭐</div>
+                    <div class="achieve-content">
+                        <div class="achieve-title">92+ Google Scholar Citations</div>
+                        <div class="achieve-sub">Across 8 published research papers in reputed venues</div>
+                    </div>
+                </div>
+
+                <div class="achieve-card fade-up fade-delay-1">
+                    <div class="achieve-icon">⭐</div>
+                    <div class="achieve-content">
+                        <div class="achieve-title">h-index 5</div>
+                        <div class="achieve-sub">Recognized impact in ML, NLP, and IoT research</div>
+                    </div>
+                </div>
+
+                <div class="achieve-card fade-up fade-delay-2">
+                    <div class="achieve-icon">⭐</div>
+                    <div class="achieve-content">
+                        <div class="achieve-title">Best Paper Presentation</div>
+                        <div class="achieve-sub">IEEE ICEEICT Conference 2023</div>
+                    </div>
+                </div>
+
+                <div class="achieve-card fade-up fade-delay-3">
+                    <div class="achieve-icon">⭐</div>
+                    <div class="achieve-content">
+                        <div class="achieve-title">Dean's List — Academic Excellence</div>
+                        <div class="achieve-sub">Daffodil International University · Multiple Semesters</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ CTA ═══════════════ -->
+    <section>
+        <div class="section-inner" style="text-align:center;">
+            <div class="section-label fade-up">// let's connect</div>
+            <h2 class="section-title fade-up">Interested in Working Together?</h2>
+            <div class="divider fade-up" style="margin:1rem auto;"></div>
+            <p class="cta-desc fade-up">
+                I'm always open to new research collaborations, job opportunities, and interesting
+                conversations. Don't hesitate to reach out!
+            </p>
+            <div class="cta-btns fade-up fade-delay-1">
+                <a href="contact.html" class="btn-primary">Get in Touch →</a>
+                <a href="research.html" class="btn-ghost">View Research →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer>
+        <div class="footer-logo"><span>✦</span> Sakib Sizan</div>
+        <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
+        <div class="footer-socials">
+            <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
+                title="Google Scholar">GS</a>
+            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub">GH</a>
+            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email">✉</a>
+        </div>
+        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
