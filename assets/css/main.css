@@ -368,8 +368,8 @@ section.alt {
 }
 
 .page-hero-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -482,7 +482,7 @@ footer {
 /* ── COMMON TAG STYLES ── */
 .tag {
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   padding: 3px 10px;
   border-radius: 3px;
   background: var(--teal-glow2);
@@ -500,7 +500,7 @@ footer {
   border-radius: 6px;
   color: var(--teal);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 500;
   transition: background var(--transition), color var(--transition);
 }

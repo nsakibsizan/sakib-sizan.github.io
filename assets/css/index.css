@@ -44,7 +44,7 @@
 .hero-name {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-size: clamp(3rem, 5vw, 3.6rem);
     letter-spacing: -0.03em;
     line-height: 1.1;
     margin-bottom: 0.5rem;
@@ -76,7 +76,7 @@
 }
 
 .hero-desc {
-    font-size: 0.92rem;
+    font-size: 1.05rem;
     color: var(--gray2);
     line-height: 1.75;
     margin-bottom: 2rem;
@@ -98,7 +98,7 @@
     border: 1px solid var(--teal);
     border-radius: 6px;
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--teal);
     transition: background var(--transition), color var(--transition);
@@ -368,7 +368,7 @@
 }
 
 .about-card-desc {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--gray3);
     line-height: 1.5;
 }
@@ -394,6 +394,7 @@
     background: transparent;
     transition: all var(--transition);
     cursor: pointer;
+    font-weight: bold;
 }
 
 #skillFilter button.active,
@@ -485,7 +486,7 @@
 
 .pub-type {
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--teal);
@@ -502,7 +503,7 @@
 
 .pub-authors {
     font-size: 0.95rem;
-    color: var(--gray3);
+    color: #9cb4d7;
     margin-bottom: 0.3rem;
 }
 
@@ -589,7 +590,7 @@
 
 .timeline-date {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     color: var(--teal);
     margin-bottom: 0.4rem;
 }
@@ -603,7 +604,7 @@
 
 .timeline-sub {
     font-size: 0.9rem;
-    color: var(--gray3);
+    color: #9cb4d7;
 }
 
 
@@ -637,12 +638,12 @@
 .proj-title {
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin-bottom: 0.4rem;
 }
 
 .proj-desc {
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     color: var(--gray3);
     line-height: 1.65;
     margin-bottom: 1rem;
@@ -679,7 +680,7 @@
 
 .blog-date {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.85rem;
     color: var(--teal);
     margin-bottom: 0.5rem;
 }
@@ -687,13 +688,13 @@
 .blog-title-home {
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 0.88rem;
+    font-size: 1.1rem;
     margin-bottom: 0.4rem;
     line-height: 1.35;
 }
 
 .blog-excerpt {
-    font-size: 0.76rem;
+    font-size: 0.95rem;
     color: var(--gray3);
     line-height: 1.6;
 }
@@ -711,7 +712,7 @@
 }
 
 .contact-info p {
-    font-size: 0.88rem;
+    font-size: 1rem;
     color: var(--gray2);
     line-height: 1.8;
     margin-bottom: 1rem;
@@ -726,8 +727,8 @@
 .contact-link-item {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    font-size: 0.82rem;
+    gap: 1rem;
+    font-size: 1rem;
     color: var(--gray2);
 }
 
