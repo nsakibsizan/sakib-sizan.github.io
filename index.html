@@ -15,10 +15,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
     rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
@@ -42,13 +44,13 @@
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav id="navbar">
-    <div class="nav-logo">
-      <span>✦</span> Sakib Sizan
-    </div>
+    <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+      <!-- <span class="logo-mark">✦</span> -->
+      <span class="logo-text">Sakib Sizan</span>
+    </a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="journey.html">Journey</a></li>
       <li><a href="project.html">Projects</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -65,7 +67,6 @@
     <span id="mobile-close" onclick="closeMenu()">✕</span>
     <a href="about.html" onclick="closeMenu()">About</a>
     <a href="research.html" onclick="closeMenu()">Research</a>
-    <a href="journey.html" onclick="closeMenu()">Journey</a>
     <a href="project.html" onclick="closeMenu()">Projects</a>
     <a href="blog.html" onclick="closeMenu()">Blog</a>
     <a href="contact.html" onclick="closeMenu()">Contact</a>
@@ -84,9 +85,11 @@
           &gt; <span id="typed"></span>
         </div>
         <p class="hero-desc">
-          Researcher &amp; Software Support Engineer passionate about building intelligent systems
-          at the intersection of <strong>Machine Learning</strong>, <strong>Blockchain</strong> &amp;
-          <strong>Post Quantum Cryptography</strong>. Currently at BJIT Limited.
+          I'm <strong>Najmus Sakib Sizan</strong>, a Senior Software Support Engineer at <strong>BJIT Limited</strong> and Graduate Researcher
+          specializing in Artificial Intelligence, Machine Learning, Blockchain, and Post Quantum Cryptography. I
+          combine research with software development to create secure, data-driven, and user-focused solutions. Whether
+          it's developing applications or exploring emerging technologies, I'm always driven by curiosity, innovation,
+          and continuous learning.
         </p>
         <div class="hero-btns">
           <a href="research.html" class="hero-btn filled">View Research →</a>
@@ -126,7 +129,8 @@
       <div class="about-grid">
         <div class="about-text fade-up">
           <p>
-            I'm a <strong>Software Support Engineer</strong> at <strong>BJIT Limited</strong>, with a strong background
+            I'm a <strong>Senior Software Support Engineer</strong> at <strong>BJIT Limited</strong>, with a strong
+            background
             in Product Data Management (PDM) and technical support. I also have a solid research background in Machine
             Learning, Blockchain, and Post-Quantum Cryptography. I hold an <strong>M.Sc. in Computer Science and
               Engineering</strong> from <strong>Jagannath University</strong> and am currently pursuing my <strong>MPhil
@@ -176,7 +180,7 @@
       <div id="skillFilter" class="fade-up">
         <button class="active" data-filter="all">All</button>
         <button data-filter="lang">Languages</button>
-        <button data-filter="ml">ML / AI</button>
+        <!-- <button data-filter="ml">ML / AI</button> -->
         <button data-filter="web">Web</button>
         <button data-filter="db">Database</button>
         <button data-filter="enterprise">Enterprise Tools</button>
@@ -188,13 +192,13 @@
         <span class="skill-tag" data-cat="lang">Java</span>
         <span class="skill-tag" data-cat="lang">Shell Scripting</span>
         <span class="skill-tag" data-cat="lang">C</span>
-        <span class="skill-tag" data-cat="ml">TensorFlow</span>
+        <!-- <span class="skill-tag" data-cat="ml">TensorFlow</span>
         <span class="skill-tag" data-cat="ml">PyTorch</span>
         <span class="skill-tag" data-cat="ml">Keras</span>
         <span class="skill-tag" data-cat="ml">Scikit-learn</span>
         <span class="skill-tag" data-cat="ml">NLTK</span>
         <span class="skill-tag" data-cat="ml">Pandas</span>
-        <span class="skill-tag" data-cat="ml">NumPy</span>
+        <span class="skill-tag" data-cat="ml">NumPy</span> -->
         <span class="skill-tag" data-cat="web">HTML 5</span>
         <span class="skill-tag" data-cat="web">CSS 3</span>
         <span class="skill-tag" data-cat="web">JavaScript</span>
@@ -202,7 +206,7 @@
         <span class="skill-tag" data-cat="tool">Git</span>
         <span class="skill-tag" data-cat="tool">Docker</span>
         <span class="skill-tag" data-cat="tool">VS Code</span>
-        <span class="skill-tag" data-cat="tool">Jupyter</span>
+        <!-- <span class="skill-tag" data-cat="tool">Jupyter</span> -->
         <span class="skill-tag" data-cat="db">MySQL</span>
         <span class="skill-tag" data-cat="db">PostgreSQL</span>
         <span class="skill-tag" data-cat="db">Microsoft SQL Server</span>
@@ -218,7 +222,7 @@
         <span class="skill-tag" data-cat="tool">AutoCAD (Basic)</span>
         <span class="skill-tag" data-cat="soft">Problem Solving</span>
         <span class="skill-tag" data-cat="soft">Analytical Thinking</span>
-        <span class="skill-tag" data-cat="soft">Team Collaboration</span>
+        <!-- <span class="skill-tag" data-cat="soft">Team Collaboration</span> -->
         <span class="skill-tag" data-cat="soft">Technical Communication</span>
         <span class="skill-tag" data-cat="soft">Research Writing</span>
       </div>
@@ -237,7 +241,7 @@
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-date">2024 — Present</div>
-            <div class="timeline-title">Software Support Engineer</div>
+            <div class="timeline-title">Senior Software Support Engineer</div>
             <div class="timeline-sub">BJIT Limited · Dhaka, Bangladesh</div>
           </div>
         </div>
@@ -346,7 +350,7 @@
       <div class="projects-grid">
 
         <div class="project-card-home fade-up">
-          <div class="proj-icon">🌾</div>
+          <div class="proj-icon"><i class="fa-solid fa-seedling"></i></div>
           <div class="proj-title">Crop Prediction - Web Application using Django</div>
           <div class="proj-desc">
             Blockchain-secured IoT platform for real-time crop monitoring with sensor data analytics.
@@ -364,7 +368,7 @@
         </div>
 
         <div class="project-card-home fade-up fade-delay-1">
-          <div class="proj-icon">💬</div>
+          <div class="proj-icon"><i class="fa-solid fa-comments"></i></div>
           <div class="proj-title">Harvesting the Future: Predicting Optimal Crops with Machine Learning</div>
           <div class="proj-desc">
             Blockchain-secured IoT platform for real-time crop monitoring with sensor data analytics.
@@ -380,7 +384,7 @@
         </div>
 
         <div class="project-card-home fade-up fade-delay-2">
-          <div class="proj-icon">📊</div>
+          <div class="proj-icon"><i class="fa-solid fa-chart-bar"></i></div>
           <div class="proj-title">Building an Intelligent Defense: Machine Learning for Credit Card Fraud Detection
           </div>
           <div class="proj-desc">
@@ -456,21 +460,39 @@
             Feel free to reach out — I'd love to connect.
           </p>
           <div class="contact-links">
+
             <div class="contact-link-item">
-              <span>✉</span> nsakibsizan115@gmail.com
+              <span class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              nsakibsizan115@gmail.com
             </div>
+
             <div class="contact-link-item">
-              <span>📍</span> Dhaka, Bangladesh
+              <span class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              Dhaka, Bangladesh
             </div>
+
             <div class="contact-link-item">
-              <span>🎓</span>
-              <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank"
-                style="color:var(--teal)">Google Scholar Profile</a>
+              <span class="contact-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </span>
+              <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank">
+                Google Scholar Profile
+              </a>
             </div>
+
             <div class="contact-link-item">
-              <span>🐙</span>
-              <a href="https://github.com/nsakibsizan" target="_blank" style="color:var(--teal)">GitHub @nsakibsizan</a>
+              <span class="contact-icon">
+                <i class="fa-brands fa-github"></i>
+              </span>
+              <a href="https://github.com/nsakibsizan" target="_blank">
+                GitHub @nsakibsizan
+              </a>
             </div>
+
           </div>
         </div>
         <form class="contact-form fade-up fade-delay-2">
@@ -490,9 +512,11 @@
     <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
     <div class="footer-socials">
       <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
-        title="Google Scholar">GS</a>
-      <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub">GH</a>
-      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email">✉</a>
+        title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+      <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub"><i
+          class="fa-brands fa-github"></i></a>
+      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
+          class="fa-solid fa-envelope"></i></a>
     </div>
     <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</div>
   </footer>

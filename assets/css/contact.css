@@ -1,9 +1,9 @@
-/* ══════════════════════════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════=
    CONTACT.CSS — Contact Page-Only Styles
    Najmus Sakib Sizan · Portfolio
    ══════════════════════════════════════════════════════════════ */
 
-/* ══════════════════════════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════=
    PAGE HERO — CONTACT EXTRAS
    ══════════════════════════════════════════════════════════════ */
 .page-hero-title .accent {
@@ -15,13 +15,13 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 1.5rem;
+  margin-top: 24px;
   padding: 8px 18px;
   border: 1px solid rgba(0, 201, 167, 0.25);
   border-radius: 20px;
   background: rgba(0, 201, 167, 0.06);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 11.52px;
   color: var(--teal);
 }
 
@@ -43,79 +43,79 @@
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 14px;
-  padding: 2rem;
+  padding: 32px;
   max-width: 320px;
   margin-left: auto;
   text-align: center;
 }
 
 .contact-hero-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 40px;
+  margin-bottom: 16px;
 }
 
 .contact-hero-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
+  font-size: 16.8px;
+  margin-bottom: 8px;
 }
 
 .contact-hero-desc {
-  font-size: 0.82rem;
+  font-size: 13.12px;
   color: var(--gray2);
   line-height: 1.65;
 }
 
 
-/* ══════════════════════════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════=
    CONTACT GRID (Info + Form)
    ══════════════════════════════════════════════════════════════ */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 4rem;
+  gap: 64px;
   align-items: start;
 }
 
 /* ── Left: Contact Info ── */
 .contact-intro {
   color: var(--gray3);
-  font-size: 0.88rem;
+  font-size: 14.08px;
   line-height: 1.8;
   font-weight: 300;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .contact-location {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.82rem;
+  font-size: 13.12px;
   color: var(--gray2);
-  margin-bottom: 2rem;
-  padding: 0.75rem 1rem;
+  margin-bottom: 32px;
+  padding: 12px 16px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 8px;
 }
 
 .loc-icon {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 /* Contact Link Cards */
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 12px;
 }
 
 .contact-link-card {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 1rem 1.2rem;
+  padding: 16px 19.2px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 10px;
@@ -136,7 +136,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   flex-shrink: 0;
   transition: background var(--transition), border-color var(--transition);
 }
@@ -147,7 +147,7 @@
 }
 
 .link-label {
-  font-size: 0.68rem;
+  font-size: 10.88px;
   color: var(--gray3);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -156,7 +156,7 @@
 }
 
 .link-value {
-  font-size: 0.85rem;
+  font-size: 13.6px;
   font-weight: 500;
   color: var(--gray1);
   transition: color var(--transition);
@@ -168,7 +168,7 @@
 
 .link-arrow {
   margin-left: auto;
-  font-size: 0.8rem;
+  font-size: 12.8px;
   color: var(--gray4);
   transition: color var(--transition), transform var(--transition);
 }
@@ -179,45 +179,45 @@
 }
 
 
-/* ══════════════════════════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════=
    CONTACT FORM
    ══════════════════════════════════════════════════════════════ */
 .form-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 14px;
-  padding: 2rem;
+  padding: 32px;
 }
 
 .form-header {
-  margin-bottom: 1.75rem;
+  margin-bottom: 28px;
 }
 
 .form-header-label {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 10.4px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--teal);
-  margin-bottom: 0.4rem;
+  margin-bottom: 6.4px;
 }
 
 .form-header-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 19.2px;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 19.2px;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .form-group {
@@ -227,12 +227,12 @@
 
 .form-group label {
   display: block;
-  font-size: 0.72rem;
+  font-size: 11.52px;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--gray3);
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   font-family: var(--font-mono);
 }
 
@@ -245,7 +245,7 @@
   border-radius: 6px;
   color: var(--white);
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 13.6px;
   transition: border-color var(--transition), background var(--transition);
 }
 
@@ -276,7 +276,7 @@
   color: var(--navy);
   background: var(--teal);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 12.48px;
   font-weight: 600;
   cursor: pointer;
   transition: background var(--transition), transform var(--transition);
@@ -289,20 +289,20 @@
 }
 
 
-/* ══════════════════════════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════=
    OPPORTUNITIES SECTION
    ══════════════════════════════════════════════════════════════ */
 .opportunities-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .opportunity-card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 24px;
   text-align: center;
   transition: border-color var(--transition), transform var(--transition);
 }
@@ -313,38 +313,38 @@
 }
 
 .opportunity-icon {
-  font-size: 1.8rem;
-  margin-bottom: 0.75rem;
+  font-size: 28.8px;
+  margin-bottom: 12px;
 }
 
 .opportunity-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.88rem;
-  margin-bottom: 0.5rem;
+  font-size: 14.08px;
+  margin-bottom: 8px;
 }
 
 .opportunity-desc {
-  font-size: 0.76rem;
+  font-size: 12.16px;
   color: var(--gray3);
   line-height: 1.65;
 }
 
 
-/* ══════════════════════════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════=
    SOCIAL GRID
    ══════════════════════════════════════════════════════════════ */
 .social-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 20px;
 }
 
 .social-btn {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 24px;
   text-align: center;
   transition: border-color var(--transition), transform var(--transition);
 }
@@ -355,20 +355,20 @@
 }
 
 .social-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 24px;
+  margin-bottom: 12px;
 }
 
 .social-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.85rem;
-  margin-bottom: 0.25rem;
+  font-size: 13.6px;
+  margin-bottom: 4px;
 }
 
 .social-handle {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 10.88px;
   color: var(--gray3);
   transition: color var(--transition);
 }
@@ -378,13 +378,13 @@
 }
 
 
-/* ══════════════════════════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════=
    FAQ SECTION
    ══════════════════════════════════════════════════════════════ */
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   max-width: 800px;
 }
 
@@ -392,76 +392,6 @@
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 10px;
-  padding: 1.5rem 1.75rem;
+  padding: 24px 28px;
   transition: border-color var(--transition);
-}
-
-.faq-card:hover {
-  border-color: var(--teal);
-}
-
-.faq-question {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.92rem;
-  margin-bottom: 0.5rem;
-  color: var(--white);
-}
-
-.faq-answer {
-  font-size: 0.82rem;
-  color: var(--gray2);
-  line-height: 1.7;
-}
-
-
-/* ══════════════════════════════════════════════════════════════
-   RESPONSIVE — CONTACT PAGE
-   ══════════════════════════════════════════════════════════════ */
-@media (max-width: 900px) {
-  .contact-hero-card {
-    display: none;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .opportunities-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .social-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 500px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .opportunities-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .social-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .btn-send {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .contact-link-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
-  }
-
-  .link-arrow {
-    display: none;
-  }
 }
