@@ -23,13 +23,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/project.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 
 <body>
-
-    <!-- CUSTOM CURSOR -->
-    <div id="cursor"></div>
-    <div id="cursor-ring"></div>
 
     <!-- SCROLL PROGRESS -->
     <div id="progress-bar"></div>
@@ -42,7 +39,7 @@
     <!-- ═══════════════ NAVBAR ═══════════════ -->
     <nav id="navbar">
         <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
-            <!-- <span class="logo-mark">✦</span> -->
+            <!-- <span class="logo-mark"><i class="fa-solid fa-star"></i></span> -->
             <span class="logo-text">Sakib Sizan</span>
         </a>
         <ul class="nav-links">
@@ -52,15 +49,14 @@
             <li><a href="project.html" class="active">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="https://drive.google.com/file/d/1VYp4LhLpj9msqJow5zJTWwNQ7M-P3p-l/view" target="_blank"
-                    class="nav-cv">↓ Download CV</a></li>
+            <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download"></i> CV</a></li>
         </ul>
         <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
     </nav>
 
     <!-- MOBILE MENU -->
     <div id="mobile-menu">
-        <span id="mobile-close" onclick="closeMenu()">✕</span>
+        <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
         <a href="index.html" onclick="closeMenu()">Home</a>
         <a href="about.html" onclick="closeMenu()">About</a>
         <a href="research.html" onclick="closeMenu()">Research</a>
@@ -112,7 +108,7 @@
             </div>
             <div class="featured-project fade-up">
                 <div class="featured-img">
-                    <div class="featured-img-text">🌾 IoT + ML + Blockchain</div>
+                    <div class="featured-img-text"><i class="fa-solid fa-seedling"></i> IoT + ML + Blockchain</div>
                 </div>
                 <div class="featured-body">
                     <div class="featured-type">Research · Smart Agriculture</div>
@@ -153,7 +149,7 @@
 
                 <div class="build-step">
                     <div class="build-step-connector"></div>
-                    <div class="build-step-icon">💡</div>
+                    <div class="build-step-icon"><i class="fa-solid fa-lightbulb"></i></div>
                     <div class="build-step-content">
                         <div class="build-step-num">01</div>
                         <div class="build-step-title">Ideation</div>
@@ -164,7 +160,7 @@
 
                 <div class="build-step">
                     <div class="build-step-connector"></div>
-                    <div class="build-step-icon">📐</div>
+                    <div class="build-step-icon"><i class="fa-solid fa-ruler-combined"></i></div>
                     <div class="build-step-content">
                         <div class="build-step-num">02</div>
                         <div class="build-step-title">Architecture</div>
@@ -175,7 +171,7 @@
 
                 <div class="build-step">
                     <div class="build-step-connector"></div>
-                    <div class="build-step-icon">⚡</div>
+                    <div class="build-step-icon"><i class="fa-solid fa-bolt"></i></div>
                     <div class="build-step-content">
                         <div class="build-step-num">03</div>
                         <div class="build-step-title">Development</div>
@@ -186,7 +182,7 @@
 
                 <div class="build-step">
                     <div class="build-step-connector"></div>
-                    <div class="build-step-icon">🧪</div>
+                    <div class="build-step-icon"><i class="fa-solid fa-vial"></i></div>
                     <div class="build-step-content">
                         <div class="build-step-num">04</div>
                         <div class="build-step-title">Testing</div>
@@ -197,7 +193,7 @@
 
                 <div class="build-step">
                     <div class="build-step-connector"></div>
-                    <div class="build-step-icon">🚀</div>
+                    <div class="build-step-icon"><i class="fa-solid fa-rocket"></i></div>
                     <div class="build-step-content">
                         <div class="build-step-num">05</div>
                         <div class="build-step-title">Deploy &amp; Iterate</div>
@@ -268,7 +264,7 @@
                     <div class="domain-bar-bg">
                         <div class="domain-bar" style="height: 85%;"></div>
                     </div>
-                    <div class="domain-icon">🔗</div>
+                    <div class="domain-icon"><i class="fa-solid fa-link"></i></div>
                     <div class="domain-name">Blockchain &amp; IoT</div>
                     <div class="domain-count">4 projects</div>
                 </div>
@@ -277,7 +273,7 @@
                     <div class="domain-bar-bg">
                         <div class="domain-bar bar-purple" style="height: 70%;"></div>
                     </div>
-                    <div class="domain-icon">🧠</div>
+                    <div class="domain-icon"><i class="fa-solid fa-brain"></i></div>
                     <div class="domain-name">ML &amp; NLP</div>
                     <div class="domain-count">3 projects</div>
                 </div>
@@ -286,7 +282,7 @@
                     <div class="domain-bar-bg">
                         <div class="domain-bar bar-orange" style="height: 50%;"></div>
                     </div>
-                    <div class="domain-icon">🌐</div>
+                    <div class="domain-icon"><i class="fa-solid fa-globe"></i></div>
                     <div class="domain-name">Web Development</div>
                     <div class="domain-count">3 projects</div>
                 </div>
@@ -295,7 +291,7 @@
                     <div class="domain-bar-bg">
                         <div class="domain-bar bar-blue" style="height: 40%;"></div>
                     </div>
-                    <div class="domain-icon">🛡️</div>
+                    <div class="domain-icon"><i class="fa-solid fa-shield-halved"></i></div>
                     <div class="domain-name">Cybersecurity</div>
                     <div class="domain-count">1 project</div>
                 </div>
@@ -304,7 +300,7 @@
                     <div class="domain-bar-bg">
                         <div class="domain-bar bar-green" style="height: 55%;"></div>
                     </div>
-                    <div class="domain-icon">🛠️</div>
+                    <div class="domain-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                     <div class="domain-name">DevOps &amp; Tools</div>
                     <div class="domain-count">2 projects</div>
                 </div>
@@ -338,7 +334,7 @@
 
                 <!-- Project 1 -->
                 <div class="project-card p-research visible fade-up" data-cat="research">
-                    <div class="project-img">🛡️</div>
+                    <div class="project-img"><i class="fa-solid fa-shield-halved"></i></div>
                     <div class="project-body">
                         <div class="project-type">Research · Cybersecurity</div>
                         <div class="project-title">Automated IDOR Vulnerability Detector</div>
@@ -357,7 +353,7 @@
 
                 <!-- Project 2 -->
                 <div class="project-card p-research visible fade-up fade-delay-1" data-cat="research">
-                    <div class="project-img">🔗</div>
+                    <div class="project-img"><i class="fa-solid fa-link"></i></div>
                     <div class="project-body">
                         <div class="project-type">Research · Blockchain</div>
                         <div class="project-title">Blockchain Platform Evaluator for IoT</div>
@@ -377,7 +373,7 @@
 
                 <!-- Project 3 -->
                 <div class="project-card p-research visible fade-up fade-delay-2" data-cat="research">
-                    <div class="project-img">💬</div>
+                    <div class="project-img"><i class="fa-solid fa-comments"></i></div>
                     <div class="project-body">
                         <div class="project-type">Research · NLP</div>
                         <div class="project-title">Social Media Sentiment Analyzer</div>
@@ -396,7 +392,7 @@
 
                 <!-- Project 4 -->
                 <div class="project-card p-research visible fade-up" data-cat="research">
-                    <div class="project-img">🗣️</div>
+                    <div class="project-img"><i class="fa-solid fa-comments"></i></div>
                     <div class="project-body">
                         <div class="project-type">Research · NLP</div>
                         <div class="project-title">Bangla Hate Speech Detector</div>
@@ -415,7 +411,7 @@
 
                 <!-- Project 5 -->
                 <div class="project-card p-research visible fade-up fade-delay-1" data-cat="research">
-                    <div class="project-img">🚗</div>
+                    <div class="project-img"><i class="fa-solid fa-car-side"></i></div>
                     <div class="project-body">
                         <div class="project-type">Research · IoT</div>
                         <div class="project-title">Road Accident Detection System</div>
@@ -434,7 +430,7 @@
 
                 <!-- Project 6 -->
                 <div class="project-card p-research visible fade-up fade-delay-2" data-cat="research">
-                    <div class="project-img">🔐</div>
+                    <div class="project-img"><i class="fa-solid fa-lock"></i></div>
                     <div class="project-body">
                         <div class="project-type">Research · Security</div>
                         <div class="project-title">Post-Quantum Blockchain for IoT</div>
@@ -454,7 +450,7 @@
 
                 <!-- Project 7 -->
                 <div class="project-card p-personal visible fade-up" data-cat="personal">
-                    <div class="project-img">🌐</div>
+                    <div class="project-img"><i class="fa-solid fa-globe"></i></div>
                     <div class="project-body">
                         <div class="project-type">Personal · Web</div>
                         <div class="project-title">Portfolio Website</div>
@@ -473,7 +469,7 @@
 
                 <!-- Project 8 -->
                 <div class="project-card p-personal visible fade-up fade-delay-1" data-cat="personal">
-                    <div class="project-img">🏥</div>
+                    <div class="project-img"><i class="fa-solid fa-hospital"></i></div>
                     <div class="project-body">
                         <div class="project-type">Personal · Healthcare</div>
                         <div class="project-title">IoT Health Monitoring System</div>
@@ -492,7 +488,7 @@
 
                 <!-- Project 9 -->
                 <div class="project-card p-personal visible fade-up fade-delay-2" data-cat="personal">
-                    <div class="project-img">📱</div>
+                    <div class="project-img"><i class="fa-solid fa-mobile-screen-button"></i></div>
                     <div class="project-body">
                         <div class="project-type">Personal · Full-Stack</div>
                         <div class="project-title">Task Manager App</div>
@@ -511,7 +507,7 @@
 
                 <!-- Project 10 -->
                 <div class="project-card p-tool visible fade-up" data-cat="tool">
-                    <div class="project-img">📄</div>
+                    <div class="project-img"><i class="fa-solid fa-file-lines"></i></div>
                     <div class="project-body">
                         <div class="project-type">Tool · Academic</div>
                         <div class="project-title">CS Research Paper Finder Guide</div>
@@ -530,7 +526,7 @@
 
                 <!-- Project 11 -->
                 <div class="project-card p-tool visible fade-up fade-delay-1" data-cat="tool">
-                    <div class="project-img">🛠️</div>
+                    <div class="project-img"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                     <div class="project-body">
                         <div class="project-type">Tool · DevOps</div>
                         <div class="project-title">Automated Deployment Scripts</div>
@@ -549,7 +545,7 @@
 
                 <!-- Project 12 -->
                 <div class="project-card p-tool visible fade-up fade-delay-2" data-cat="tool">
-                    <div class="project-img">📊</div>
+                    <div class="project-img"><i class="fa-solid fa-chart-line"></i></div>
                     <div class="project-body">
                         <div class="project-type">Tool · Data Science</div>
                         <div class="project-title">ML Model Evaluation Toolkit</div>
@@ -655,15 +651,18 @@
 
     <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer>
-        <div class="footer-logo"><span>✦</span> Sakib Sizan</div>
+        <div class="footer-logo"><span><i class="fa-solid fa-star"></i></span> Sakib Sizan</div>
         <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
         <div class="footer-socials">
             <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
-                title="Google Scholar">GS</a>
-            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub">GH</a>
-            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email">✉</a>
+                title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
+                    class="fa-solid fa-envelope"></i></a>
         </div>
-        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</div>
+        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i>
+            Back to top</div>
     </footer>
 
     <!-- Scripts -->

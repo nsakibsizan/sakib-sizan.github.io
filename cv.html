@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Curriculum Vitae — Najmus Sakib Sizan" />
+    <title>Curriculum Vitae — Najmus Sakib Sizan</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/cv.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR (same as others) -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+            <span class="logo-text">Sakib Sizan</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cv.html" class="active">CV</a></li>
+        </ul>
+        <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <div class="page-hero-label">// curriculum vitae</div>
+                <h1 class="page-hero-title">My <span class="accent">CV</span></h1>
+                <p class="page-hero-desc">
+                    Find my latest CV here...
+                </p>
+                <div class="cv-action-buttons">
+                    <a href="assets/docs/CV_of_Najmus_Sakib_Sizan.pdf" target="_blank" class="btn-ghost">
+                        <i class="fa-solid fa-up-right-from-square"></i> Open in New Tab
+                    </a>
+                    <a href="assets/docs/CV_of_Najmus_Sakib_Sizan.pdf" download class="btn-primary">
+                        <i class="fa-solid fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF VIEWER -->
+    <section>
+        <div class="section-inner">
+            <div class="cv-frame-box fade-up">
+                <iframe src="assets/docs/CV_of_Najmus_Sakib_Sizan.pdf" frameborder="0"
+                    title="Curriculum Vitae — Najmus Sakib Sizan"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo"><span>✦</span> Sakib Sizan</div>
+        <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
+        <div class="footer-socials">
+            <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
+                title="Google Scholar">GS</a>
+            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub">GH</a>
+            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email">✉</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

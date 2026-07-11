@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates — Najmus Sakib Sizan</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/certificates.css" />
+
+</head>
+
+<body>
+  <div id="progress-bar"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+      <span class="logo-text">Sakib Sizan</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="certificates.html" class="active">Certificates</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download" style="margin-right:0.45rem;"></i>CV</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="openMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="research.html" onclick="closeMenu()">Research</a>
+    <a href="project.html" onclick="closeMenu()">Projects</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="certificates.html" onclick="closeMenu()">Certificates</a>
+    <a href="blog.html" onclick="closeMenu()">Blog</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="page-hero-label">// credentials &amp; learning</div>
+        <h1 class="page-hero-title">Certificates &amp; <span class="accent">Courses</span></h1>
+        <p class="page-hero-desc">
+          A record of completed courses, professional certifications, and ongoing learning across
+          AI, machine learning, blockchain, and software engineering.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="cert-stats">
+    <div class="cert-stats-inner">
+      <div class="cert-stat fade-up">
+        <div class="cert-stat-icon"><i class="fa-solid fa-certificate"></i></div>
+        <div>
+          <div class="cert-stat-num" data-count="12">0</div>
+          <div class="cert-stat-label">Certificates</div>
+        </div>
+      </div>
+      <div class="cert-stat fade-up fd1">
+        <div class="cert-stat-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <div>
+          <div class="cert-stat-num" data-count="5">0</div>
+          <div class="cert-stat-label">Platforms</div>
+        </div>
+      </div>
+      <div class="cert-stat fade-up fd2">
+        <div class="cert-stat-icon"><i class="fa-solid fa-clock"></i></div>
+        <div>
+          <div class="cert-stat-num" data-count="240">0</div>
+          <div class="cert-stat-label">Hours Completed</div>
+        </div>
+      </div>
+      <div class="cert-stat fade-up fd3">
+        <div class="cert-stat-icon"><i class="fa-solid fa-brain"></i></div>
+        <div>
+          <div class="cert-stat-num" data-count="6">0</div>
+          <div class="cert-stat-label">Skill Areas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="cert-filter-bar">
+    <div class="filter-inner">
+      <span class="filter-label">Category</span>
+      <button class="cert-filter-btn active" data-filter="all">All</button>
+      <button class="cert-filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="cert-filter-btn" data-filter="blockchain">Blockchain</button>
+      <button class="cert-filter-btn" data-filter="programming">Programming</button>
+      <button class="cert-filter-btn" data-filter="data">Data Science</button>
+      <button class="cert-filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+      <button class="cert-filter-btn" data-filter="other">Other</button>
+    </div>
+  </div>
+
+  <!-- CERTIFICATES -->
+  <div class="cert-main">
+
+    <!-- ── Machine Learning ── -->
+    <div class="cert-category fade-up" data-cat="ml">
+      <div class="cat-heading">
+        <div class="cat-icon"><i class="fa-solid fa-brain"></i></div>
+        <div class="cat-title">Machine Learning &amp; AI</div>
+        <div class="cat-divider"></div>
+        <div class="cat-count">3 credentials</div>
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card fade-up" data-title="Machine Learning Specialization"
+          data-issuer="Coursera / DeepLearning.AI" data-date="2023" data-link="#" data-cat="ml">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ml1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#0f2040" />
+                  <stop offset="100%" stop-color="#0d1f38" />
+                </linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#ml1)" />
+              <!-- Certificate frame -->
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <rect x="32" y="32" width="336" height="236" rx="4" fill="none" stroke="rgba(0,201,167,0.08)"
+                stroke-width="1" stroke-dasharray="4 4" />
+              <!-- Neural net illustration -->
+              <circle cx="100" cy="100" r="6" fill="none" stroke="rgba(0,201,167,0.5)" stroke-width="1.5" />
+              <circle cx="100" cy="150" r="6" fill="none" stroke="rgba(0,201,167,0.5)" stroke-width="1.5" />
+              <circle cx="100" cy="200" r="6" fill="none" stroke="rgba(0,201,167,0.5)" stroke-width="1.5" />
+              <circle cx="200" cy="120" r="6" fill="none" stroke="rgba(0,201,167,0.7)" stroke-width="1.5" />
+              <circle cx="200" cy="150" r="6" fill="none" stroke="rgba(0,201,167,0.7)" stroke-width="1.5" />
+              <circle cx="200" cy="180" r="6" fill="none" stroke="rgba(0,201,167,0.7)" stroke-width="1.5" />
+              <circle cx="300" cy="150" r="6" fill="none" stroke="rgba(0,201,167,0.5)" stroke-width="1.5" />
+              <line x1="106" y1="100" x2="194" y2="120" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="106" y1="100" x2="194" y2="150" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="106" y1="100" x2="194" y2="180" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="106" y1="150" x2="194" y2="120" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="106" y1="150" x2="194" y2="150" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="106" y1="150" x2="194" y2="180" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="106" y1="200" x2="194" y2="120" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="106" y1="200" x2="194" y2="150" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="106" y1="200" x2="194" y2="180" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="206" y1="120" x2="294" y2="150" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="206" y1="150" x2="294" y2="150" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <line x1="206" y1="180" x2="294" y2="150" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <!-- Label -->
+              <text x="200" y="255" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="sans-serif">Machine
+                Learning Specialization</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">🎓</div>
+              <div class="cert-issuer-name">Coursera · DeepLearning.AI</div>
+            </div>
+            <div class="cert-title">Machine Learning Specialization</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2023</div>
+              <div class="cert-id">ID: ML-DLAI-2023</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">Python</span>
+              <span class="cert-skill-tag">TensorFlow</span>
+              <span class="cert-skill-tag">Neural Nets</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link" title="Verify"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up fd1" data-title="Deep Learning Specialization"
+          data-issuer="Coursera / DeepLearning.AI" data-date="2023" data-link="#" data-cat="ml">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0d1f38" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Layers illustration -->
+              <rect x="60" y="80" width="280" height="28" rx="4" fill="none" stroke="rgba(0,201,167,0.3)"
+                stroke-width="1" />
+              <rect x="60" y="120" width="280" height="28" rx="4" fill="none" stroke="rgba(0,201,167,0.25)"
+                stroke-width="1" />
+              <rect x="60" y="160" width="280" height="28" rx="4" fill="none" stroke="rgba(0,201,167,0.2)"
+                stroke-width="1" />
+              <rect x="60" y="200" width="280" height="28" rx="4" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <text x="200" y="99" text-anchor="middle" fill="rgba(0,201,167,0.5)" font-size="10"
+                font-family="sans-serif">Input Layer</text>
+              <text x="200" y="139" text-anchor="middle" fill="rgba(0,201,167,0.4)" font-size="10"
+                font-family="sans-serif">Hidden Layer 1</text>
+              <text x="200" y="179" text-anchor="middle" fill="rgba(0,201,167,0.35)" font-size="10"
+                font-family="sans-serif">Hidden Layer 2</text>
+              <text x="200" y="219" text-anchor="middle" fill="rgba(0,201,167,0.3)" font-size="10"
+                font-family="sans-serif">Output Layer</text>
+              <text x="200" y="268" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="sans-serif">Deep
+                Learning Specialization</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">🎓</div>
+              <div class="cert-issuer-name">Coursera · DeepLearning.AI</div>
+            </div>
+            <div class="cert-title">Deep Learning Specialization</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2023</div>
+              <div class="cert-id">ID: DL-DLAI-2023</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">CNN</span>
+              <span class="cert-skill-tag">RNN</span>
+              <span class="cert-skill-tag">Keras</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up fd2" data-title="Applied Data Science with Python"
+          data-issuer="Coursera / University of Michigan" data-date="2022" data-link="#" data-cat="ml">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0f2040" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Chart bars -->
+              <rect x="70" y="180" width="36" height="60" rx="3" fill="rgba(0,201,167,0.2)" stroke="rgba(0,201,167,0.4)"
+                stroke-width="1" />
+              <rect x="120" y="140" width="36" height="100" rx="3" fill="rgba(0,201,167,0.25)"
+                stroke="rgba(0,201,167,0.4)" stroke-width="1" />
+              <rect x="170" y="100" width="36" height="140" rx="3" fill="rgba(0,201,167,0.3)"
+                stroke="rgba(0,201,167,0.4)" stroke-width="1" />
+              <rect x="220" y="120" width="36" height="120" rx="3" fill="rgba(0,201,167,0.25)"
+                stroke="rgba(0,201,167,0.4)" stroke-width="1" />
+              <rect x="270" y="80" width="36" height="160" rx="3" fill="rgba(0,201,167,0.35)"
+                stroke="rgba(0,201,167,0.5)" stroke-width="1" />
+              <line x1="60" y1="250" x2="340" y2="250" stroke="rgba(0,201,167,0.2)" stroke-width="1" />
+              <text x="200" y="275" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="sans-serif">Applied
+                Data Science · Python</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">🎓</div>
+              <div class="cert-issuer-name">Coursera · Univ. of Michigan</div>
+            </div>
+            <div class="cert-title">Applied Data Science with Python</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2022</div>
+              <div class="cert-id">ID: ADS-UM-2022</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">Pandas</span>
+              <span class="cert-skill-tag">Matplotlib</span>
+              <span class="cert-skill-tag">Scikit-learn</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Blockchain ── -->
+    <div class="cert-category fade-up" data-cat="blockchain">
+      <div class="cat-heading">
+        <div class="cat-icon"><i class="fa-solid fa-link"></i></div>
+        <div class="cat-title">Blockchain &amp; Cryptography</div>
+        <div class="cat-divider"></div>
+        <div class="cat-count">2 credentials</div>
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card fade-up" data-title="Blockchain Specialization"
+          data-issuer="Coursera / University of Buffalo" data-date="2022" data-link="#" data-cat="blockchain">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0a1628" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Chain blocks -->
+              <rect x="50" y="130" width="60" height="40" rx="4" fill="none" stroke="rgba(0,201,167,0.5)"
+                stroke-width="1.5" />
+              <text x="80" y="155" text-anchor="middle" fill="rgba(0,201,167,0.5)" font-size="9"
+                font-family="monospace">BLOCK 1</text>
+              <line x1="110" y1="150" x2="140" y2="150" stroke="rgba(0,201,167,0.3)" stroke-width="1.5"
+                stroke-dasharray="3 2" />
+              <rect x="140" y="130" width="60" height="40" rx="4" fill="none" stroke="rgba(0,201,167,0.6)"
+                stroke-width="1.5" />
+              <text x="170" y="155" text-anchor="middle" fill="rgba(0,201,167,0.6)" font-size="9"
+                font-family="monospace">BLOCK 2</text>
+              <line x1="200" y1="150" x2="230" y2="150" stroke="rgba(0,201,167,0.3)" stroke-width="1.5"
+                stroke-dasharray="3 2" />
+              <rect x="230" y="130" width="60" height="40" rx="4" fill="none" stroke="rgba(0,201,167,0.7)"
+                stroke-width="1.5" />
+              <text x="260" y="155" text-anchor="middle" fill="rgba(0,201,167,0.7)" font-size="9"
+                font-family="monospace">BLOCK 3</text>
+              <line x1="290" y1="150" x2="320" y2="150" stroke="rgba(0,201,167,0.3)" stroke-width="1.5"
+                stroke-dasharray="3 2" />
+              <text x="340" y="155" fill="rgba(0,201,167,0.5)" font-size="16" font-family="sans-serif">…</text>
+              <text x="200" y="268" text-anchor="middle" fill="#94a3b8" font-size="11"
+                font-family="sans-serif">Blockchain Specialization</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">⛓️</div>
+              <div class="cert-issuer-name">Coursera · Univ. of Buffalo</div>
+            </div>
+            <div class="cert-title">Blockchain Specialization</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2022</div>
+              <div class="cert-id">ID: BC-UB-2022</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">Ethereum</span>
+              <span class="cert-skill-tag">Solidity</span>
+              <span class="cert-skill-tag">DApps</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up fd1" data-title="Cryptography I" data-issuer="Coursera / Stanford University"
+          data-date="2023" data-link="#" data-cat="blockchain">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0d1f38" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Lock icon -->
+              <rect x="160" y="130" width="80" height="70" rx="8" fill="none" stroke="rgba(0,201,167,0.5)"
+                stroke-width="2" />
+              <path d="M176 130 L176 110 A24 24 0 0 1 224 110 L224 130" fill="none" stroke="rgba(0,201,167,0.4)"
+                stroke-width="2" stroke-linecap="round" />
+              <circle cx="200" cy="165" r="8" fill="rgba(0,201,167,0.25)" stroke="rgba(0,201,167,0.5)"
+                stroke-width="1.5" />
+              <line x1="200" y1="173" x2="200" y2="186" stroke="rgba(0,201,167,0.4)" stroke-width="2"
+                stroke-linecap="round" />
+              <text x="200" y="268" text-anchor="middle" fill="#94a3b8" font-size="11"
+                font-family="sans-serif">Cryptography I · Stanford</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">🔐</div>
+              <div class="cert-issuer-name">Coursera · Stanford University</div>
+            </div>
+            <div class="cert-title">Cryptography I</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2023</div>
+              <div class="cert-id">ID: CRPT-SU-2023</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">PQC</span>
+              <span class="cert-skill-tag">AES</span>
+              <span class="cert-skill-tag">RSA</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Programming ── -->
+    <div class="cert-category fade-up" data-cat="programming">
+      <div class="cat-heading">
+        <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+        <div class="cat-title">Programming &amp; Development</div>
+        <div class="cat-divider"></div>
+        <div class="cat-count">3 credentials</div>
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card fade-up" data-title="Python for Everybody" data-issuer="Coursera / University of Michigan"
+          data-date="2021" data-link="#" data-cat="programming">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0a1628" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Code snippet visual -->
+              <rect x="48" y="60" width="304" height="170" rx="6" fill="rgba(5,13,26,0.8)" stroke="rgba(0,201,167,0.1)"
+                stroke-width="1" />
+              <text x="64" y="88" fill="rgba(0,201,167,0.6)" font-size="11" font-family="monospace">def
+                predict(data):</text>
+              <text x="80" y="108" fill="rgba(148,163,184,0.7)" font-size="11" font-family="monospace">model =
+                load_model()</text>
+              <text x="80" y="128" fill="rgba(148,163,184,0.7)" font-size="11" font-family="monospace">result =
+                model.fit(</text>
+              <text x="96" y="148" fill="rgba(148,163,184,0.5)" font-size="11" font-family="monospace">X=data,
+                epochs=10</text>
+              <text x="80" y="168" fill="rgba(148,163,184,0.7)" font-size="11" font-family="monospace">)</text>
+              <text x="80" y="188" fill="rgba(0,201,167,0.4)" font-size="11" font-family="monospace">return
+                result</text>
+              <text x="200" y="268" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="sans-serif">Python
+                for Everybody</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">🐍</div>
+              <div class="cert-issuer-name">Coursera · Univ. of Michigan</div>
+            </div>
+            <div class="cert-title">Python for Everybody Specialization</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2021</div>
+              <div class="cert-id">ID: PY-UM-2021</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">Python</span>
+              <span class="cert-skill-tag">SQL</span>
+              <span class="cert-skill-tag">JSON</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up fd1" data-title="Java Programming and Software Engineering Fundamentals"
+          data-issuer="Coursera / Duke University" data-date="2021" data-link="#" data-cat="programming">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0f2040" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Gear/cog -->
+              <circle cx="200" cy="140" r="40" fill="none" stroke="rgba(0,201,167,0.25)" stroke-width="2" />
+              <circle cx="200" cy="140" r="18" fill="none" stroke="rgba(0,201,167,0.4)" stroke-width="1.5" />
+              <line x1="200" y1="96" x2="200" y2="84" stroke="rgba(0,201,167,0.35)" stroke-width="4"
+                stroke-linecap="round" />
+              <line x1="200" y1="184" x2="200" y2="196" stroke="rgba(0,201,167,0.35)" stroke-width="4"
+                stroke-linecap="round" />
+              <line x1="156" y1="140" x2="144" y2="140" stroke="rgba(0,201,167,0.35)" stroke-width="4"
+                stroke-linecap="round" />
+              <line x1="244" y1="140" x2="256" y2="140" stroke="rgba(0,201,167,0.35)" stroke-width="4"
+                stroke-linecap="round" />
+              <line x1="170" y1="110" x2="162" y2="102" stroke="rgba(0,201,167,0.25)" stroke-width="3"
+                stroke-linecap="round" />
+              <line x1="230" y1="170" x2="238" y2="178" stroke="rgba(0,201,167,0.25)" stroke-width="3"
+                stroke-linecap="round" />
+              <line x1="230" y1="110" x2="238" y2="102" stroke="rgba(0,201,167,0.25)" stroke-width="3"
+                stroke-linecap="round" />
+              <line x1="170" y1="170" x2="162" y2="178" stroke="rgba(0,201,167,0.25)" stroke-width="3"
+                stroke-linecap="round" />
+              <text x="200" y="268" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="sans-serif">Java
+                Programming · Duke</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">☕</div>
+              <div class="cert-issuer-name">Coursera · Duke University</div>
+            </div>
+            <div class="cert-title">Java Programming &amp; Software Engineering</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2021</div>
+              <div class="cert-id">ID: JAVA-DUKE-2021</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">Java</span>
+              <span class="cert-skill-tag">OOP</span>
+              <span class="cert-skill-tag">Algorithms</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up fd2" data-title="Version Control with Git" data-issuer="Atlassian / Coursera"
+          data-date="2022" data-link="#" data-cat="programming">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0d1f38" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Git branch -->
+              <circle cx="130" cy="200" r="8" fill="none" stroke="rgba(0,201,167,0.5)" stroke-width="2" />
+              <circle cx="130" cy="150" r="8" fill="none" stroke="rgba(0,201,167,0.5)" stroke-width="2" />
+              <circle cx="130" cy="100" r="8" fill="none" stroke="rgba(0,201,167,0.6)" stroke-width="2" />
+              <circle cx="230" cy="130" r="8" fill="none" stroke="rgba(0,201,167,0.4)" stroke-width="2" />
+              <circle cx="230" cy="80" r="8" fill="none" stroke="rgba(0,201,167,0.4)" stroke-width="2" />
+              <line x1="130" y1="192" x2="130" y2="158" stroke="rgba(0,201,167,0.3)" stroke-width="1.5" />
+              <line x1="130" y1="142" x2="130" y2="108" stroke="rgba(0,201,167,0.3)" stroke-width="1.5" />
+              <path d="M130 100 Q180 100 230 130" fill="none" stroke="rgba(0,201,167,0.25)" stroke-width="1.5" />
+              <line x1="230" y1="122" x2="230" y2="88" stroke="rgba(0,201,167,0.25)" stroke-width="1.5" />
+              <text x="200" y="268" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="sans-serif">Version
+                Control with Git</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">🔧</div>
+              <div class="cert-issuer-name">Coursera · Atlassian</div>
+            </div>
+            <div class="cert-title">Version Control with Git</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2022</div>
+              <div class="cert-id">ID: GIT-ATL-2022</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">Git</span>
+              <span class="cert-skill-tag">GitHub</span>
+              <span class="cert-skill-tag">CI/CD</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Cloud ── -->
+    <div class="cert-category fade-up" data-cat="cloud">
+      <div class="cat-heading">
+        <div class="cat-icon"><i class="fa-solid fa-cloud"></i></div>
+        <div class="cat-title">Cloud &amp; DevOps</div>
+        <div class="cat-divider"></div>
+        <div class="cat-count">2 credentials</div>
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card fade-up" data-title="Docker Essentials" data-issuer="IBM / Cognitive Class"
+          data-date="2023" data-link="#" data-cat="cloud">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0a1628" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Container stacks -->
+              <rect x="60" y="180" width="80" height="44" rx="4" fill="rgba(0,201,167,0.08)"
+                stroke="rgba(0,201,167,0.35)" stroke-width="1.5" />
+              <rect x="60" y="130" width="80" height="44" rx="4" fill="rgba(0,201,167,0.1)" stroke="rgba(0,201,167,0.4)"
+                stroke-width="1.5" />
+              <rect x="60" y="80" width="80" height="44" rx="4" fill="rgba(0,201,167,0.12)" stroke="rgba(0,201,167,0.5)"
+                stroke-width="1.5" />
+              <rect x="160" y="155" width="80" height="44" rx="4" fill="rgba(0,201,167,0.1)"
+                stroke="rgba(0,201,167,0.35)" stroke-width="1.5" />
+              <rect x="160" y="105" width="80" height="44" rx="4" fill="rgba(0,201,167,0.12)"
+                stroke="rgba(0,201,167,0.4)" stroke-width="1.5" />
+              <rect x="260" y="165" width="80" height="44" rx="4" fill="rgba(0,201,167,0.12)"
+                stroke="rgba(0,201,167,0.45)" stroke-width="1.5" />
+              <text x="200" y="268" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="sans-serif">Docker
+                Essentials</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">🐳</div>
+              <div class="cert-issuer-name">IBM · Cognitive Class</div>
+            </div>
+            <div class="cert-title">Docker Essentials: A Developer Introduction</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2023</div>
+              <div class="cert-id">ID: DOCK-IBM-2023</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">Docker</span>
+              <span class="cert-skill-tag">Containers</span>
+              <span class="cert-skill-tag">DevOps</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-card fade-up fd1" data-title="Introduction to Cloud Computing" data-issuer="IBM / Coursera"
+          data-date="2023" data-link="#" data-cat="cloud">
+          <div class="cert-thumb">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="300" fill="#0d1f38" />
+              <rect x="24" y="24" width="352" height="252" rx="6" fill="none" stroke="rgba(0,201,167,0.15)"
+                stroke-width="1" />
+              <!-- Cloud shape -->
+              <ellipse cx="200" cy="148" rx="90" ry="50" fill="none" stroke="rgba(0,201,167,0.35)" stroke-width="1.5" />
+              <ellipse cx="155" cy="155" rx="50" ry="38" fill="none" stroke="rgba(0,201,167,0.25)" stroke-width="1" />
+              <ellipse cx="245" cy="155" rx="50" ry="38" fill="none" stroke="rgba(0,201,167,0.25)" stroke-width="1" />
+              <!-- Server lines hanging down -->
+              <line x1="160" y1="195" x2="160" y2="215" stroke="rgba(0,201,167,0.2)" stroke-width="1"
+                stroke-dasharray="3 2" />
+              <line x1="200" y1="197" x2="200" y2="215" stroke="rgba(0,201,167,0.2)" stroke-width="1"
+                stroke-dasharray="3 2" />
+              <line x1="240" y1="195" x2="240" y2="215" stroke="rgba(0,201,167,0.2)" stroke-width="1"
+                stroke-dasharray="3 2" />
+              <rect x="140" y="215" width="40" height="16" rx="3" fill="none" stroke="rgba(0,201,167,0.3)"
+                stroke-width="1" />
+              <rect x="180" y="215" width="40" height="16" rx="3" fill="none" stroke="rgba(0,201,167,0.3)"
+                stroke-width="1" />
+              <rect x="220" y="215" width="40" height="16" rx="3" fill="none" stroke="rgba(0,201,167,0.3)"
+                stroke-width="1" />
+              <text x="200" y="268" text-anchor="middle" fill="#94a3b8" font-size="11"
+                font-family="sans-serif">Introduction to Cloud · IBM</text>
+            </svg>
+            <div class="cert-thumb-overlay">
+              <button class="cert-view-btn"><i class="fa-solid fa-expand"></i> View Certificate</button>
+            </div>
+            <div class="cert-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer-row">
+              <div class="cert-issuer-logo">☁️</div>
+              <div class="cert-issuer-name">IBM · Coursera</div>
+            </div>
+            <div class="cert-title">Introduction to Cloud Computing</div>
+            <div class="cert-meta-row">
+              <div class="cert-date"><i class="fa-regular fa-calendar"></i> Completed 2023</div>
+              <div class="cert-id">ID: CLOUD-IBM-2023</div>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-skill-tags">
+              <span class="cert-skill-tag">AWS</span>
+              <span class="cert-skill-tag">IaaS</span>
+              <span class="cert-skill-tag">SaaS</span>
+            </div>
+            <a href="#" target="_blank" class="cert-ext-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- end cert-main -->
+
+  <!-- CERT LIGHTBOX -->
+  <div id="certLightbox">
+    <div class="cert-lightbox-content">
+      <div class="cert-lb-header">
+        <div class="cert-lb-title" id="lbTitle">Certificate Title</div>
+        <div class="cert-lb-close" id="lbClose"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+      <div class="cert-lb-img-wrap" id="lbImgWrap"></div>
+      <div class="cert-lb-footer">
+        <div class="cert-lb-meta">Issued by <span id="lbIssuer">—</span> · <span id="lbDate">—</span></div>
+        <a href="#" id="lbVerifyLink" target="_blank" class="cert-lb-action">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="footer-logo"><a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+        <span class="logo-text">Sakib Sizan</span>
+      </a></div>
+
+    <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
+    <div class="footer-socials">
+      <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
+        title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+      <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub"><i
+          class="fa-brands fa-github"></i></a>
+      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
+          class="fa-solid fa-envelope"></i></a>
+    </div>
+    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i> Back
+      to top</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script>
+    const fadeUps = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appeared');
+        }
+      });
+    });
+    fadeUps.forEach(el => observer.observe(el));
+  </script>
+
+
+
+
+</body>
+
+</html>

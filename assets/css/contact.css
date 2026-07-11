@@ -34,8 +34,17 @@
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0, 201, 167, 0.5); }
-  50%      { opacity: 0.7; box-shadow: 0 0 0 6px rgba(0, 201, 167, 0); }
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(0, 201, 167, 0.5);
+  }
+
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 6px rgba(0, 201, 167, 0);
+  }
 }
 
 /* Hero Card */
@@ -52,6 +61,7 @@
 .contact-hero-icon {
   font-size: 40px;
   margin-bottom: 16px;
+  color: var(--teal);
 }
 
 .contact-hero-title {
@@ -178,6 +188,18 @@
   transform: translateX(3px);
 }
 
+.contact-link-card,
+.opportunity-card,
+.social-btn,
+.faq-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-link-card:hover,
+.opportunity-card:hover,
+.social-btn:hover {
+  box-shadow: 0 6px 14px rgba(0, 201, 167, 0.08);
+}
 
 /* ═════════════════════════════════════════════════════════════=
    CONTACT FORM
@@ -212,6 +234,15 @@
   display: flex;
   flex-direction: column;
   gap: 19.2px;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: rgba(0, 201, 167, 0.4);
+}
+
+.btn-send:active {
+  transform: scale(0.98);
 }
 
 .form-row {
@@ -394,4 +425,63 @@
   border-radius: 10px;
   padding: 24px 28px;
   transition: border-color var(--transition);
+}
+
+/* ═════════════════════════════════════════════════════════════=
+   MAP & SCHEDULE SECTION
+   ══════════════════════════════════════════════════════════════ */
+.map-schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.map-box iframe {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+}
+
+.schedule-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.schedule-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16.8px;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.schedule-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+  font-size: 13.12px;
+  color: var(--gray2);
+  line-height: 1.6;
+}
+
+.schedule-list span {
+  color: var(--teal);
+  font-family: var(--font-mono);
+  margin-right: 6px;
+}
+
+.schedule-note {
+  font-size: 12.16px;
+  color: var(--gray3);
+  font-style: italic;
+}
+
+/* Responsive adjustment */
+@media (max-width: 800px) {
+  .map-schedule-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -12,66 +12,6 @@ window.addEventListener('load', () => {
 
 
 /* ══════════════════════════════════════════════════════════════
-   CUSTOM CURSOR
-   ══════════════════════════════════════════════════════════════ */
-const cur = document.getElementById('cursor');
-const curRing = document.getElementById('cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-
-document.addEventListener('mousemove', e => {
-    mx = e.clientX;
-    my = e.clientY;
-    cur.style.left = mx + 'px';
-    cur.style.top = my + 'px';
-});
-
-function animRing() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    curRing.style.left = rx + 'px';
-    curRing.style.top = ry + 'px';
-    requestAnimationFrame(animRing);
-}
-animRing();
-
-// Hover effect on interactive elements
-const hoverSelectors = [
-    'a',
-    'button',
-    '.skill-tag',
-    '.about-card',
-    '.timeline-card',
-    '.cert-card',
-    '.achieve-card',
-    '.what-card',
-    '.pub-card',
-    '.lab-card',
-    '.interest-tag',
-    '.project-card',
-    '.featured-project',
-    '.blog-card',
-    '.featured-article',
-    '.collab-card',
-    '.contact-link-card',
-    '.social-btn',
-    '.chip'
-];
-
-document.querySelectorAll(hoverSelectors.join(',')).forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cur.style.transform = 'translate(-50%,-50%) scale(2.5)';
-        cur.style.background = 'rgba(0,201,167,0.4)';
-        curRing.style.opacity = '0.4';
-    });
-    el.addEventListener('mouseleave', () => {
-        cur.style.transform = 'translate(-50%,-50%) scale(1)';
-        cur.style.background = 'var(--teal)';
-        curRing.style.opacity = '1';
-    });
-});
-
-
-/* ══════════════════════════════════════════════════════════════
    SCROLL PROGRESS BAR & NAVBAR
    ══════════════════════════════════════════════════════════════ */
 window.addEventListener('scroll', () => {
@@ -375,3 +315,107 @@ if (particleCanvas) {
 
     animateParticles();
 }
+
+
+// Navbar scroll
+window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (window.scrollY / (h.scrollHeight - h.clientHeight)) * 100;
+    document.getElementById('progress-bar').style.width = pct + '%';
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 30);
+});
+
+// Mobile menu
+function openMenu() { document.getElementById('mobile-menu').classList.add('open'); }
+function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+
+// Fade-up observer
+const fadeObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('appeared'); });
+});
+document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+
+// FILTER
+const filterBtns = document.querySelectorAll('.gal-filter-btn');
+const photoItems = document.querySelectorAll('.photo-item');
+const yearGroups = document.querySelectorAll('.year-group');
+const emptyState = document.getElementById('galleryEmpty');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        let visibleCount = 0;
+        photoItems.forEach(item => {
+            const show = f === 'all' || item.dataset.cat === f;
+            item.style.display = show ? '' : 'none';
+            if (show) visibleCount++;
+        });
+        yearGroups.forEach(group => {
+            const cats = group.dataset.categories ? group.dataset.categories.split(',') : [];
+            const show = f === 'all' || cats.includes(f);
+            group.classList.toggle('hidden', !show);
+        });
+        emptyState.classList.toggle('visible', visibleCount === 0);
+    });
+});
+
+// LIGHTBOX
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxTag = document.getElementById('lightboxTag');
+let currentIdx = 0;
+let visibleItems = [];
+
+function openLightbox(item) {
+    visibleItems = [...photoItems].filter(i => i.style.display !== 'none');
+    currentIdx = visibleItems.indexOf(item);
+    showSlide(currentIdx);
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function showSlide(idx) {
+    const item = visibleItems[idx];
+    // For real images, use item.querySelector('img').src
+    // For SVG placeholders, use a data URL
+    const svg = item.querySelector('svg');
+    if (svg) {
+        const svgData = new XMLSerializer().serializeToString(svg);
+        lightboxImg.src = 'data:image/svg+xml;base64,' + btoa(svgData);
+    } else {
+        lightboxImg.src = item.querySelector('img').src;
+    }
+    lightboxTitle.textContent = item.dataset.title;
+    lightboxTag.textContent = item.dataset.cat.charAt(0).toUpperCase() + item.dataset.cat.slice(1);
+}
+
+photoItems.forEach(item => {
+    item.addEventListener('click', () => openLightbox(item));
+});
+
+document.getElementById('lightboxClose').addEventListener('click', () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+});
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+});
+document.getElementById('lightboxPrev').addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIdx = (currentIdx - 1 + visibleItems.length) % visibleItems.length;
+    showSlide(currentIdx);
+});
+document.getElementById('lightboxNext').addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIdx = (currentIdx + 1) % visibleItems.length;
+    showSlide(currentIdx);
+});
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+    if (e.key === 'ArrowLeft') { currentIdx = (currentIdx - 1 + visibleItems.length) % visibleItems.length; showSlide(currentIdx); }
+    if (e.key === 'ArrowRight') { currentIdx = (currentIdx + 1) % visibleItems.length; showSlide(currentIdx); }
+});

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Najmus Sakib Sizan</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/gallery.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+
+</head>
+
+<body>
+  <div id="progress-bar"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">Sakib Sizan</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download" style="margin-right:0.45rem;"></i>CV</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="openMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="research.html" onclick="closeMenu()">Research</a>
+    <a href="project.html" onclick="closeMenu()">Projects</a>
+    <a href="certificates.html" onclick="closeMenu()">Certificates</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="blog.html" onclick="closeMenu()">Blog</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div>
+        <div class="page-hero-label">// moments &amp; memories</div>
+        <h1 class="page-hero-title">Event <span class="accent">Gallery</span></h1>
+        <p class="page-hero-desc">
+          Snapshots from conferences, workshops, university events, and the moments in between —
+          a visual record of the journey so far.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="gallery-filter-bar">
+    <div class="filter-inner">
+      <span class="filter-label">Filter</span>
+      <button class="gal-filter-btn active" data-filter="all">All</button>
+      <button class="gal-filter-btn" data-filter="conference">Conference</button>
+      <button class="gal-filter-btn" data-filter="workshop">Workshop</button>
+      <button class="gal-filter-btn" data-filter="university">University</button>
+      <button class="gal-filter-btn" data-filter="award">Award</button>
+      <button class="gal-filter-btn" data-filter="personal">Personal</button>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div style="max-width:1200px;margin:0 auto;padding:60px 5%;">
+
+    <!-- ── 2025 ── -->
+    <div class="year-group" data-categories="conference,workshop">
+      <div class="year-heading fade-up">
+        <span class="year-label">// year</span>
+        <span class="year-title">2025</span>
+        <span class="year-divider"></span>
+        <span class="year-count">6 photos</span>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-item fade-up" data-cat="conference" data-title="ICICC 2025 — Paper Presentation" data-idx="0">
+          <img src="/assets/images/sizan.png" alt="ICICC 2025 — Paper Presentation" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">ICICC 2025 — Paper Presentation</div>
+            <div class="photo-overlay-tag">Conference</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+        <div class="photo-item fade-up fd1" data-cat="conference" data-title="ICICC 2025 — Conference Hall"
+          data-idx="1">
+          <img src="/assets/images/sizan.png" alt="ICICC 2025 — Conference Hall" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">ICICC 2025 — Conference Hall</div>
+            <div class="photo-overlay-tag">Conference</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+        <div class="photo-item fade-up fd2" data-cat="workshop" data-title="AI Workshop — Jagannath University"
+          data-idx="2">
+          <img src="/assets/images/sizan.png" alt="AI Workshop — Jagannath University" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">AI Workshop — Jagannath University</div>
+            <div class="photo-overlay-tag">Workshop</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+        <div class="photo-item fade-up" data-cat="conference" data-title="STI 2023 Proceedings Launch" data-idx="3">
+          <img src="/assets/images/sizan.png" alt="STI 2023 Proceedings Launch" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">STI 2023 Proceedings Launch</div>
+            <div class="photo-overlay-tag">Conference</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+        <div class="photo-item fade-up fd1" data-cat="workshop" data-title="Blockchain Research Session" data-idx="4">
+          <img src="/assets/images/sizan.png" alt="Blockchain Research Session" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">Blockchain Research Session</div>
+            <div class="photo-overlay-tag">Workshop</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+        <div class="photo-item fade-up fd2" data-cat="award" data-title="Best Paper Award — ICICC 2025" data-idx="5">
+          <img src="/assets/images/sizan.png" alt="Best Paper Award — ICICC 2025" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">Best Paper Award — ICICC 2025</div>
+            <div class="photo-overlay-tag">Award</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── 2024 ── -->
+    <div class="year-group" data-categories="university,personal">
+      <div class="year-heading fade-up">
+        <span class="year-label">// year</span>
+        <span class="year-title">2024</span>
+        <span class="year-divider"></span>
+        <span class="year-count">4 photos</span>
+      </div>
+      <div class="photo-grid">
+
+        <div class="photo-item fade-up" data-cat="university" data-title="MPhil Admission Ceremony" data-idx="6">
+          <img src="/assets/images/sizan.png" alt="MPhil Admission Ceremony" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">MPhil Admission Ceremony</div>
+            <div class="photo-overlay-tag">University</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+        <div class="photo-item fade-up fd1" data-cat="university" data-title="Lab Research Group Photo" data-idx="7">
+          <img src="/assets/images/sizan.png" alt="Lab Research Group Photo" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">Lab Research Group Photo</div>
+            <div class="photo-overlay-tag">University</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+        <div class="photo-item fade-up fd2" data-cat="personal" data-title="BJIT Office — First Day" data-idx="8">
+          <img src="/assets/images/sizan.png" alt="BJIT Office — First Day" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">BJIT Office — First Day</div>
+            <div class="photo-overlay-tag">Personal</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+
+        <div class="photo-item fade-up" data-cat="personal" data-title="Team Lunch — BJIT" data-idx="9">
+          <img src="/assets/images/sizan.png" alt="Team Lunch — BJIT" class="photo-placeholder" />
+          <div class="photo-overlay">
+            <div class="photo-overlay-title">Team Lunch — BJIT</div>
+            <div class="photo-overlay-tag">Personal</div>
+          </div>
+          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMPTY STATE -->
+    <div class="gallery-empty" id="galleryEmpty">
+      <div class="gallery-empty-icon"><i class="fa-regular fa-images"></i></div>
+      <div class="gallery-empty-text">No photos found for this category.</div>
+    </div>
+
+  </div><!-- end gallery wrapper -->
+
+  <!-- UPLOAD CTA -->
+  <div class="gallery-upload-cta">
+    <div class="upload-cta-inner fade-up">
+      <div class="section-label"
+        style="color:var(--teal);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin-bottom:12px;">
+        // add your photos</div>
+      <p>Replace the placeholder SVGs with your actual event photos by dropping your image files into the <code
+          style="color:var(--teal);font-size:12px;">assets/images/gallery/</code> folder and updating the <code
+          style="color:var(--teal);font-size:12px;">src</code> attributes.</p>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></span>
+      <span class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></span>
+      <span class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></span>
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-caption">
+        <div class="cap-title" id="lightboxTitle"></div>
+        <div class="cap-tag" id="lightboxTag"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="footer-logo"><a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+        <span class="logo-text">Sakib Sizan</span>
+      </a></div>
+
+    <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
+    <div class="footer-socials">
+      <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
+        title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+      <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub"><i
+          class="fa-brands fa-github"></i></a>
+      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
+          class="fa-solid fa-envelope"></i></a>
+    </div>
+    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i> Back
+      to top</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script>
+    const fadeUps = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appeared');
+        }
+      });
+    });
+    fadeUps.forEach(el => observer.observe(el));
+  </script>
+
+
+
+</body>
+
+</html>

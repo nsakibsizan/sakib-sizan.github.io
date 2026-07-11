@@ -26,10 +26,6 @@
 
 <body>
 
-    <!-- CUSTOM CURSOR -->
-    <div id="cursor"></div>
-    <div id="cursor-ring"></div>
-
     <!-- SCROLL PROGRESS -->
     <div id="progress-bar"></div>
 
@@ -41,18 +37,17 @@
     <!-- ═══════════════ NAVBAR ═══════════════ -->
     <nav id="navbar">
         <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
-            <!-- <span class="logo-mark">✦</span> -->
+            <!-- <span class="logo-mark"><i class="fa-solid fa-star"></i></span> -->
             <span class="logo-text">Sakib Sizan</span>
         </a>
         <ul class="nav-links">
-            <li><a href="index.html" >Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
             <li><a href="research.html">Research</a></li>
-            <li><a href="project.html" >Projects</a></li>
+            <li><a href="project.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="https://drive.google.com/file/d/1VYp4LhLpj9msqJow5zJTWwNQ7M-P3p-l/view" target="_blank"
-                    class="nav-cv">↓ Download CV</a></li>
+            <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download"></i> CV</a></li>
         </ul>
         <div class="hamburger" id="hamburger" onclick="openMenu()">
             <span></span><span></span><span></span>
@@ -61,7 +56,7 @@
 
     <!-- MOBILE MENU -->
     <div id="mobile-menu">
-        <span id="mobile-close" onclick="closeMenu()">✕</span>
+        <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
         <a href="index.html" onclick="closeMenu()">Home</a>
         <a href="about.html" onclick="closeMenu()">About</a>
         <a href="research.html" onclick="closeMenu()">Research</a>
@@ -217,55 +212,61 @@
     </div>
 </section> -->
 
-<!-- ═══════════════ RESEARCH INTERESTS ═══════════════ -->
-<section class="alt">
-    <div class="section-inner">
-        <div class="section-header fade-up">
-            <div class="section-label">// research focus</div>
-            <h2 class="section-title">Research Interests</h2>
-            <div class="divider"></div>
+    <!-- ═══════════════ RESEARCH INTERESTS ═══════════════ -->
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// research focus</div>
+                <h2 class="section-title">Research Interests</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="ri-grid">
+
+                <div class="ri-card fade-up">
+                    <div class="ri-number">01</div>
+                    <div class="ri-title">Natural Language Processing</div>
+                    <div class="ri-desc">Sentiment analysis, text classification, and transformer-based models for
+                        Bangla &amp; English language tasks.</div>
+                </div>
+
+                <div class="ri-card fade-up fade-delay-1">
+                    <div class="ri-number">02</div>
+                    <div class="ri-title">Healthcare AI</div>
+                    <div class="ri-desc">Deep learning models for disease prediction, medical image analysis, and
+                        clinical decision support systems.</div>
+                </div>
+
+                <div class="ri-card fade-up fade-delay-2">
+                    <div class="ri-number">03</div>
+                    <div class="ri-title">IoT &amp; Smart Agriculture</div>
+                    <div class="ri-desc">Sensor-driven systems for precision farming, crop monitoring, and environmental
+                        data collection.</div>
+                </div>
+
+                <div class="ri-card fade-up fade-delay-3">
+                    <div class="ri-number">04</div>
+                    <div class="ri-title">Blockchain &amp; Security</div>
+                    <div class="ri-desc">Decentralized data-sharing frameworks, smart contracts, and secure
+                        communication protocols.</div>
+                </div>
+
+                <div class="ri-card fade-up fade-delay-1">
+                    <div class="ri-number">05</div>
+                    <div class="ri-title">Computer Vision</div>
+                    <div class="ri-desc">Image classification, object detection, and CNN architectures for real-world
+                        visual recognition tasks.</div>
+                </div>
+
+                <div class="ri-card fade-up fade-delay-2">
+                    <div class="ri-number">06</div>
+                    <div class="ri-title">Explainable AI (XAI)</div>
+                    <div class="ri-desc">Making ML models interpretable and trustworthy through SHAP, LIME, and
+                        attention-based explanations.</div>
+                </div>
+
+            </div>
         </div>
-        <div class="ri-grid">
-
-            <div class="ri-card fade-up">
-                <div class="ri-number">01</div>
-                <div class="ri-title">Natural Language Processing</div>
-                <div class="ri-desc">Sentiment analysis, text classification, and transformer-based models for Bangla &amp; English language tasks.</div>
-            </div>
-
-            <div class="ri-card fade-up fade-delay-1">
-                <div class="ri-number">02</div>
-                <div class="ri-title">Healthcare AI</div>
-                <div class="ri-desc">Deep learning models for disease prediction, medical image analysis, and clinical decision support systems.</div>
-            </div>
-
-            <div class="ri-card fade-up fade-delay-2">
-                <div class="ri-number">03</div>
-                <div class="ri-title">IoT &amp; Smart Agriculture</div>
-                <div class="ri-desc">Sensor-driven systems for precision farming, crop monitoring, and environmental data collection.</div>
-            </div>
-
-            <div class="ri-card fade-up fade-delay-3">
-                <div class="ri-number">04</div>
-                <div class="ri-title">Blockchain &amp; Security</div>
-                <div class="ri-desc">Decentralized data-sharing frameworks, smart contracts, and secure communication protocols.</div>
-            </div>
-
-            <div class="ri-card fade-up fade-delay-1">
-                <div class="ri-number">05</div>
-                <div class="ri-title">Computer Vision</div>
-                <div class="ri-desc">Image classification, object detection, and CNN architectures for real-world visual recognition tasks.</div>
-            </div>
-
-            <div class="ri-card fade-up fade-delay-2">
-                <div class="ri-number">06</div>
-                <div class="ri-title">Explainable AI (XAI)</div>
-                <div class="ri-desc">Making ML models interpretable and trustworthy through SHAP, LIME, and attention-based explanations.</div>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- ═══════════════ WHAT I DO ═══════════════ -->
@@ -279,7 +280,7 @@
             <div class="what-grid">
 
                 <div class="what-card fade-up">
-                    <div class="what-icon">🔬</div>
+                    <div class="what-icon"><i class="fa-solid fa-flask"></i></div>
                     <div class="what-title">Research</div>
                     <div class="what-desc">
                         Conducting research in ML, NLP, IoT &amp; Blockchain with publications in
@@ -288,7 +289,7 @@
                 </div>
 
                 <div class="what-card fade-up fade-delay-1">
-                    <div class="what-icon">🧠</div>
+                    <div class="what-icon"><i class="fa-solid fa-brain"></i></div>
                     <div class="what-title">Machine Learning</div>
                     <div class="what-desc">
                         Building deep learning models for classification, NLP tasks, sentiment analysis,
@@ -297,7 +298,7 @@
                 </div>
 
                 <div class="what-card fade-up fade-delay-2">
-                    <div class="what-icon">💻</div>
+                    <div class="what-icon"><i class="fa-solid fa-laptop-code"></i></div>
                     <div class="what-title">Software Engineering</div>
                     <div class="what-desc">
                         Full-stack development with modern frameworks, REST APIs, database design,
@@ -306,7 +307,7 @@
                 </div>
 
                 <div class="what-card fade-up fade-delay-3">
-                    <div class="what-icon">🌐</div>
+                    <div class="what-icon"><i class="fa-solid fa-globe"></i></div>
                     <div class="what-title">IoT &amp; Blockchain</div>
                     <div class="what-desc">
                         Designing smart systems with sensor networks and decentralized data-sharing
@@ -381,65 +382,65 @@
 
 
     <!-- ═══════════════ DAILY TOOLS ═══════════════ -->
-<section class="alt">
-    <div class="section-inner">
-        <div class="section-header fade-up">
-            <div class="section-label">// daily workflow</div>
-            <h2 class="section-title">Tools I Use Every Day</h2>
-            <div class="divider"></div>
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// daily workflow</div>
+                <h2 class="section-title">Tools I Use Every Day</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="tools-grid fade-up">
+
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" />
+                    <span>Python</span>
+                </div>
+
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                        alt="VS Code" />
+                    <span>VS Code</span>
+                </div>
+
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+                    <span>Git</span>
+                </div>
+
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        alt="Docker" />
+                    <span>Docker</span>
+                </div>
+
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                        alt="Linux" />
+                    <span>Linux</span>
+                </div>
+
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+                        alt="Jupyter" />
+                    <span>Jupyter</span>
+                </div>
+
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        alt="React" />
+                    <span>React</span>
+                </div>
+
+                <div class="tool-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                        alt="MongoDB" />
+                    <span>MongoDB</span>
+                </div>
+
+            </div>
         </div>
-        <div class="tools-grid fade-up">
-
-            <div class="tool-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    alt="Python" />
-                <span>Python</span>
-            </div>
-
-            <div class="tool-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                    alt="VS Code" />
-                <span>VS Code</span>
-            </div>
-
-            <div class="tool-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
-                <span>Git</span>
-            </div>
-
-            <div class="tool-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                    alt="Docker" />
-                <span>Docker</span>
-            </div>
-
-            <div class="tool-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-                    alt="Linux" />
-                <span>Linux</span>
-            </div>
-
-            <div class="tool-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
-                    alt="Jupyter" />
-                <span>Jupyter</span>
-            </div>
-
-            <div class="tool-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                    alt="React" />
-                <span>React</span>
-            </div>
-
-            <div class="tool-item">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                    alt="MongoDB" />
-                <span>MongoDB</span>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -544,45 +545,48 @@
 
 
     <!-- ═══════════════ VOLUNTEERING & LEADERSHIP ═══════════════ -->
-<section>
-    <div class="section-inner">
-        <div class="section-header fade-up">
-            <div class="section-label">// community</div>
-            <h2 class="section-title">Volunteering &amp; Leadership</h2>
-            <div class="divider"></div>
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// community</div>
+                <h2 class="section-title">Volunteering &amp; Leadership</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="volunteer-grid">
+
+                <div class="volunteer-card fade-up">
+                    <div class="volunteer-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <div class="volunteer-info">
+                        <div class="volunteer-role">Member — DIU Research Club</div>
+                        <div class="volunteer-org">Daffodil International University · 2021 — 2023</div>
+                        <div class="volunteer-desc">Organized research workshops, mentored junior students on academic
+                            paper writing, and coordinated inter-university research symposiums.</div>
+                    </div>
+                </div>
+
+                <div class="volunteer-card fade-up fade-delay-1">
+                    <div class="volunteer-icon"><i class="fa-solid fa-microphone"></i></div>
+                    <div class="volunteer-info">
+                        <div class="volunteer-role">Workshop Facilitator — ML Bootcamp</div>
+                        <div class="volunteer-org">DIU CSE Department · 2022</div>
+                        <div class="volunteer-desc">Conducted hands-on sessions on Python, Scikit-learn, and TensorFlow
+                            basics for 50+ undergraduate students.</div>
+                    </div>
+                </div>
+
+                <div class="volunteer-card fade-up fade-delay-2">
+                    <div class="volunteer-icon"><i class="fa-solid fa-school"></i></div>
+                    <div class="volunteer-info">
+                        <div class="volunteer-role">Peer Mentor — Programming Lab</div>
+                        <div class="volunteer-org">Daffodil International University · 2021 — 2022</div>
+                        <div class="volunteer-desc">Helped first-year students with C, C++, and data structures concepts
+                            during lab sessions and office hours.</div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="volunteer-grid">
-
-            <div class="volunteer-card fade-up">
-                <div class="volunteer-icon">🤝</div>
-                <div class="volunteer-info">
-                    <div class="volunteer-role">Member — DIU Research Club</div>
-                    <div class="volunteer-org">Daffodil International University · 2021 — 2023</div>
-                    <div class="volunteer-desc">Organized research workshops, mentored junior students on academic paper writing, and coordinated inter-university research symposiums.</div>
-                </div>
-            </div>
-
-            <div class="volunteer-card fade-up fade-delay-1">
-                <div class="volunteer-icon">🎤</div>
-                <div class="volunteer-info">
-                    <div class="volunteer-role">Workshop Facilitator — ML Bootcamp</div>
-                    <div class="volunteer-org">DIU CSE Department · 2022</div>
-                    <div class="volunteer-desc">Conducted hands-on sessions on Python, Scikit-learn, and TensorFlow basics for 50+ undergraduate students.</div>
-                </div>
-            </div>
-
-            <div class="volunteer-card fade-up fade-delay-2">
-                <div class="volunteer-icon">🏫</div>
-                <div class="volunteer-info">
-                    <div class="volunteer-role">Peer Mentor — Programming Lab</div>
-                    <div class="volunteer-org">Daffodil International University · 2021 — 2022</div>
-                    <div class="volunteer-desc">Helped first-year students with C, C++, and data structures concepts during lab sessions and office hours.</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -597,28 +601,28 @@
             <div class="cert-grid">
 
                 <div class="cert-card fade-up">
-                    <div class="cert-icon">🏆</div>
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                     <div class="cert-title">Machine Learning Specialization</div>
                     <div class="cert-issuer">Coursera · Stanford / DeepLearning.AI</div>
                     <div class="cert-date">2023</div>
                 </div>
 
                 <div class="cert-card fade-up fade-delay-1">
-                    <div class="cert-icon">🏆</div>
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                     <div class="cert-title">Deep Learning Specialization</div>
                     <div class="cert-issuer">Coursera · DeepLearning.AI</div>
                     <div class="cert-date">2023</div>
                 </div>
 
                 <div class="cert-card fade-up fade-delay-2">
-                    <div class="cert-icon">🏆</div>
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                     <div class="cert-title">Python for Data Science</div>
                     <div class="cert-issuer">IBM · Cognitive Class</div>
                     <div class="cert-date">2022</div>
                 </div>
 
                 <div class="cert-card fade-up fade-delay-3">
-                    <div class="cert-icon">🏆</div>
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                     <div class="cert-title">Web Development Bootcamp</div>
                     <div class="cert-issuer">Udemy</div>
                     <div class="cert-date">2021</div>
@@ -639,7 +643,7 @@
             <div class="achieve-grid">
 
                 <div class="achieve-card fade-up">
-                    <div class="achieve-icon">⭐</div>
+                    <div class="achieve-icon"><i class="fa-solid fa-star"></i></div>
                     <div class="achieve-content">
                         <div class="achieve-title">92+ Google Scholar Citations</div>
                         <div class="achieve-sub">Across 8 published research papers in reputed venues</div>
@@ -647,7 +651,7 @@
                 </div>
 
                 <div class="achieve-card fade-up fade-delay-1">
-                    <div class="achieve-icon">⭐</div>
+                    <div class="achieve-icon"><i class="fa-solid fa-star"></i></div>
                     <div class="achieve-content">
                         <div class="achieve-title">h-index 5</div>
                         <div class="achieve-sub">Recognized impact in ML, NLP, and IoT research</div>
@@ -655,7 +659,7 @@
                 </div>
 
                 <div class="achieve-card fade-up fade-delay-2">
-                    <div class="achieve-icon">⭐</div>
+                    <div class="achieve-icon"><i class="fa-solid fa-star"></i></div>
                     <div class="achieve-content">
                         <div class="achieve-title">Best Paper Presentation</div>
                         <div class="achieve-sub">IEEE ICEEICT Conference 2023</div>
@@ -663,7 +667,7 @@
                 </div>
 
                 <div class="achieve-card fade-up fade-delay-3">
-                    <div class="achieve-icon">⭐</div>
+                    <div class="achieve-icon"><i class="fa-solid fa-star"></i></div>
                     <div class="achieve-content">
                         <div class="achieve-title">Dean's List — Academic Excellence</div>
                         <div class="achieve-sub">Daffodil International University · Multiple Semesters</div>
@@ -676,96 +680,98 @@
 
 
     <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
-<section class="alt">
-    <div class="section-inner">
-        <div class="section-header fade-up">
-            <div class="section-label">// what people say</div>
-            <h2 class="section-title">Testimonials</h2>
-            <div class="divider"></div>
+    <section class="alt">
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// what people say</div>
+                <h2 class="section-title">Testimonials</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="testimonial-grid">
+
+                <div class="testimonial-card fade-up">
+                    <div class="testimonial-quote">"Sakib is one of the most dedicated researchers I've worked with. His
+                        ability to bridge theory and practical implementation is remarkable."</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Dr. [Supervisor Name]</div>
+                            <div class="testimonial-role">Research Supervisor · DIU</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-up fade-delay-1">
+                    <div class="testimonial-quote">"A great team player who consistently delivers quality work. His
+                        technical troubleshooting skills saved us countless hours in production."</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">[Colleague Name]</div>
+                            <div class="testimonial-role">Team Lead · BJIT Limited</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-up fade-delay-2">
+                    <div class="testimonial-quote">"As a co-author, Sakib brought incredible attention to detail in data
+                        analysis and writing. His contributions elevated our research significantly."</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">[Co-author Name]</div>
+                            <div class="testimonial-role">Research Collaborator</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="testimonial-grid">
-
-            <div class="testimonial-card fade-up">
-                <div class="testimonial-quote">"Sakib is one of the most dedicated researchers I've worked with. His ability to bridge theory and practical implementation is remarkable."</div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">👤</div>
-                    <div class="testimonial-info">
-                        <div class="testimonial-name">Dr. [Supervisor Name]</div>
-                        <div class="testimonial-role">Research Supervisor · DIU</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card fade-up fade-delay-1">
-                <div class="testimonial-quote">"A great team player who consistently delivers quality work. His technical troubleshooting skills saved us countless hours in production."</div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">👤</div>
-                    <div class="testimonial-info">
-                        <div class="testimonial-name">[Colleague Name]</div>
-                        <div class="testimonial-role">Team Lead · BJIT Limited</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card fade-up fade-delay-2">
-                <div class="testimonial-quote">"As a co-author, Sakib brought incredible attention to detail in data analysis and writing. His contributions elevated our research significantly."</div>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">👤</div>
-                    <div class="testimonial-info">
-                        <div class="testimonial-name">[Co-author Name]</div>
-                        <div class="testimonial-role">Research Collaborator</div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- ═══════════════ FUN FACTS / INTERESTS ═══════════════ -->
-<section>
-    <div class="section-inner">
-        <div class="section-header fade-up">
-            <div class="section-label">// beyond work</div>
-            <h2 class="section-title">Fun Facts &amp; Interests</h2>
-            <div class="divider"></div>
+    <section>
+        <div class="section-inner">
+            <div class="section-header fade-up">
+                <div class="section-label">// beyond work</div>
+                <h2 class="section-title">Fun Facts &amp; Interests</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="funfact-grid">
+
+                <div class="funfact-card fade-up">
+                    <div class="funfact-emoji"><i class="fa-solid fa-mug-hot"></i></div>
+                    <div class="funfact-text">Mass cups of coffee consumed while debugging</div>
+                </div>
+
+                <div class="funfact-card fade-up fade-delay-1">
+                    <div class="funfact-emoji"><i class="fa-solid fa-book"></i></div>
+                    <div class="funfact-text">Avid reader — love books on AI ethics &amp; sci-fi</div>
+                </div>
+
+                <div class="funfact-card fade-up fade-delay-2">
+                    <div class="funfact-emoji"><i class="fa-solid fa-gamepad"></i></div>
+                </div>
+
+                <div class="funfact-card fade-up fade-delay-3">
+                    <div class="funfact-emoji"><i class="fa-solid fa-plane"></i></div>
+                    <div class="funfact-text">Dream: attend NeurIPS or ICML in person someday</div>
+                </div>
+
+                <div class="funfact-card fade-up fade-delay-1">
+                    <div class="funfact-emoji"><i class="fa-solid fa-music"></i></div>
+                    <div class="funfact-text">Code with lo-fi beats — productivity secret weapon</div>
+                </div>
+
+                <div class="funfact-card fade-up fade-delay-2">
+                    <div class="funfact-emoji"><i class="fa-solid fa-seedling"></i></div>
+                    <div class="funfact-text">Passionate about tech for social good &amp; sustainability</div>
+                </div>
+
+            </div>
         </div>
-        <div class="funfact-grid">
-
-            <div class="funfact-card fade-up">
-                <div class="funfact-emoji">☕</div>
-                <div class="funfact-text">Mass cups of coffee consumed while debugging</div>
-            </div>
-
-            <div class="funfact-card fade-up fade-delay-1">
-                <div class="funfact-emoji">📚</div>
-                <div class="funfact-text">Avid reader — love books on AI ethics &amp; sci-fi</div>
-            </div>
-
-            <div class="funfact-card fade-up fade-delay-2">
-                <div class="funfact-emoji">🎮</div>
-                <div class="funfact-text">Casual gamer — strategy &amp; puzzle games fan</div>
-            </div>
-
-            <div class="funfact-card fade-up fade-delay-3">
-                <div class="funfact-emoji">✈️</div>
-                <div class="funfact-text">Dream: attend NeurIPS or ICML in person someday</div>
-            </div>
-
-            <div class="funfact-card fade-up fade-delay-1">
-                <div class="funfact-emoji">🎵</div>
-                <div class="funfact-text">Code with lo-fi beats — productivity secret weapon</div>
-            </div>
-
-            <div class="funfact-card fade-up fade-delay-2">
-                <div class="funfact-emoji">🌱</div>
-                <div class="funfact-text">Passionate about tech for social good &amp; sustainability</div>
-            </div>
-
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- ═══════════════ CTA ═══════════════ -->
     <section>
@@ -786,15 +792,18 @@
 
     <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer>
-        <div class="footer-logo"><span>✦</span> Sakib Sizan</div>
+        <div class="footer-logo"><span><i class="fa-solid fa-star"></i></span> Sakib Sizan</div>
         <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
         <div class="footer-socials">
             <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
-                title="Google Scholar">GS</a>
-            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub">GH</a>
-            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email">✉</a>
+                title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
+                    class="fa-solid fa-envelope"></i></a>
         </div>
-        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</div>
+        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i>
+            Back to top</div>
     </footer>
 
     <!-- Scripts -->

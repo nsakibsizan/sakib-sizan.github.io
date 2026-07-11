@@ -118,6 +118,19 @@
     background: #00e0bb;
 }
 
+.hero-btn.filled {
+    background: var(--teal);
+    color: var(--navy);
+    box-shadow: 0 0 20px rgba(0, 201, 167, 0.25);
+}
+
+.hero-btn:hover {
+    background: var(--teal);
+    color: var(--navy);
+    box-shadow: 0 0 28px rgba(0, 201, 167, 0.4);
+}
+
+
 /* ── HERO STATS ── */
 .hero-stats {
     display: flex;
@@ -786,6 +799,32 @@
     align-self: flex-start;
 }
 
+/* Hover feedback improvements */
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: rgba(0, 201, 167, 0.3);
+}
+
+/* Card elevation */
+.about-card,
+.project-card-home,
+.blog-card-home {
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.about-card:hover,
+.project-card-home:hover,
+.blog-card-home:hover {
+    box-shadow: 0 8px 20px rgba(0, 201, 167, 0.05);
+}
+
+/* Navbar active state for current page */
+.nav-links a.active,
+.nav-links a.nav-cv.active {
+    color: var(--teal);
+    border-bottom: 2px solid var(--teal);
+}
+
 
 /* ══════════════════════════════════════════════════════════════
    RESPONSIVE — INDEX PAGE
@@ -842,4 +881,23 @@
         flex-direction: column;
         gap: 16px;
     }
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   METRICS — INDEX PAGE
+   ══════════════════════════════════════════════════════════════ */
+#metrics-bar {
+    background: rgba(0, 201, 167, 0.08);
+    padding: 12px 5%;
+    color: var(--teal);
+    font-family: var(--font-mono);
+    font-size: 14px;
+}
+
+.metrics-inner {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
 }

@@ -25,14 +25,11 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
 
+  <link rel="preload" href="assets/images/sizan.png" as="image">
 
 </head>
 
 <body>
-
-  <!-- CUSTOM CURSOR -->
-  <div id="cursor"></div>
-  <div id="cursor-ring"></div>
 
   <!-- SCROLL PROGRESS -->
   <div id="progress-bar"></div>
@@ -45,17 +42,19 @@
   <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav id="navbar">
     <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
-      <!-- <span class="logo-mark">✦</span> -->
       <span class="logo-text">Sakib Sizan</span>
     </a>
     <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="project.html">Projects</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://drive.google.com/file/d/1VYp4LhLpj9msqJow5zJTWwNQ7M-P3p-l/view" target="_blank"
-          class="nav-cv">↓ Download CV</a></li>
+      <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download" style="margin-right: 0.45rem;"></i>CV</a>
+      </li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="openMenu()">
       <span></span><span></span><span></span>
@@ -64,7 +63,7 @@
 
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
-    <span id="mobile-close" onclick="closeMenu()">✕</span>
+    <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
     <a href="about.html" onclick="closeMenu()">About</a>
     <a href="research.html" onclick="closeMenu()">Research</a>
     <a href="project.html" onclick="closeMenu()">Projects</a>
@@ -77,7 +76,6 @@
     <canvas id="particleCanvas"></canvas>
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-label">// welcome to my portfolio</div>
         <h1 class="hero-name">
           Najmus Sakib <span class="accent">Sizan</span>
         </h1>
@@ -85,11 +83,12 @@
           &gt; <span id="typed"></span>
         </div>
         <p class="hero-desc">
-          I'm <strong>Najmus Sakib Sizan</strong>, a Senior Software Support Engineer at <strong>BJIT Limited</strong> and Graduate Researcher
-          specializing in Artificial Intelligence, Machine Learning, Blockchain, and Post Quantum Cryptography. I
-          combine research with software development to create secure, data-driven, and user-focused solutions. Whether
+          I'm <strong>Najmus Sakib Sizan</strong>, a Senior Software Support Engineer at <strong>BJIT Limited</strong>
+          and Graduate Researcher
+          specializing in Artificial Intelligence, Machine Learning, Blockchain, and Post Quantum Cryptography.
+          <!-- I combine research with software development to create secure, data-driven, and user-focused solutions. Whether
           it's developing applications or exploring emerging technologies, I'm always driven by curiosity, innovation,
-          and continuous learning.
+          and continuous learning. -->
         </p>
         <div class="hero-btns">
           <a href="research.html" class="hero-btn filled">View Research →</a>
@@ -98,14 +97,14 @@
         <div class="hero-stats">
           <div>
             <div class="hero-stat-num" data-count="4" data-suffix="+">0</div>
-            <div class="hero-stat-label">Years Experience</div>
+            <div class="hero-stat-label">Years Job Experience</div>
           </div>
           <div>
             <div class="hero-stat-num" data-count="120" data-suffix="+">0</div>
             <div class="hero-stat-label">Citations</div>
           </div>
           <div>
-            <div class="hero-stat-num" data-count="10" data-suffix="+">0</div>
+            <div class="hero-stat-num" data-count="9" data-suffix="+">0</div>
             <div class="hero-stat-label">Publications</div>
           </div>
         </div>
@@ -119,6 +118,17 @@
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════ METRICS ═══════════════ -->
+  <!-- <section id="metrics-bar">
+    <div class="metrics-inner">
+      <div><i class="fa-solid fa-atom"></i> 98+ Citations</div>
+      <div><i class="fa-solid fa-book"></i> 8 Publications</div>
+      <div><i class="fa-solid fa-briefcase"></i> 4+ Years Experience</div>
+    </div>
+  </section> -->
+
+
 
   <!-- ═══════════════ ABOUT ═══════════════ -->
   <section id="about">
@@ -291,7 +301,21 @@
         </div> -->
         <div class="pub-grid">
 
-          <div class="pub-card visible fade-up" data-type="journal">
+          <div class="pub-card visible fade-up" data-type="conference">
+            <div class="pub-type">Conference · 2025</div>
+            <div class="pub-title">Automated Black-Box Detection of Insecure Direct Object Reference (IDOR)
+              Vulnerabilities in Web Applications</div>
+            <div class="pub-authors">Ayemun Hossain, <strong>Najmus Sakib Sizan</strong>, Bibi Kawsar an Tanusree Saha
+              Tanny
+            </div>
+            <div class="pub-venue">2025 IEEE 4th International Conference on Robotics, Automation,
+              Artificial-Intelligence and Internet-of-Things (RAAICON)</div>
+            <div class="pub-meta">
+              <a href="https://doi.org/10.1109/RAAICON69033.2025.11502030" target="_blank">DOI ↗</a>
+            </div>
+          </div>
+
+          <div class="pub-card visible fade-up" data-type="review">
             <div class="pub-type">Review · 2025</div>
             <div class="pub-title">Evaluating Blockchain Platforms for IoT Applications in Industry 5.0: A Comprehensive
               Review</div>
@@ -318,11 +342,11 @@
             </div>
           </div>
 
-          <div class="pub-card visible fade-up fade-delay-2" data-type="journal">
+          <div class="pub-card visible fade-up fade-delay-2" data-type="conference">
             <div class="pub-type">Conference · 2025</div>
             <div class="pub-title">Revolutionizing Agriculture: An IoT-driven ML-blockchain Framework 5.0 for Optimal
               Crop Prediction</div>
-            <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Diganta Dey, Md Solaiman Mia, Md Abu Layek
+            <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Diganta Dey, Md Solaiman Mia and Md Abu Layek
             </div>
             <div class="pub-venue">5th International Conference on Sustainable Technologies for Industry 5.0 (STI 2023)
             </div>
@@ -508,7 +532,10 @@
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
-    <div class="footer-logo"><span>✦</span> Sakib Sizan</div>
+    <div class="footer-logo"><a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+        <span class="logo-text">Sakib Sizan</span>
+      </a></div>
+
     <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
     <div class="footer-socials">
       <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
@@ -518,7 +545,8 @@
       <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
           class="fa-solid fa-envelope"></i></a>
     </div>
-    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to top</div>
+    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i> Back
+      to top</div>
   </footer>
 
   <!-- Scripts -->
@@ -527,6 +555,22 @@
   <script>
     lucide.createIcons();
   </script>
+
+  <script>
+    const fadeUps = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appeared');
+        }
+      });
+    });
+    fadeUps.forEach(el => observer.observe(el));
+  </script>
+
+
+
+
 </body>
 
 </html>
