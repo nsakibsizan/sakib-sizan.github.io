@@ -4,29 +4,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050d1a" />
+
+  <!-- Primary Meta -->
+  <title>Najmus Sakib Sizan — Researcher & Engineer</title>
   <meta name="description"
-    content="Najmus Sakib Sizan — Researcher, Software Engineer & Tech Leader. Building intelligent systems at the intersection of IoT, Blockchain & ML." />
+    content="Najmus Sakib Sizan — Senior Software Support Engineer at BJIT Limited & Graduate Researcher in AI, Machine Learning, Blockchain & Post-Quantum Cryptography." />
+  <meta name="author" content="Najmus Sakib Sizan" />
+  <link rel="canonical" href="https://nsakibsizan.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Najmus Sakib Sizan — Researcher & Engineer" />
   <meta property="og:description"
-    content="98 Citations · h-index 5 · 8 Publications · Software Support Engineer @ BJIT Limited" />
-  <title>Najmus Sakib Sizan — Researcher & Engineer</title>
+    content="98+ Citations · 8 Publications · Senior Software Support Engineer @ BJIT Limited" />
+  <meta property="og:url" content="https://nsakibsizan.github.io/" />
+  <meta property="og:image" content="assets/images/sizan.png" />
 
-  <!-- Fonts -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Najmus Sakib Sizan — Researcher & Engineer" />
+  <meta name="twitter:description"
+    content="98+ Citations · 8 Publications · Senior Software Support Engineer @ BJIT Limited" />
+  <meta name="twitter:image" content="assets/images/sizan.png" />
+
+  <!-- Favicon (add your file) -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+  <!-- Fonts (only used families kept) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
-    rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
 
-  <link rel="preload" href="assets/images/sizan.png" as="image">
-
+  <link rel="preload" href="assets/images/sizan.png" as="image" />
 </head>
 
 <body>
@@ -34,14 +49,12 @@
   <!-- SCROLL PROGRESS -->
   <div id="progress-bar"></div>
 
-  <!-- LOADER -->
-  <div id="loader">
-    <div class="loader-text">NSS</div>
-  </div>
+  <!-- LOADER (kept off; JS guards against it) -->
+  <!-- <div id="loader"><div class="loader-text">NSS</div></div> -->
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav id="navbar">
-    <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+    <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
       <span class="logo-text">Sakib Sizan</span>
     </a>
     <ul class="nav-links">
@@ -53,27 +66,34 @@
       <li><a href="certificates.html">Certificates</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download" style="margin-right: 0.45rem;"></i>CV</a>
+      <li>
+        <a href="cv.html" class="nav-cv">
+          <i data-lucide="download" style="width:16px;height:16px;margin-right:0.45rem;"></i>CV
+        </a>
       </li>
     </ul>
-    <div class="hamburger" id="hamburger" onclick="openMenu()">
+    <button class="hamburger" id="hamburger" onclick="openMenu()" aria-label="Open menu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </nav>
 
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
-    <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
+    <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
+      <i data-lucide="x"></i>
+    </button>
     <a href="about.html" onclick="closeMenu()">About</a>
     <a href="research.html" onclick="closeMenu()">Research</a>
     <a href="project.html" onclick="closeMenu()">Projects</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="certificates.html" onclick="closeMenu()">Certificates</a>
     <a href="blog.html" onclick="closeMenu()">Blog</a>
     <a href="contact.html" onclick="closeMenu()">Contact</a>
   </div>
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero">
-    <canvas id="particleCanvas"></canvas>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
     <div class="hero-inner">
       <div class="hero-content">
         <h1 class="hero-name">
@@ -83,21 +103,20 @@
           &gt; <span id="typed"></span>
         </div>
         <p class="hero-desc">
-          I'm <strong>Najmus Sakib Sizan</strong>, a Senior Software Support Engineer at <strong>BJIT Limited</strong>
-          and Graduate Researcher
-          specializing in Artificial Intelligence, Machine Learning, Blockchain, and Post Quantum Cryptography.
-          <!-- I combine research with software development to create secure, data-driven, and user-focused solutions. Whether
-          it's developing applications or exploring emerging technologies, I'm always driven by curiosity, innovation,
-          and continuous learning. -->
+          I'm <strong>Najmus Sakib Sizan</strong>, a <strong>Senior Software Support Engineer</strong>
+          at <strong>BJIT Limited</strong> and a Graduate Researcher specializing in Artificial Intelligence,
+          Machine Learning, Blockchain, and Post-Quantum Cryptography.
         </p>
         <div class="hero-btns">
-          <a href="research.html" class="hero-btn filled">View Research →</a>
+          <a href="research.html" class="hero-btn filled">
+            View Research <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+          </a>
           <a href="contact.html" class="hero-btn">Get in Touch</a>
         </div>
         <div class="hero-stats">
           <div>
             <div class="hero-stat-num" data-count="4" data-suffix="+">0</div>
-            <div class="hero-stat-label">Years Job Experience</div>
+            <div class="hero-stat-label">Years Experience</div>
           </div>
           <div>
             <div class="hero-stat-num" data-count="120" data-suffix="+">0</div>
@@ -113,22 +132,11 @@
         <div class="hero-photo-wrap">
           <div class="hero-photo-ring"></div>
           <div class="hero-photo-ring2"></div>
-          <img src="assets/images/sizan.png" alt="Najmus Sakib Sizan" class="hero-photo" />
+          <img src="assets/images/sizan.png" alt="Portrait of Najmus Sakib Sizan" class="hero-photo" width="300" height="300" />
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════ METRICS ═══════════════ -->
-  <!-- <section id="metrics-bar">
-    <div class="metrics-inner">
-      <div><i class="fa-solid fa-atom"></i> 98+ Citations</div>
-      <div><i class="fa-solid fa-book"></i> 8 Publications</div>
-      <div><i class="fa-solid fa-briefcase"></i> 4+ Years Experience</div>
-    </div>
-  </section> -->
-
-
 
   <!-- ═══════════════ ABOUT ═══════════════ -->
   <section id="about">
@@ -140,41 +148,40 @@
         <div class="about-text fade-up">
           <p>
             I'm a <strong>Senior Software Support Engineer</strong> at <strong>BJIT Limited</strong>, with a strong
-            background
-            in Product Data Management (PDM) and technical support. I also have a solid research background in Machine
-            Learning, Blockchain, and Post-Quantum Cryptography. I hold an <strong>M.Sc. in Computer Science and
-              Engineering</strong> from <strong>Jagannath University</strong> and am currently pursuing my <strong>MPhil
-              in Computer Science</strong> at the same university. I'm passionate about bridging the gap between
-            academic research and real-world engineering.
+            background in Product Data Management (PDM) and technical support. I also have a solid research background
+            in Machine Learning, Blockchain, and Post-Quantum Cryptography. I hold an
+            <strong>M.Sc. in Computer Science and Engineering</strong> from <strong>Jagannath University</strong> and am
+            currently pursuing my <strong>MPhil in Computer Science</strong> at the same university. I'm passionate about
+            bridging the gap between academic research and real-world engineering.
           </p>
           <p>
-            With <strong>98+ citations</strong> and <strong>8 publications</strong>, my research work spans across
-            AI, Machine Learning, Blockchain, and Post Quantum Cryptography in Smart Agriculture sector.
+            With <strong>98+ citations</strong> and <strong>8 publications</strong>, my research work spans AI,
+            Machine Learning, Blockchain, and Post-Quantum Cryptography in the Smart Agriculture sector.
           </p>
-          <a href="about.html" class="btn-ghost">Learn more about me <i data-lucide="arrow-right"></i></a>
+          <a href="about.html" class="btn-ghost">
+            Learn more about me <i data-lucide="arrow-right"></i>
+          </a>
         </div>
         <div class="about-cards fade-up fade-delay-2">
           <div class="about-card">
             <div class="about-card-icon"><i data-lucide="microscope"></i></div>
-            <div class="about-card-title">Research & Publications</div>
-            <div class="about-card-desc">ML, Blockchain, &amp; PQC with published
-              academic work</div>
+            <div class="about-card-title">Research &amp; Publications</div>
+            <div class="about-card-desc">ML, Blockchain &amp; PQC with published academic work.</div>
           </div>
           <div class="about-card">
             <div class="about-card-icon"><i data-lucide="laptop"></i></div>
             <div class="about-card-title">Software Engineering</div>
-            <div class="about-card-desc">PDM systems &amp; data migration in enterprise environments
-            </div>
+            <div class="about-card-desc">Product Lifecycle &amp; Data Management, and data migration in enterprise environments.</div>
           </div>
           <div class="about-card">
             <div class="about-card-icon"><i data-lucide="brain"></i></div>
             <div class="about-card-title">Intelligent Systems</div>
-            <div class="about-card-desc">Applied Machine Learning, AI, and data-driven research solutions</div>
+            <div class="about-card-desc">Applied Machine Learning, AI, and data-driven research solutions.</div>
           </div>
           <div class="about-card">
             <div class="about-card-icon"><i data-lucide="database"></i></div>
-            <div class="about-card-title">Data Analysis & Processing</div>
-            <div class="about-card-desc">Excel-based analytics, large-scale data cleaning &amp; transformation</div>
+            <div class="about-card-title">Data Analysis &amp; Processing</div>
+            <div class="about-card-desc">Excel-based analytics, large-scale data cleaning &amp; transformation.</div>
           </div>
         </div>
       </div>
@@ -187,10 +194,9 @@
       <div class="section-label fade-up">// skills</div>
       <h2 class="section-title fade-up">Tech Stack</h2>
       <div class="divider fade-up"></div>
-      <div id="skillFilter" class="fade-up">
+      <div id="skillFilter" class="fade-up" role="tablist" aria-label="Skill categories">
         <button class="active" data-filter="all">All</button>
         <button data-filter="lang">Languages</button>
-        <!-- <button data-filter="ml">ML / AI</button> -->
         <button data-filter="web">Web</button>
         <button data-filter="db">Database</button>
         <button data-filter="enterprise">Enterprise Tools</button>
@@ -202,13 +208,6 @@
         <span class="skill-tag" data-cat="lang">Java</span>
         <span class="skill-tag" data-cat="lang">Shell Scripting</span>
         <span class="skill-tag" data-cat="lang">C</span>
-        <!-- <span class="skill-tag" data-cat="ml">TensorFlow</span>
-        <span class="skill-tag" data-cat="ml">PyTorch</span>
-        <span class="skill-tag" data-cat="ml">Keras</span>
-        <span class="skill-tag" data-cat="ml">Scikit-learn</span>
-        <span class="skill-tag" data-cat="ml">NLTK</span>
-        <span class="skill-tag" data-cat="ml">Pandas</span>
-        <span class="skill-tag" data-cat="ml">NumPy</span> -->
         <span class="skill-tag" data-cat="web">HTML 5</span>
         <span class="skill-tag" data-cat="web">CSS 3</span>
         <span class="skill-tag" data-cat="web">JavaScript</span>
@@ -216,7 +215,8 @@
         <span class="skill-tag" data-cat="tool">Git</span>
         <span class="skill-tag" data-cat="tool">Docker</span>
         <span class="skill-tag" data-cat="tool">VS Code</span>
-        <!-- <span class="skill-tag" data-cat="tool">Jupyter</span> -->
+        <span class="skill-tag" data-cat="enterprise">Product Lifecycle Management</span>
+        <span class="skill-tag" data-cat="enterprise">Product Data Management</span>
         <span class="skill-tag" data-cat="db">MySQL</span>
         <span class="skill-tag" data-cat="db">PostgreSQL</span>
         <span class="skill-tag" data-cat="db">Microsoft SQL Server</span>
@@ -232,11 +232,9 @@
         <span class="skill-tag" data-cat="tool">AutoCAD (Basic)</span>
         <span class="skill-tag" data-cat="soft">Problem Solving</span>
         <span class="skill-tag" data-cat="soft">Analytical Thinking</span>
-        <!-- <span class="skill-tag" data-cat="soft">Team Collaboration</span> -->
         <span class="skill-tag" data-cat="soft">Technical Communication</span>
         <span class="skill-tag" data-cat="soft">Research Writing</span>
       </div>
-
     </div>
   </section>
 
@@ -250,18 +248,18 @@
         <div class="timeline-item fade-up">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-date">2024 — Present</div>
-            <div class="timeline-title">Senior Software Support Engineer</div>
-            <div class="timeline-sub">BJIT Limited · Dhaka, Bangladesh</div>
+            <div class="timeline-date">2026 — Present</div>
+            <div class="timeline-title">MPhil in Computer Science &amp; Engineering</div>
+            <div class="timeline-sub">Jagannath University</div>
           </div>
         </div>
 
         <div class="timeline-item fade-up fade-delay-1">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-date">2026 — Present</div>
-            <div class="timeline-title">MPhil in Computer Science &amp; Engineering</div>
-            <div class="timeline-sub">Jagannath University</div>
+            <div class="timeline-date">2024 — Present</div>
+            <div class="timeline-title">Senior Software Support Engineer</div>
+            <div class="timeline-sub">BJIT Limited · Dhaka, Bangladesh</div>
           </div>
         </div>
 
@@ -293,66 +291,45 @@
       <h2 class="section-title fade-up">Selected Publications</h2>
       <div class="divider fade-up"></div>
       <div class="research-preview">
-        <!-- <div class="pub-filters fade-up">
-          <button class="pub-filter active" data-type="all">All</button>
-          <button class="pub-filter" data-type="journal">Journal</button>
-          <button class="pub-filter" data-type="conference">Conference</button>
-          <button class="pub-filter" data-type="review">Review</button>
-        </div> -->
         <div class="pub-grid">
 
           <div class="pub-card visible fade-up" data-type="conference">
             <div class="pub-type">Conference · 2025</div>
-            <div class="pub-title">Automated Black-Box Detection of Insecure Direct Object Reference (IDOR)
-              Vulnerabilities in Web Applications</div>
-            <div class="pub-authors">Ayemun Hossain, <strong>Najmus Sakib Sizan</strong>, Bibi Kawsar an Tanusree Saha
-              Tanny
-            </div>
-            <div class="pub-venue">2025 IEEE 4th International Conference on Robotics, Automation,
-              Artificial-Intelligence and Internet-of-Things (RAAICON)</div>
+            <div class="pub-title">Automated Black-Box Detection of Insecure Direct Object Reference (IDOR) Vulnerabilities in Web Applications</div>
+            <div class="pub-authors">Ayemun Hossain, <strong>Najmus Sakib Sizan</strong>, Bibi Kawsar and Tanusree Saha Tanny</div>
+            <div class="pub-venue">2025 IEEE 4th International Conference on Robotics, Automation, Artificial-Intelligence and Internet-of-Things (RAAICON)</div>
             <div class="pub-meta">
-              <a href="https://doi.org/10.1109/RAAICON69033.2025.11502030" target="_blank">DOI ↗</a>
+              <a href="https://doi.org/10.1109/RAAICON69033.2025.11502030" target="_blank" rel="noopener noreferrer">DOI ↗</a>
             </div>
           </div>
 
           <div class="pub-card visible fade-up" data-type="review">
             <div class="pub-type">Review · 2025</div>
-            <div class="pub-title">Evaluating Blockchain Platforms for IoT Applications in Industry 5.0: A Comprehensive
-              Review</div>
-            <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Diganta Dey, Md. Abu Layek, Md Ashraf Uddin
-              and Eui-Nam Huh
-            </div>
+            <div class="pub-title">Evaluating Blockchain Platforms for IoT Applications in Industry 5.0: A Comprehensive Review</div>
+            <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Diganta Dey, Md. Abu Layek, Md Ashraf Uddin and Eui-Nam Huh</div>
             <div class="pub-venue">Blockchain: Research and Applications, Elsevier</div>
             <div class="pub-meta">
-              <a href="https://doi.org/10.1016/j.bcra.2025.100276" target="_blank">DOI ↗</a>
-              <!-- <span class="pub-cite">Cited: 18</span> -->
+              <a href="https://doi.org/10.1016/j.bcra.2025.100276" target="_blank" rel="noopener noreferrer">DOI ↗</a>
             </div>
           </div>
 
           <div class="pub-card visible fade-up fade-delay-1" data-type="conference">
             <div class="pub-type">Conference · 2025</div>
-            <div class="pub-title">A Secured Triad of IoT, Machine Learning, and Blockchain for Crop Forecasting in
-              Agriculture</div>
+            <div class="pub-title">A Secured Triad of IoT, Machine Learning, and Blockchain for Crop Forecasting in Agriculture</div>
             <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Md. Abu Layek and Khondokar Fida Hasan</div>
-            <div class="pub-venue">8th International Conference on Innovative Computing and Communications (ICICC 2025)
-            </div>
+            <div class="pub-venue">8th International Conference on Innovative Computing and Communications (ICICC 2025)</div>
             <div class="pub-meta">
-              <a href="https://doi.org/10.1007/978-981-96-6883-0_13" target="_blank">DOI ↗</a>
-              <!-- <span class="pub-cite">Cited: 25</span> -->
+              <a href="https://doi.org/10.1007/978-981-96-6883-0_13" target="_blank" rel="noopener noreferrer">DOI ↗</a>
             </div>
           </div>
 
           <div class="pub-card visible fade-up fade-delay-2" data-type="conference">
             <div class="pub-type">Conference · 2025</div>
-            <div class="pub-title">Revolutionizing Agriculture: An IoT-driven ML-blockchain Framework 5.0 for Optimal
-              Crop Prediction</div>
-            <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Diganta Dey, Md Solaiman Mia and Md Abu Layek
-            </div>
-            <div class="pub-venue">5th International Conference on Sustainable Technologies for Industry 5.0 (STI 2023)
-            </div>
+            <div class="pub-title">Revolutionizing Agriculture: An IoT-driven ML-blockchain Framework 5.0 for Optimal Crop Prediction</div>
+            <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Diganta Dey, Md Solaiman Mia and Md Abu Layek</div>
+            <div class="pub-venue">5th International Conference on Sustainable Technologies for Industry 5.0 (STI 2023)</div>
             <div class="pub-meta">
-              <a href="https://doi.org/10.1109/STI59863.2023.10464478" target="_blank">DOI ↗</a>
-              <!-- <span class="pub-cite">Cited: 30</span> -->
+              <a href="https://doi.org/10.1109/STI59863.2023.10464478" target="_blank" rel="noopener noreferrer">DOI ↗</a>
             </div>
           </div>
 
@@ -364,7 +341,6 @@
     </div>
   </section>
 
-
   <!-- ═══════════════ PROJECTS ═══════════════ -->
   <section id="projects">
     <div class="section-inner">
@@ -374,60 +350,48 @@
       <div class="projects-grid">
 
         <div class="project-card-home fade-up">
-          <div class="proj-icon"><i class="fa-solid fa-seedling"></i></div>
-          <div class="proj-title">Crop Prediction - Web Application using Django</div>
-          <div class="proj-desc">
-            Blockchain-secured IoT platform for real-time crop monitoring with sensor data analytics.
-          </div>
+          <div class="proj-icon"><i data-lucide="sprout"></i></div>
+          <div class="proj-title">Crop Prediction — Web Application using Django</div>
+          <div class="proj-desc">Blockchain-secured IoT platform for real-time crop monitoring with sensor data analytics.</div>
           <div class="proj-tags">
             <span class="tag">IoT</span>
             <span class="tag">HTML/CSS</span>
             <span class="tag">Python</span>
           </div>
           <div class="pub-meta">
-            <a href="https://github.com/nsakibsizan/Crop-Prediction-Web-Application---Django" target="_blank">GitHub
-              Link ↗</a>
-            <!-- <span class="pub-cite">Cited: 25</span> -->
+            <a href="https://github.com/nsakibsizan/Crop-Prediction-Web-Application---Django" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
 
         <div class="project-card-home fade-up fade-delay-1">
-          <div class="proj-icon"><i class="fa-solid fa-comments"></i></div>
+          <div class="proj-icon"><i data-lucide="line-chart"></i></div>
           <div class="proj-title">Harvesting the Future: Predicting Optimal Crops with Machine Learning</div>
-          <div class="proj-desc">
-            Blockchain-secured IoT platform for real-time crop monitoring with sensor data analytics.
-          </div>
+          <div class="proj-desc">ML-driven crop recommendation using classification models on agricultural datasets.</div>
           <div class="proj-tags">
             <span class="tag">Python</span>
+            <span class="tag">ML</span>
           </div>
           <div class="pub-meta">
-            <a href="https://github.com/nsakibsizan/ML_Assignment" target="_blank">GitHub
-              Link ↗</a>
-            <!-- <span class="pub-cite">Cited: 25</span> -->
+            <a href="https://github.com/nsakibsizan/ML_Assignment" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
 
         <div class="project-card-home fade-up fade-delay-2">
-          <div class="proj-icon"><i class="fa-solid fa-chart-bar"></i></div>
-          <div class="proj-title">Building an Intelligent Defense: Machine Learning for Credit Card Fraud Detection
-          </div>
-          <div class="proj-desc">
-            Multi-model Fraud Detection for Credit Card using Machine Learning models.
-          </div>
+          <div class="proj-icon"><i data-lucide="shield-check"></i></div>
+          <div class="proj-title">Building an Intelligent Defense: ML for Credit Card Fraud Detection</div>
+          <div class="proj-desc">Multi-model fraud detection for credit card transactions using Machine Learning.</div>
           <div class="proj-tags">
             <span class="tag">ML</span>
             <span class="tag">TensorFlow</span>
           </div>
           <div class="pub-meta">
-            <a href="https://github.com/nsakibsizan/ML_Assignment" target="_blank">GitHub
-              Link ↗</a>
-            <!-- <span class="pub-cite">Cited: 25</span> -->
+            <a href="https://github.com/nsakibsizan/ML_Assignment" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
 
       </div>
       <div style="margin-top:2.5rem;text-align:center;" class="fade-up">
-        <a href="projects.html" class="btn-primary">View All Projects →</a>
+        <a href="project.html" class="btn-primary">View All Projects →</a>
       </div>
     </div>
   </section>
@@ -443,25 +407,19 @@
         <div class="blog-card-home fade-up">
           <div class="blog-date">Dec 2024</div>
           <div class="blog-title-home">Understanding Transformer Architecture from Scratch</div>
-          <div class="blog-excerpt">
-            A beginner-friendly deep dive into the attention mechanism that powers modern NLP models.
-          </div>
+          <div class="blog-excerpt">A beginner-friendly deep dive into the attention mechanism that powers modern NLP models.</div>
         </div>
 
         <div class="blog-card-home fade-up fade-delay-1">
           <div class="blog-date">Nov 2024</div>
           <div class="blog-title-home">Blockchain for IoT: Why It Matters</div>
-          <div class="blog-excerpt">
-            How decentralized ledgers can solve trust and security challenges in IoT ecosystems.
-          </div>
+          <div class="blog-excerpt">How decentralized ledgers can solve trust and security challenges in IoT ecosystems.</div>
         </div>
 
         <div class="blog-card-home fade-up fade-delay-2">
           <div class="blog-date">Oct 2024</div>
           <div class="blog-title-home">My Research Workflow: Tools &amp; Tips</div>
-          <div class="blog-excerpt">
-            A practical guide on how I manage literature reviews, experiments, and paper writing.
-          </div>
+          <div class="blog-excerpt">A practical guide on how I manage literature reviews, experiments, and paper writing.</div>
         </div>
 
       </div>
@@ -479,51 +437,45 @@
       <div class="divider fade-up"></div>
       <div class="contact-row">
         <div class="contact-info fade-up">
-          <p>
-            Interested in collaboration, research opportunities, or just want to say hello?
-            Feel free to reach out — I'd love to connect.
-          </p>
+          <p>Interested in collaboration, research opportunities, or just want to say hello? Feel free to reach out — I'd love to connect.</p>
           <div class="contact-links">
-
             <div class="contact-link-item">
-              <span class="contact-icon">
-                <i class="fa-solid fa-envelope"></i>
-              </span>
-              nsakibsizan115@gmail.com
+              <span class="contact-icon"><i data-lucide="mail"></i></span>
+              <a href="mailto:nsakibsizan115@gmail.com">nsakibsizan115@gmail.com</a>
             </div>
-
             <div class="contact-link-item">
-              <span class="contact-icon">
-                <i class="fa-solid fa-location-dot"></i>
-              </span>
+              <span class="contact-icon"><i data-lucide="map-pin"></i></span>
               Dhaka, Bangladesh
             </div>
-
             <div class="contact-link-item">
-              <span class="contact-icon">
-                <i class="fa-solid fa-graduation-cap"></i>
-              </span>
-              <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank">
-                Google Scholar Profile
-              </a>
+              <span class="contact-icon"><i data-lucide="graduation-cap"></i></span>
+              <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar Profile</a>
             </div>
-
             <div class="contact-link-item">
-              <span class="contact-icon">
-                <i class="fa-brands fa-github"></i>
-              </span>
-              <a href="https://github.com/nsakibsizan" target="_blank">
-                GitHub @nsakibsizan
-              </a>
+              <span class="contact-icon"><i data-lucide="github"></i></span>
+              <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer">GitHub @nsakibsizan</a>
             </div>
-
           </div>
         </div>
-        <form class="contact-form fade-up fade-delay-2">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Your Message..." required></textarea>
+
+        <!-- Formspree: replace YOUR_FORM_ID with your endpoint -->
+        <form class="contact-form fade-up fade-delay-2" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label class="visually-hidden" for="cf-name">Your Name</label>
+          <input id="cf-name" name="name" type="text" placeholder="Your Name" required autocomplete="name" />
+
+          <label class="visually-hidden" for="cf-email">Your Email</label>
+          <input id="cf-email" name="email" type="email" placeholder="Your Email" required autocomplete="email" />
+
+          <label class="visually-hidden" for="cf-subject">Subject</label>
+          <input id="cf-subject" name="subject" type="text" placeholder="Subject" />
+
+          <label class="visually-hidden" for="cf-message">Your Message</label>
+          <textarea id="cf-message" name="message" placeholder="Your Message..." required></textarea>
+
+          <!-- Honeypot (spam trap — hidden from users) -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+                 style="position:absolute;left:-9999px;" aria-hidden="true" />
+
           <button type="submit" class="btn-primary">Send Message →</button>
         </form>
       </div>
@@ -532,44 +484,34 @@
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
-    <div class="footer-logo"><a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+    <div class="footer-logo">
+      <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
         <span class="logo-text">Sakib Sizan</span>
-      </a></div>
-
-    <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
-    <div class="footer-socials">
-      <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
-        title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-      <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub"><i
-          class="fa-brands fa-github"></i></a>
-      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
-          class="fa-solid fa-envelope"></i></a>
+      </a>
     </div>
-    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i> Back
-      to top</div>
+
+    <div class="footer-copy">© <span id="year">2025</span> Najmus Sakib Sizan · All rights reserved.</div>
+
+    <div class="footer-socials">
+      <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" rel="noopener noreferrer" class="footer-social" title="Google Scholar" aria-label="Google Scholar"><i data-lucide="graduation-cap"></i></a>
+      <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer" class="footer-social" title="GitHub" aria-label="GitHub"><i data-lucide="github"></i></a>
+      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email" aria-label="Email"><i data-lucide="mail"></i></a>
+    </div>
+
+    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <i data-lucide="arrow-up"></i> Back to top
+    </div>
   </footer>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
+    // Render all Lucide icons
     lucide.createIcons();
+    // Auto-update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-  <script>
-    const fadeUps = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('appeared');
-        }
-      });
-    });
-    fadeUps.forEach(el => observer.observe(el));
-  </script>
-
-
-
 
 </body>
 

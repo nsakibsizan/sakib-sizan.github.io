@@ -1,77 +1,98 @@
 /* ══════════════════════════════════════════════════════════════
    MAIN.JS — Global JavaScript for All Pages
    Najmus Sakib Sizan · Portfolio
+   Production build — de-duplicated, crash-safe, strict mode
    ══════════════════════════════════════════════════════════════ */
 
-/* ── LOADER ── */
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
-    }, 1200);
-});
+(() => {
+    'use strict';
 
+    /* ── Utility: safe query helpers ── */
+    const $  = (sel, ctx = document) => ctx.querySelector(sel);
+    const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
-/* ══════════════════════════════════════════════════════════════
-   SCROLL PROGRESS BAR & NAVBAR
-   ══════════════════════════════════════════════════════════════ */
-window.addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const pct = (window.scrollY / (h.scrollHeight - h.clientHeight)) * 100;
-    document.getElementById('progress-bar').style.width = pct + '%';
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 30);
-});
+    /* ══════════════════════════════════════════════════════════
+       LOADER
+       ══════════════════════════════════════════════════════════ */
+    window.addEventListener('load', () => {
+        const loader = $('#loader');
+        if (loader) {
+            setTimeout(() => loader.classList.add('hidden'), 1200);
+        }
+    });
 
+    /* ══════════════════════════════════════════════════════════
+       SCROLL PROGRESS BAR & NAVBAR  (single listener)
+       ══════════════════════════════════════════════════════════ */
+    const progressBar = $('#progress-bar');
+    const navbar      = $('#navbar');
 
-/* ══════════════════════════════════════════════════════════════
-   INTERSECTION OBSERVER — FADE-UP ANIMATIONS
-   ══════════════════════════════════════════════════════════════ */
-const fadeObserver = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    },
-    { threshold: 0.1 }
-);
+    const onScroll = () => {
+        const h = document.documentElement;
+        const scrollable = h.scrollHeight - h.clientHeight;
+        const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
 
-document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+        if (progressBar) progressBar.style.width = pct + '%';
+        if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 30);
+    };
 
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // set initial state
 
-/* ══════════════════════════════════════════════════════════════
-   MOBILE MENU
-   ══════════════════════════════════════════════════════════════ */
-function openMenu() {
-    document.getElementById('mobile-menu').classList.add('open');
-}
+    /* ══════════════════════════════════════════════════════════
+       FADE-UP ANIMATIONS  (single observer · class: 'visible')
+       ══════════════════════════════════════════════════════════ */
+    const fadeEls = $$('.fade-up');
+    if (fadeEls.length) {
+        const fadeObserver = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target); // animate once
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+        fadeEls.forEach(el => fadeObserver.observe(el));
+    }
 
-function closeMenu() {
-    document.getElementById('mobile-menu').classList.remove('open');
-}
+    /* ══════════════════════════════════════════════════════════
+       MOBILE MENU  (exposed to window for inline onclick)
+       ══════════════════════════════════════════════════════════ */
+    const mobileMenu = $('#mobile-menu');
 
+    window.openMenu  = () => mobileMenu && mobileMenu.classList.add('open');
+    window.closeMenu = () => mobileMenu && mobileMenu.classList.remove('open');
 
-/* ══════════════════════════════════════════════════════════════
-   COUNTER ANIMATION (Research Page — Stats)
-   Only runs if elements with [data-count] exist
-   ══════════════════════════════════════════════════════════════ */
-const countElements = document.querySelectorAll('[data-count]');
+    // Close mobile menu on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+        }
+    });
 
-if (countElements.length > 0) {
-    const countObserver = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const target = +el.dataset.count;
-                    const suffix = el.dataset.suffix || '';
+    /* ══════════════════════════════════════════════════════════
+       COUNTER ANIMATION  ([data-count])
+       ══════════════════════════════════════════════════════════ */
+    const countElements = $$('[data-count]');
+    if (countElements.length) {
+        const countObserver = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+
+                    const el       = entry.target;
+                    const target   = Number(el.dataset.count) || 0;
+                    const suffix   = el.dataset.suffix || '';
                     const duration = 1200;
-                    const totalSteps = 60;
-                    const stepTime = duration / totalSteps;
-                    let current = 0;
+                    const steps    = 60;
+                    const stepTime = duration / steps;
+                    let current    = 0;
 
                     const timer = setInterval(() => {
-                        current += target / totalSteps;
+                        current += target / steps;
                         if (current >= target) {
                             current = target;
                             clearInterval(timer);
@@ -79,343 +100,265 @@ if (countElements.length > 0) {
                         el.textContent = Math.round(current) + suffix;
                     }, stepTime);
 
-                    countObserver.unobserve(el);
+                    obs.unobserve(el);
+                });
+            },
+            { threshold: 0.5 }
+        );
+        countElements.forEach(el => countObserver.observe(el));
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       GENERIC FILTER SYSTEM
+       Works for: Skills, Publications, Projects, Blog
+       ══════════════════════════════════════════════════════════ */
+    function initFilter(btnSelector, itemSelector, btnAttr, itemAttr, countElId = null) {
+        const buttons = $$(btnSelector);
+        const items   = $$(itemSelector);
+        if (!buttons.length || !items.length) return;
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.dataset[btnAttr];
+                let count = 0;
+
+                items.forEach(item => {
+                    const show = filterValue === 'all' || item.dataset[itemAttr] === filterValue;
+
+                    if (item.classList.contains('skill-tag')) {
+                        // Tags use inline display
+                        item.style.display = show ? 'inline-flex' : 'none';
+                    } else {
+                        // Cards use the 'visible' class
+                        item.classList.toggle('visible', show);
+                    }
+                    if (show) count++;
+                });
+
+                if (countElId) {
+                    const countEl = document.getElementById(countElId);
+                    if (countEl) {
+                        countEl.textContent =
+                            `Showing ${count} paper${count !== 1 ? 's' : ''}`;
+                    }
                 }
             });
-        },
-        { threshold: 0.5 }
-    );
+        });
+    }
 
-    countElements.forEach(el => countObserver.observe(el));
-}
+    // Index: Skills
+    initFilter('#skillFilter button', '.skill-tag', 'filter', 'cat');
+    // Index & Research: Publications
+    initFilter('.pub-filter', '.pub-card', 'type', 'type', 'pubCount');
+    // Projects
+    initFilter('.proj-filter', '.project-card', 'cat', 'cat');
+    // Blog
+    initFilter('.blog-filter', '.blog-card', 'cat', 'cat');
 
+    /* ══════════════════════════════════════════════════════════
+       TYPING ANIMATION  (#typed — Index hero)
+       ══════════════════════════════════════════════════════════ */
+    const typedEl = $('#typed');
+    if (typedEl) {
+        const roles = [
+            'PDM Data Migration Engineer',
+            'AI & Machine Learning Engineer',
+            'Blockchain & PQC Researcher'
+        ];
+        let roleIndex = 0, charIndex = 0, isDeleting = false;
 
-/* ══════════════════════════════════════════════════════════════
-   FILTER SYSTEM — Generic Reusable
-   Works for: Skills, Publications, Projects, Blog
-   ══════════════════════════════════════════════════════════════ */
+        const typeRole = () => {
+            const current = roles[roleIndex];
+            charIndex += isDeleting ? -1 : 1;
+            typedEl.textContent = current.substring(0, charIndex);
 
-/**
- * initFilter()
- * @param {string} btnSelector   — CSS selector for filter buttons
- * @param {string} itemSelector  — CSS selector for filterable items
- * @param {string} btnAttr       — data attribute on button (e.g. 'filter', 'type', 'cat')
- * @param {string} itemAttr      — data attribute on item to match against
- * @param {string|null} countElId — optional: ID of element to show count
- */
-function initFilter(btnSelector, itemSelector, btnAttr, itemAttr, countElId = null) {
-    const buttons = document.querySelectorAll(btnSelector);
-    const items = document.querySelectorAll(itemSelector);
+            let speed = isDeleting ? 40 : 80;
 
-    if (buttons.length === 0 || items.length === 0) return;
+            if (!isDeleting && charIndex === current.length) {
+                speed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                speed = 400;
+            }
+            setTimeout(typeRole, speed);
+        };
+        typeRole();
+    }
 
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Update active button
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    /* ══════════════════════════════════════════════════════════
+       PARTICLE CANVAS  (#particleCanvas — Index hero)
+       ══════════════════════════════════════════════════════════ */
+    const particleCanvas = $('#particleCanvas');
+    if (particleCanvas) {
+        const ctx = particleCanvas.getContext('2d');
+        let particles = [];
 
-            const filterValue = btn.dataset[btnAttr];
-            let count = 0;
+        const resizeCanvas = () => {
+            particleCanvas.width  = window.innerWidth;
+            particleCanvas.height = window.innerHeight;
+        };
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas, { passive: true });
 
-            items.forEach(item => {
-                const show = filterValue === 'all' || item.dataset[itemAttr] === filterValue;
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * particleCanvas.width;
+                this.y = Math.random() * particleCanvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > particleCanvas.width)  this.speedX *= -1;
+                if (this.y < 0 || this.y > particleCanvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0,201,167,${this.opacity})`;
+                ctx.fill();
+            }
+        }
 
-                // Use 'visible' class for cards, 'display' for tags
-                if (item.classList.contains('skill-tag')) {
-                    item.style.display = show ? 'inline-flex' : 'none';
+        const particleCount = Math.min(80, Math.floor(window.innerWidth / 15));
+        for (let i = 0; i < particleCount; i++) particles.push(new Particle());
+
+        const animateParticles = () => {
+            ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.hypot(dx, dy);
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = `rgba(0,201,167,${0.08 * (1 - dist / 120)})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        };
+        animateParticles();
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       GALLERY  (only runs on gallery.html — fully guarded)
+       ══════════════════════════════════════════════════════════ */
+    const lightbox = $('#lightbox');
+    const photoItems = $$('.photo-item');
+
+    if (photoItems.length) {
+        const filterBtns = $$('.gal-filter-btn');
+        const yearGroups = $$('.year-group');
+        const emptyState = $('#galleryEmpty');
+
+        // Filter
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                let visibleCount = 0;
+
+                photoItems.forEach(item => {
+                    const show = f === 'all' || item.dataset.cat === f;
+                    item.style.display = show ? '' : 'none';
+                    if (show) visibleCount++;
+                });
+                yearGroups.forEach(group => {
+                    const cats = group.dataset.categories
+                        ? group.dataset.categories.split(',') : [];
+                    group.classList.toggle('hidden', !(f === 'all' || cats.includes(f)));
+                });
+                if (emptyState) emptyState.classList.toggle('visible', visibleCount === 0);
+            });
+        });
+
+        // Lightbox (only if the lightbox markup exists)
+        if (lightbox) {
+            const lightboxImg   = $('#lightboxImg');
+            const lightboxTitle = $('#lightboxTitle');
+            const lightboxTag   = $('#lightboxTag');
+            const btnClose      = $('#lightboxClose');
+            const btnPrev       = $('#lightboxPrev');
+            const btnNext       = $('#lightboxNext');
+
+            let currentIdx = 0;
+            let visibleItems = [];
+
+            const showSlide = (idx) => {
+                const item = visibleItems[idx];
+                if (!item) return;
+                const svg = item.querySelector('svg');
+                if (svg) {
+                    const svgData = new XMLSerializer().serializeToString(svg);
+                    lightboxImg.src = 'data:image/svg+xml;base64,' + btoa(svgData);
                 } else {
-                    item.classList.toggle('visible', show);
+                    const img = item.querySelector('img');
+                    if (img) lightboxImg.src = img.src;
                 }
+                if (lightboxTitle) lightboxTitle.textContent = item.dataset.title || '';
+                if (lightboxTag && item.dataset.cat) {
+                    lightboxTag.textContent =
+                        item.dataset.cat.charAt(0).toUpperCase() + item.dataset.cat.slice(1);
+                }
+            };
 
-                if (show) count++;
+            const openLightbox = (item) => {
+                visibleItems = photoItems.filter(i => i.style.display !== 'none');
+                currentIdx = visibleItems.indexOf(item);
+                showSlide(currentIdx);
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            };
+
+            const prev = () => {
+                currentIdx = (currentIdx - 1 + visibleItems.length) % visibleItems.length;
+                showSlide(currentIdx);
+            };
+            const next = () => {
+                currentIdx = (currentIdx + 1) % visibleItems.length;
+                showSlide(currentIdx);
+            };
+
+            photoItems.forEach(item =>
+                item.addEventListener('click', () => openLightbox(item)));
+
+            if (btnClose) btnClose.addEventListener('click', closeLightbox);
+            if (btnPrev)  btnPrev.addEventListener('click', e => { e.stopPropagation(); prev(); });
+            if (btnNext)  btnNext.addEventListener('click', e => { e.stopPropagation(); next(); });
+
+            lightbox.addEventListener('click', e => {
+                if (e.target === lightbox) closeLightbox();
             });
 
-            // Update count display if provided
-            if (countElId) {
-                const countEl = document.getElementById(countElId);
-                if (countEl) {
-                    countEl.textContent = `Showing ${count} paper${count !== 1 ? 's' : ''}`;
-                }
-            }
-        });
-    });
-}
-
-
-/* ── INDEX PAGE: Skills Filter ── */
-initFilter(
-    '#skillFilter button',
-    '.skill-tag',
-    'filter',
-    'cat'
-);
-
-/* ── INDEX PAGE: Publication Filter ── */
-initFilter(
-    '.pub-filter',
-    '.pub-card',
-    'type',
-    'type'
-);
-
-/* ── RESEARCH PAGE: Publication Filter ── */
-initFilter(
-    '.pub-filter',
-    '.pub-card',
-    'type',
-    'type',
-    'pubCount'
-);
-
-/* ── PROJECTS PAGE: Project Filter ── */
-initFilter(
-    '.proj-filter',
-    '.project-card',
-    'cat',
-    'cat'
-);
-
-/* ── BLOG PAGE: Blog Filter ── */
-initFilter(
-    '.blog-filter',
-    '.blog-card',
-    'cat',
-    'cat'
-);
-
-
-/* ══════════════════════════════════════════════════════════════
-   TYPING ANIMATION (Index Page Hero)
-   Only runs if #typed element exists
-   ══════════════════════════════════════════════════════════════ */
-const typedEl = document.getElementById('typed');
-
-if (typedEl) {
-    const roles = [
-        'PDM Data Migration Engineer',
-        'AI & Machine Learning Engineer',
-        'Blockchain & PQC Researcher'
-    ];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeRole() {
-        const current = roles[roleIndex];
-
-        if (isDeleting) {
-            typedEl.textContent = current.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typedEl.textContent = current.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        let speed = isDeleting ? 40 : 80;
-
-        if (!isDeleting && charIndex === current.length) {
-            speed = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            speed = 400; // Pause before next word
-        }
-
-        setTimeout(typeRole, speed);
-    }
-
-    typeRole();
-}
-
-
-/* ══════════════════════════════════════════════════════════════
-   INDEX PAGE: PARTICLE CANVAS
-   Only runs if #particleCanvas exists
-   ══════════════════════════════════════════════════════════════ */
-const particleCanvas = document.getElementById('particleCanvas');
-
-if (particleCanvas) {
-    const ctx = particleCanvas.getContext('2d');
-    let particles = [];
-
-    function resizeCanvas() {
-        particleCanvas.width = window.innerWidth;
-        particleCanvas.height = window.innerHeight;
-    }
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    class Particle {
-        constructor() {
-            this.reset();
-        }
-
-        reset() {
-            this.x = Math.random() * particleCanvas.width;
-            this.y = Math.random() * particleCanvas.height;
-            this.size = Math.random() * 2 + 0.5;
-            this.speedX = (Math.random() - 0.5) * 0.5;
-            this.speedY = (Math.random() - 0.5) * 0.5;
-            this.opacity = Math.random() * 0.5 + 0.1;
-        }
-
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-
-            if (this.x < 0 || this.x > particleCanvas.width) this.speedX *= -1;
-            if (this.y < 0 || this.y > particleCanvas.height) this.speedY *= -1;
-        }
-
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(0,201,167,${this.opacity})`;
-            ctx.fill();
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('open')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft')  prev();
+                if (e.key === 'ArrowRight') next();
+            });
         }
     }
 
-    // Create particles
-    const particleCount = Math.min(80, Math.floor(window.innerWidth / 15));
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
-
-    function animateParticles() {
-        ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
-
-        particles.forEach(p => {
-            p.update();
-            p.draw();
-        });
-
-        // Draw connections
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-
-                if (dist < 120) {
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(0,201,167,${0.08 * (1 - dist / 120)})`;
-                    ctx.lineWidth = 0.5;
-                    ctx.stroke();
-                }
-            }
-        }
-
-        requestAnimationFrame(animateParticles);
-    }
-
-    animateParticles();
-}
-
-
-// Navbar scroll
-window.addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const pct = (window.scrollY / (h.scrollHeight - h.clientHeight)) * 100;
-    document.getElementById('progress-bar').style.width = pct + '%';
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 30);
-});
-
-// Mobile menu
-function openMenu() { document.getElementById('mobile-menu').classList.add('open'); }
-function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
-
-// Fade-up observer
-const fadeObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('appeared'); });
-});
-document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
-
-// FILTER
-const filterBtns = document.querySelectorAll('.gal-filter-btn');
-const photoItems = document.querySelectorAll('.photo-item');
-const yearGroups = document.querySelectorAll('.year-group');
-const emptyState = document.getElementById('galleryEmpty');
-
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const f = btn.dataset.filter;
-        let visibleCount = 0;
-        photoItems.forEach(item => {
-            const show = f === 'all' || item.dataset.cat === f;
-            item.style.display = show ? '' : 'none';
-            if (show) visibleCount++;
-        });
-        yearGroups.forEach(group => {
-            const cats = group.dataset.categories ? group.dataset.categories.split(',') : [];
-            const show = f === 'all' || cats.includes(f);
-            group.classList.toggle('hidden', !show);
-        });
-        emptyState.classList.toggle('visible', visibleCount === 0);
-    });
-});
-
-// LIGHTBOX
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const lightboxTitle = document.getElementById('lightboxTitle');
-const lightboxTag = document.getElementById('lightboxTag');
-let currentIdx = 0;
-let visibleItems = [];
-
-function openLightbox(item) {
-    visibleItems = [...photoItems].filter(i => i.style.display !== 'none');
-    currentIdx = visibleItems.indexOf(item);
-    showSlide(currentIdx);
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-}
-
-function showSlide(idx) {
-    const item = visibleItems[idx];
-    // For real images, use item.querySelector('img').src
-    // For SVG placeholders, use a data URL
-    const svg = item.querySelector('svg');
-    if (svg) {
-        const svgData = new XMLSerializer().serializeToString(svg);
-        lightboxImg.src = 'data:image/svg+xml;base64,' + btoa(svgData);
-    } else {
-        lightboxImg.src = item.querySelector('img').src;
-    }
-    lightboxTitle.textContent = item.dataset.title;
-    lightboxTag.textContent = item.dataset.cat.charAt(0).toUpperCase() + item.dataset.cat.slice(1);
-}
-
-photoItems.forEach(item => {
-    item.addEventListener('click', () => openLightbox(item));
-});
-
-document.getElementById('lightboxClose').addEventListener('click', () => {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-});
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
-});
-document.getElementById('lightboxPrev').addEventListener('click', (e) => {
-    e.stopPropagation();
-    currentIdx = (currentIdx - 1 + visibleItems.length) % visibleItems.length;
-    showSlide(currentIdx);
-});
-document.getElementById('lightboxNext').addEventListener('click', (e) => {
-    e.stopPropagation();
-    currentIdx = (currentIdx + 1) % visibleItems.length;
-    showSlide(currentIdx);
-});
-document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
-    if (e.key === 'ArrowLeft') { currentIdx = (currentIdx - 1 + visibleItems.length) % visibleItems.length; showSlide(currentIdx); }
-    if (e.key === 'ArrowRight') { currentIdx = (currentIdx + 1) % visibleItems.length; showSlide(currentIdx); }
-});
+})();
