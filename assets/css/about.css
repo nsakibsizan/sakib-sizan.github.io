@@ -52,19 +52,19 @@
 .profile-name {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 22px;
+  font-size: 25px;
   margin-bottom: 4px;
 }
 
 .profile-role {
   font-family: var(--font-mono);
-  font-size: 15px;
+  font-size: 18px;
   color: var(--teal);
   margin-bottom: 2.4px;
 }
 
 .profile-company {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--gray2);
   margin-bottom: 20px;
 }
@@ -86,14 +86,14 @@
 .profile-stat-num {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 20px;
+  font-size: 26px;
   color: var(--teal);
   line-height: 1;
   margin-bottom: 4px;
 }
 
 .profile-stat-label {
-  font-size: 12.5px;
+  font-size: 15.5px;
   color: var(--gray2);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -108,12 +108,13 @@
 
 .profile-link-btn {
   font-family: var(--font-mono);
-  font-size: 13.5px;
+  font-size: 15.5px;
   padding: 6px 14px;
   border: 1px solid var(--gray4);
   border-radius: var(--radius-sm);
   color: var(--gray2);
   transition: all var(--transition);
+  font-weight: 600;
 }
 
 .profile-link-btn:hover {
@@ -144,7 +145,7 @@
   color: var(--gray1);
   line-height: 1.85;
   margin-bottom: 19.2px;
-  font-size: 15.52px;
+  font-size: 18px;
 }
 
 .about-text p strong {
@@ -169,7 +170,7 @@
 
 .highlight-box p {
   margin: 0;
-  font-size: 14.4px;
+  font-size: 18px;
   color: var(--gray1);
   font-style: italic;
   line-height: 1.7;
@@ -218,7 +219,7 @@
 
 .info-label {
   font-family: var(--font-mono);
-  font-size: 11.2px;
+  font-size: 14px;
   color: var(--gray3);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -226,7 +227,7 @@
 }
 
 .info-value {
-  font-size: 13.12px;
+  font-size: 16px;
   color: var(--gray1);
   text-align: right;
 }
@@ -258,7 +259,7 @@
 
 .ri-number {
   font-family: var(--font-mono);
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 800;
   color: var(--teal);
   opacity: 0.15;
@@ -277,15 +278,14 @@
 .ri-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 15.2px;
+  font-size: 20px;
   margin-bottom: 8px;
   color: var(--white);
   position: relative;
-  
 }
 
 .ri-desc {
-  font-size: 12.48px;
+  font-size: 16px;
   color: var(--gray2);
   line-height: 1.65;
   position: relative;
@@ -340,12 +340,12 @@
 .what-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 6.4px;
 }
 
 .what-desc {
-  font-size: 12.8px;
+  font-size: 16px;
   color: var(--gray2);
   line-height: 1.65;
 }
@@ -363,7 +363,7 @@
 .skills-filter button {
   padding: 6px 16px;
   font-family: var(--font-mono);
-  font-size: 12.48px;
+  font-size: 18px;
   font-weight: 500;
   border: 1px solid var(--gray4);
   border-radius: var(--radius-sm);
@@ -390,7 +390,7 @@
 
 .skills-grid .skill-tag {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 15px;
   padding: 8px 16px;
   border-radius: var(--radius-sm);
   background: var(--card-bg);
@@ -452,7 +452,7 @@
 
 .tool-item span {
   font-family: var(--font-mono);
-  font-size: 11.2px;
+  font-size: 16px;
   color: var(--gray2);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -522,7 +522,7 @@
 .exp-date,
 .edu-date {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 16px;
   color: var(--teal);
   margin-bottom: 6.4px;
   letter-spacing: 0.04em;
@@ -532,13 +532,13 @@
 .edu-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 14.72px;
+  font-size: 20px;
   margin-bottom: 3.2px;
 }
 
 .exp-company,
 .edu-institution {
-  font-size: 12.8px;
+  font-size: 16px;
   color: var(--gray2);
   margin-bottom: 3.2px;
 }
@@ -552,7 +552,7 @@
 
 .edu-detail {
   font-family: var(--font-mono);
-  font-size: 11.52px;
+  font-size: 15px;
   color: var(--teal);
   margin-bottom: 4px;
 }
@@ -594,13 +594,13 @@
 .cert-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 6.4px;
   line-height: 1.35;
 }
 
 .cert-issuer {
-  font-size: 11.8px;
+  font-size: 15px;
   color: var(--gray2);
   margin-bottom: 4.8px;
   line-height: 1.4;
@@ -608,7 +608,7 @@
 
 .cert-date {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 14px;
   color: var(--teal);
 }
 
@@ -652,12 +652,12 @@
 .achieve-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 14.5px;
+  font-size: 20px;
   margin-bottom: 3.2px;
 }
 
 .achieve-sub {
-  font-size: 12.2px;
+  font-size: 16px;
   color: var(--gray2);
   line-height: 1.4;
 }
@@ -702,7 +702,7 @@
 }
 
 .testimonial-quote {
-  font-size: 13.12px;
+  font-size: 20px;
   color: var(--gray1);
   line-height: 1.75;
   font-style: italic;
@@ -739,13 +739,13 @@
 .testimonial-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 13.6px;
+  font-size: 17px;
   color: var(--white);
 }
 
 .testimonial-role {
   font-family: var(--font-mono);
-  font-size: 10.8px;
+  font-size: 14px;
   color: var(--teal);
   letter-spacing: 0.04em;
 }
@@ -793,7 +793,7 @@
 }
 
 .funfact-text {
-  font-size: 13.12px;
+  font-size: 20px;
   color: var(--gray1);
   line-height: 1.6;
 }
@@ -814,7 +814,7 @@
    CTA SECTION
    ══════════════════════════════════════════════════════════════ */
 .cta-desc {
-  font-size: 14.72px;
+  font-size: 20px;
   color: var(--gray1);
   line-height: 1.75;
   max-width: 600px;
