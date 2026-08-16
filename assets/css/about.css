@@ -512,6 +512,12 @@
   transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
+.exp-card.active,
+.edu-card.active {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-glow);
+}
+
 .exp-card:hover,
 .edu-card:hover {
   border-color: var(--teal);

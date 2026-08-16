@@ -602,18 +602,22 @@
   </section>
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
+  <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
     <div class="footer-logo">
       <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
         <span class="logo-text">Sakib Sizan</span>
       </a>
     </div>
+
     <div class="footer-copy">© <span id="year">2025</span> Najmus Sakib Sizan · All rights reserved.</div>
+
     <div class="footer-socials">
       <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" rel="noopener noreferrer" class="footer-social" title="Google Scholar" aria-label="Google Scholar"><i data-lucide="graduation-cap"></i></a>
-      <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer" class="footer-social" title="GitHub" aria-label="GitHub"><i data-lucide="github"></i></a>
+      <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer" class="footer-social" title="GitHub" aria-label="GitHub"><i data-lucide="GitCompareArrows"></i></a>
       <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email" aria-label="Email"><i data-lucide="mail"></i></a>
     </div>
+
     <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
       <i data-lucide="arrow-up"></i> Back to top
     </div>
@@ -623,24 +627,12 @@
   <script src="assets/js/main.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
+    // Render all Lucide icons
     lucide.createIcons();
+    // Auto-update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Animate citation chart bars when they scroll into view
-    (function () {
-      const bars = document.querySelectorAll('.chart-bar-fill[data-width]');
-      if (!bars.length) return;
-      const obs = new IntersectionObserver((entries, o) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.style.width = e.target.dataset.width + '%';
-            o.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.3 });
-      bars.forEach(b => { b.style.width = '0%'; obs.observe(b); });
-    })();
   </script>
+
 
 </body>
 
