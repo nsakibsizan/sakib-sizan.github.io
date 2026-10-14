@@ -22,11 +22,12 @@
 
 .project-stats-title {
     font-family: var(--font-mono);
-    font-size: 10.4px;
+    font-size: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--teal);
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .project-stats-grid {
@@ -46,22 +47,22 @@
 .project-stat-num {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: 20.8px;
+    font-size: 36px;
     color: var(--teal);
     line-height: 1;
     margin-bottom: 3.2px;
 }
 
 .project-stat-label {
-    font-size: 9.6px;
-    color: var(--gray3);
+    font-size: 15px;
+    color: var(--gray2);
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
 
 .project-stats-link {
     font-family: var(--font-mono);
-    font-size: 11.52px;
+    font-size: 16px;
     color: var(--teal);
     border: 1px solid var(--teal);
     padding: 8px 20px;
@@ -131,7 +132,7 @@
 
 .featured-type {
     font-family: var(--font-mono);
-    font-size: 9.92px;
+    font-size: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--gray3);
@@ -184,7 +185,7 @@
 
 .proj-filter {
     padding: 6px 16px;
-    font-size: 12.48px;
+    font-size: 14px;
     font-weight: 500;
     border: 1px solid var(--gray4);
     border-radius: 3px;
@@ -271,7 +272,7 @@
 
 .project-type {
     font-family: var(--font-mono);
-    font-size: 9.92px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -282,14 +283,14 @@
 .project-title {
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 15.2px;
+    font-size: 18px;
     margin-bottom: 8px;
     color: var(--white);
     line-height: 1.35;
 }
 
 .project-desc {
-    font-size: 12.64px;
+    font-size: 14px;
     color: var(--gray3);
     line-height: 1.65;
     margin-bottom: 16px;
@@ -305,7 +306,7 @@
 
 .proj-tag {
     font-family: var(--font-mono);
-    font-size: 9.6px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.04em;
     padding: 3px 10px;
@@ -325,7 +326,7 @@
 
 .proj-link {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--gray2);
     display: flex;
@@ -350,7 +351,7 @@
 
 .tech-item {
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 16px;
     padding: 8px 18px;
     border-radius: 6px;
     background: var(--card-bg);
@@ -372,7 +373,7 @@
    ═════════════════════════════════════════════════════════════=
 */
 .cta-desc {
-    font-size: 14.72px;
+    font-size: 16px;
     color: var(--gray2);
     line-height: 1.75;
     max-width: 600px;
@@ -535,23 +536,24 @@
 
 .build-step-num {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 28px;
   color: var(--teal);
-  opacity: 0.5;
+  opacity: 0.8;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  font-weight: 900;
 }
 
 .build-step-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 13.6px;
+  font-size: 18px;
   color: var(--white);
   margin-bottom: 6px;
 }
 
 .build-step-desc {
-  font-size: 11.2px;
+  font-size: 13px;
   color: var(--gray3);
   line-height: 1.55;
 }
@@ -654,7 +656,7 @@
 .highlight-stat-num {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 32px;
+  font-size: 48px;
   color: var(--teal);
   line-height: 1;
   margin-bottom: 6px;
@@ -662,10 +664,11 @@
 
 .highlight-stat-label {
   font-family: var(--font-mono);
-  font-size: 10.4px;
+  font-size: 18px;
   color: var(--gray3);
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  font-weight: 600;
 }
 
 .highlight-divider {
@@ -761,14 +764,14 @@
 .domain-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 18px;
   color: var(--white);
   line-height: 1.35;
 }
 
 .domain-count {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 14px;
   color: var(--gray3);
   letter-spacing: 0.04em;
 }

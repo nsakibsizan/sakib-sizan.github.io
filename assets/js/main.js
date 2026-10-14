@@ -165,7 +165,7 @@
     if (typedEl) {
         const roles = [
             'PDM Data Migration Engineer',
-            'AI & Machine Learning Engineer',
+            'AI & Machine Learning Researcher',
             'Blockchain & PQC Researcher'
         ];
         let roleIndex = 0, charIndex = 0, isDeleting = false;
