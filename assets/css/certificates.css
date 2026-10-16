@@ -36,13 +36,13 @@
 
 .cert-stat-num {
     font-weight: 800;
-    font-size: 22px;
+    font-size: 48px;
     color: var(--teal);
     line-height: 1;
 }
 
 .cert-stat-label {
-    font-size: 11px;
+    font-size: 16px;
     color: var(--gray3);
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -69,7 +69,7 @@
 }
 
 .filter-label {
-    font-size: 11px;
+    font-size: 16px;
     letter-spacing: 0.12em;
     color: var(--gray3);
     text-transform: uppercase;
@@ -78,7 +78,7 @@
 }
 
 .cert-filter-btn {
-    font-size: 12px;
+    font-size: 16px;
     padding: 6px 16px;
     border: 1px solid var(--gray4);
     border-radius: 20px;
@@ -136,7 +136,7 @@
 
 .cat-title {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .cat-divider {
@@ -146,7 +146,7 @@
 }
 
 .cat-count {
-    font-size: 11px;
+    font-size: 13px;
     color: var(--gray3);
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -247,7 +247,7 @@
     border: 1px solid rgba(0, 201, 167, 0.4);
     border-radius: 4px;
     padding: 3px 8px;
-    font-size: 9px;
+    font-size: 13px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--teal);
@@ -284,7 +284,7 @@
 }
 
 .cert-issuer-name {
-    font-size: 11px;
+    font-size: 15px;
     color: var(--gray3);
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -292,7 +292,7 @@
 
 .cert-title {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.4;
     margin-bottom: 10px;
     color: var(--white);
@@ -306,7 +306,7 @@
 }
 
 .cert-date {
-    font-size: 11px;
+    font-size: 13px;
     color: var(--gray3);
     display: flex;
     align-items: center;
@@ -314,7 +314,7 @@
 }
 
 .cert-id {
-    font-size: 10px;
+    font-size: 11px;
     color: var(--gray4);
     font-family: monospace;
     letter-spacing: 0.04em;
@@ -336,7 +336,7 @@
 }
 
 .cert-skill-tag {
-    font-size: 10px;
+    font-size: 13px;
     padding: 3px 8px;
     border-radius: 3px;
     background: var(--teal-glow2);

@@ -2,68 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Contact Najmus Sakib Sizan — Reach out for research collaboration, job opportunities, speaking invites, or just a friendly hello." />
-    <title>Contact — Najmus Sakib Sizan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050d1a" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
-        rel="stylesheet" />
+  <title>Contact — Najmus Sakib Sizan</title>
+  <meta name="description"
+    content="Contact Najmus Sakib Sizan — Reach out for research collaboration, job opportunities, speaking invites, or just a friendly hello." />
+  <meta name="author" content="Najmus Sakib Sizan" />
+  <link rel="canonical" href="https://nsakibsizan.github.io/contact.html" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Contact — Najmus Sakib Sizan" />
+  <meta property="og:description"
+    content="Researcher & Software Engineer building intelligent systems at the intersection of IoT, Blockchain & ML." />
+  <meta property="og:image" content="assets/images/sizan.png" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+  <!-- Fonts (only used families) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/css/contact.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 
 <body>
 
-    <!-- SCROLL PROGRESS -->
-    <div id="progress-bar"></div>
+  <!-- SCROLL PROGRESS -->
+  <div id="progress-bar"></div>
 
-    <!-- LOADER -->
-    <div id="loader">
-        <div class="loader-text">NSS</div>
-    </div>
+  <!-- LOADER (kept off; JS guards against it) -->
+  <!-- <div id="loader"><div class="loader-text">NSS</div></div> -->
 
-    <!-- ═══════════════ NAVBAR ═══════════════ -->
-    <nav id="navbar">
-        <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
-            <span class="logo-text">Sakib Sizan</span>
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
+      <span class="logo-text">Sakib Sizan</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li>
+        <a href="cv.html" class="nav-cv">
+          <i data-lucide="download" style="width: 16px; height: 16px; margin-right: 0.45rem"></i>CV
         </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="project.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download"></i> CV</a></li>
-        </ul>
-        <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
-    </nav>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="openMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-    <!-- MOBILE MENU -->
-    <div id="mobile-menu">
-        <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
-        <a href="index.html" onclick="closeMenu()">Home</a>
-        <a href="about.html" onclick="closeMenu()">About</a>
-        <a href="research.html" onclick="closeMenu()">Research</a>
-        <a href="project.html" onclick="closeMenu()">Projects</a>
-        <a href="blog.html" onclick="closeMenu()">Blog</a>
-        <a href="contact.html" onclick="closeMenu()">Contact</a>
-    </div>
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
+      <i data-lucide="x"></i>
+    </button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="research.html" onclick="closeMenu()">Research</a>
+    <a href="project.html" onclick="closeMenu()">Projects</a>
+    <a href="certificates.html" onclick="closeMenu()">Certificates</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="blog.html" onclick="closeMenu()">Blog</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="cv.html" onclick="closeMenu()">CV</a>
+  </div>
 
     <!-- ═══════════════ PAGE HERO ═══════════════ -->
     <div class="page-hero">
@@ -398,7 +415,14 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Render all Lucide icons
+    lucide.createIcons();
+    // Auto-update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>

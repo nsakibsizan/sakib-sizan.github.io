@@ -260,18 +260,18 @@
        GALLERY  (only runs on gallery.html — fully guarded)
        ══════════════════════════════════════════════════════════ */
     const lightbox = $('#lightbox');
-    const photoItems = $$('.photo-item');
+    const photoItems = $$('.gallery_photo-item');
 
     if (photoItems.length) {
-        const filterBtns = $$('.gal-filter-btn');
-        const yearGroups = $$('.year-group');
+        const filterBtns = $$('.gallery_gal-filter-btn');
+        const yearGroups = $$('.gallery_year-group');
         const emptyState = $('#galleryEmpty');
 
         // Filter
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+                filterBtns.forEach(b => b.classList.remove('gallery_active'));
+                btn.classList.add('gallery_active');
                 const f = btn.dataset.filter;
                 let visibleCount = 0;
 
@@ -283,9 +283,9 @@
                 yearGroups.forEach(group => {
                     const cats = group.dataset.categories
                         ? group.dataset.categories.split(',') : [];
-                    group.classList.toggle('hidden', !(f === 'all' || cats.includes(f)));
+                    group.classList.toggle('gallery_hidden', !(f === 'all' || cats.includes(f)));
                 });
-                if (emptyState) emptyState.classList.toggle('visible', visibleCount === 0);
+                if (emptyState) emptyState.classList.toggle('gallery_visible', visibleCount === 0);
             });
         });
 
@@ -323,12 +323,12 @@
                 visibleItems = photoItems.filter(i => i.style.display !== 'none');
                 currentIdx = visibleItems.indexOf(item);
                 showSlide(currentIdx);
-                lightbox.classList.add('open');
+                lightbox.classList.add('gallery_open');
                 document.body.style.overflow = 'hidden';
             };
 
             const closeLightbox = () => {
-                lightbox.classList.remove('open');
+                lightbox.classList.remove('gallery_open');
                 document.body.style.overflow = '';
             };
 
@@ -353,7 +353,7 @@
             });
 
             document.addEventListener('keydown', (e) => {
-                if (!lightbox.classList.contains('open')) return;
+                if (!lightbox.classList.contains('gallery_open')) return;
                 if (e.key === 'Escape') closeLightbox();
                 if (e.key === 'ArrowLeft')  prev();
                 if (e.key === 'ArrowRight') next();

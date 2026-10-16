@@ -1,45 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Blog — Najmus Sakib Sizan. Articles on research methodology, CS books, cloud computing, and tech insights." />
-    <title>Blog — Najmus Sakib Sizan</title>
+    <meta name="theme-color" content="#050d1a" />
 
-    <!-- Fonts -->
+    <title>Blog — Najmus Sakib Sizan</title>
+    <meta name="description"
+        content="Blog posts & insights of Najmus Sakib Sizan — AI, Machine Learning, Blockchain, Post-Quantum Cryptography, IoT & Smart Agriculture. 130+ citations, h-index 5." />
+    <meta name="author" content="Najmus Sakib Sizan" />
+    <link rel="canonical" href="https://nsakibsizan.github.io/blog.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Blog — Najmus Sakib Sizan" />
+    <meta property="og:description"
+        content="Researcher & Software Engineer building intelligent systems at the intersection of IoT, Blockchain & ML." />
+    <meta property="og:image" content="assets/images/sizan.png" />
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <!-- Fonts (only used families) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
-        rel="stylesheet" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/blog.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/blog.css" />
 </head>
 
 <body>
-
     <!-- SCROLL PROGRESS -->
     <div id="progress-bar"></div>
 
-    <!-- LOADER -->
-    <div id="loader">
-        <div class="loader-text">NSS</div>
-    </div>
+    <!-- LOADER (kept off; JS guards against it) -->
+    <!-- <div id="loader"><div class="loader-text">NSS</div></div> -->
 
     <!-- ═══════════════ NAVBAR ═══════════════ -->
     <nav id="navbar">
-        <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">
+        <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
             <span class="logo-text">Sakib Sizan</span>
         </a>
         <ul class="nav-links">
@@ -47,33 +50,48 @@
             <li><a href="about.html">About</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="project.html">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download"></i> CV</a></li>
+            <li>
+        <a href="cv.html" class="nav-cv">
+          <i data-lucide="download" style="width: 16px; height: 16px; margin-right: 0.45rem"></i>CV
+        </a>
+      </li>
         </ul>
-        <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
+        <button class="hamburger" id="hamburger" onclick="openMenu()" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
-    <!-- MOBILE MENU -->
-    <div id="mobile-menu">
-        <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
-        <a href="index.html" onclick="closeMenu()">Home</a>
-        <a href="about.html" onclick="closeMenu()">About</a>
-        <a href="research.html" onclick="closeMenu()">Research</a>
-        <a href="project.html" onclick="closeMenu()">Projects</a>
-        <a href="blog.html" onclick="closeMenu()">Blog</a>
-        <a href="contact.html" onclick="closeMenu()">Contact</a>
-    </div>
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu">
+    <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
+      <i data-lucide="x"></i>
+    </button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="about.html" onclick="closeMenu()">About</a>
+    <a href="research.html" onclick="closeMenu()">Research</a>
+    <a href="project.html" onclick="closeMenu()">Projects</a>
+    <a href="certificates.html" onclick="closeMenu()">Certificates</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="blog.html" onclick="closeMenu()">Blog</a>
+    <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="cv.html" onclick="closeMenu()">CV</a>
+  </div>
 
     <!-- ═══════════════ PAGE HERO ═══════════════ -->
     <div class="page-hero">
         <div class="page-hero-inner">
             <div>
                 <div class="page-hero-label">// blog</div>
-                <h1 class="page-hero-title">Thoughts &amp;<br /><span class="accent">Insights</span></h1>
+                <h1 class="page-hero-title">
+                    Thoughts &amp;<br /><span class="accent">Insights</span>
+                </h1>
                 <p class="page-hero-desc">
-                    Writings on research methodology, recommended CS books, cloud computing,
-                    technology trends, and lessons learned along the way.
+                    Writings on research methodology, recommended CS books, cloud
+                    computing, technology trends, and lessons learned along the way.
                 </p>
             </div>
             <div class="blog-stats-card">
@@ -108,23 +126,27 @@
             </div>
             <a href="https://nsakibsizan.github.io/blog_res_paper_finding.html" class="featured-article fade-up">
                 <div class="featured-article-img">
-                    <div class="featured-article-emoji"><i class="fa-solid fa-file-lines"></i></div>
+                    <div class="featured-article-emoji">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
                 </div>
                 <div class="featured-article-body">
                     <div class="featured-article-cat">Research</div>
-                    <div class="featured-article-title">A Comprehensive Guide to Finding Computer Science Research
-                        Papers</div>
+                    <div class="featured-article-title">
+                        A Comprehensive Guide to Finding Computer Science Research Papers
+                    </div>
                     <div class="featured-article-excerpt">
-                        Research papers are a vital source of knowledge for scholars and researchers.
-                        This guide walks you through every tool, database, and strategy you need —
-                        from IEEE Xplore and ACM Digital Library to arXiv and Google Scholar.
-                        Master efficient paper discovery with practical tips.
+                        Research papers are a vital source of knowledge for scholars and
+                        researchers. This guide walks you through every tool, database,
+                        and strategy you need — from IEEE Xplore and ACM Digital Library
+                        to arXiv and Google Scholar. Master efficient paper discovery with
+                        practical tips.
                     </div>
                     <div class="featured-article-meta">
                         <span>2024</span>
                         <span>·</span>
                         <span>8 min read</span>
-                        <span style="flex:1"></span>
+                        <span style="flex: 1"></span>
                         <span class="featured-read-link">Read Article →</span>
                     </div>
                 </div>
@@ -144,7 +166,9 @@
             <!-- Filter Controls -->
             <div class="blog-controls fade-up">
                 <div class="blog-filters" id="blogFilter">
-                    <button class="blog-filter active" data-cat="all">All Articles</button>
+                    <button class="blog-filter active" data-cat="all">
+                        All Articles
+                    </button>
                     <button class="blog-filter" data-cat="research">Research</button>
                     <button class="blog-filter" data-cat="books">Books</button>
                     <button class="blog-filter" data-cat="cloud">Cloud</button>
@@ -154,16 +178,21 @@
 
             <!-- Blog Grid -->
             <div class="blog-grid" id="blogGrid">
-
                 <!-- Article 1 -->
                 <a href="https://nsakibsizan.github.io/blog_res_paper_finding.html"
                     class="blog-card c-research visible fade-up" data-cat="research">
-                    <div class="blog-card-img"><i class="fa-solid fa-file-lines"></i></div>
+                    <div class="blog-card-img">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
                     <div class="blog-card-body">
                         <div class="blog-card-cat">Research</div>
-                        <div class="blog-card-title">A Comprehensive Guide to Finding CS Research Papers</div>
-                        <div class="blog-card-excerpt">Master every research database — from IEEE and ACM to arXiv —
-                            with practical tips for efficient paper discovery.</div>
+                        <div class="blog-card-title">
+                            A Comprehensive Guide to Finding CS Research Papers
+                        </div>
+                        <div class="blog-card-excerpt">
+                            Master every research database — from IEEE and ACM to arXiv —
+                            with practical tips for efficient paper discovery.
+                        </div>
                         <div class="blog-card-footer">
                             <div class="blog-card-meta">2024 · 8 min read</div>
                             <span class="blog-read-link">Read →</span>
@@ -177,9 +206,14 @@
                     <div class="blog-card-img"><i class="fa-solid fa-book"></i></div>
                     <div class="blog-card-body">
                         <div class="blog-card-cat">Books</div>
-                        <div class="blog-card-title">Reference Books for CSE Students</div>
-                        <div class="blog-card-excerpt">A curated collection of essential reference books covering
-                            algorithms, data structures, OS, networking, and more for CS students.</div>
+                        <div class="blog-card-title">
+                            Reference Books for CSE Students
+                        </div>
+                        <div class="blog-card-excerpt">
+                            A curated collection of essential reference books covering
+                            algorithms, data structures, OS, networking, and more for CS
+                            students.
+                        </div>
                         <div class="blog-card-footer">
                             <div class="blog-card-meta">2023 · 20 min read</div>
                             <span class="blog-read-link">Read →</span>
@@ -192,9 +226,13 @@
                     <div class="blog-card-img"><i class="fa-solid fa-cloud"></i></div>
                     <div class="blog-card-body">
                         <div class="blog-card-cat">Cloud Computing</div>
-                        <div class="blog-card-title">The Evolution of AWS and Its Most Used Services</div>
-                        <div class="blog-card-excerpt">A deep dive into how Amazon Web Services has grown from a simple
-                            storage solution to the world's largest cloud platform.</div>
+                        <div class="blog-card-title">
+                            The Evolution of AWS and Its Most Used Services
+                        </div>
+                        <div class="blog-card-excerpt">
+                            A deep dive into how Amazon Web Services has grown from a simple
+                            storage solution to the world's largest cloud platform.
+                        </div>
                         <div class="blog-card-footer">
                             <div class="blog-card-meta">2023 · 12 min read</div>
                             <span class="blog-read-link">Read →</span>
@@ -207,9 +245,13 @@
                     <div class="blog-card-img"><i class="fa-solid fa-brain"></i></div>
                     <div class="blog-card-body">
                         <div class="blog-card-cat">Tech</div>
-                        <div class="blog-card-title">Understanding Transformer Architecture from Scratch</div>
-                        <div class="blog-card-excerpt">A beginner-friendly walkthrough of the attention mechanism and
-                            transformer models that power modern NLP systems.</div>
+                        <div class="blog-card-title">
+                            Understanding Transformer Architecture from Scratch
+                        </div>
+                        <div class="blog-card-excerpt">
+                            A beginner-friendly walkthrough of the attention mechanism and
+                            transformer models that power modern NLP systems.
+                        </div>
                         <div class="blog-card-footer">
                             <div class="blog-card-meta">2024 · 15 min read</div>
                             <span class="blog-read-link">Read →</span>
@@ -219,12 +261,18 @@
 
                 <!-- Article 5 -->
                 <a href="#" class="blog-card c-research visible fade-up fade-delay-1" data-cat="research">
-                    <div class="blog-card-img"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="blog-card-img">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
                     <div class="blog-card-body">
                         <div class="blog-card-cat">Research</div>
-                        <div class="blog-card-title">My Research Workflow: Tools, Tips &amp; Best Practices</div>
-                        <div class="blog-card-excerpt">A practical guide on how I manage literature reviews, run
-                            experiments, organize references, and write academic papers.</div>
+                        <div class="blog-card-title">
+                            My Research Workflow: Tools, Tips &amp; Best Practices
+                        </div>
+                        <div class="blog-card-excerpt">
+                            A practical guide on how I manage literature reviews, run
+                            experiments, organize references, and write academic papers.
+                        </div>
                         <div class="blog-card-footer">
                             <div class="blog-card-meta">2024 · 10 min read</div>
                             <span class="blog-read-link">Read →</span>
@@ -237,9 +285,13 @@
                     <div class="blog-card-img"><i class="fa-solid fa-link"></i></div>
                     <div class="blog-card-body">
                         <div class="blog-card-cat">Tech</div>
-                        <div class="blog-card-title">Blockchain for IoT: Why It Matters in 2025</div>
-                        <div class="blog-card-excerpt">How decentralized ledger technology solves the fundamental trust
-                            and security challenges in modern IoT ecosystems.</div>
+                        <div class="blog-card-title">
+                            Blockchain for IoT: Why It Matters in 2025
+                        </div>
+                        <div class="blog-card-excerpt">
+                            How decentralized ledger technology solves the fundamental trust
+                            and security challenges in modern IoT ecosystems.
+                        </div>
                         <div class="blog-card-footer">
                             <div class="blog-card-meta">2024 · 9 min read</div>
                             <span class="blog-read-link">Read →</span>
@@ -252,9 +304,14 @@
                     <div class="blog-card-img"><i class="fa-brands fa-docker"></i></div>
                     <div class="blog-card-body">
                         <div class="blog-card-cat">Cloud Computing</div>
-                        <div class="blog-card-title">Getting Started with Docker for Developers</div>
-                        <div class="blog-card-excerpt">A hands-on guide to containerization with Docker — from
-                            installation and basic commands to building production-ready images.</div>
+                        <div class="blog-card-title">
+                            Getting Started with Docker for Developers
+                        </div>
+                        <div class="blog-card-excerpt">
+                            A hands-on guide to containerization with Docker — from
+                            installation and basic commands to building production-ready
+                            images.
+                        </div>
                         <div class="blog-card-footer">
                             <div class="blog-card-meta">2023 · 14 min read</div>
                             <span class="blog-read-link">Read →</span>
@@ -267,16 +324,19 @@
                     <div class="blog-card-img"><i class="fa-solid fa-robot"></i></div>
                     <div class="blog-card-body">
                         <div class="blog-card-cat">Books</div>
-                        <div class="blog-card-title">Top 10 Machine Learning Books for Beginners</div>
-                        <div class="blog-card-excerpt">Hand-picked ML books that take you from fundamental statistics to
-                            advanced deep learning — perfect for self-learners.</div>
+                        <div class="blog-card-title">
+                            Top 10 Machine Learning Books for Beginners
+                        </div>
+                        <div class="blog-card-excerpt">
+                            Hand-picked ML books that take you from fundamental statistics
+                            to advanced deep learning — perfect for self-learners.
+                        </div>
                         <div class="blog-card-footer">
                             <div class="blog-card-meta">2023 · 11 min read</div>
                             <span class="blog-read-link">Read →</span>
                         </div>
                     </div>
                 </a>
-
             </div>
         </div>
     </section>
@@ -286,11 +346,14 @@
         <div class="section-inner">
             <div class="newsletter-box fade-up">
                 <div class="newsletter-content">
-                    <div class="newsletter-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <div class="newsletter-icon">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
                     <div class="newsletter-text">
                         <div class="newsletter-title">Stay Updated</div>
                         <div class="newsletter-desc">
-                            Get notified when I publish new articles on research, tech, and engineering.
+                            Get notified when I publish new articles on research, tech, and
+                            engineering.
                         </div>
                     </div>
                 </div>
@@ -305,8 +368,12 @@
 
     <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer>
-        <div class="footer-logo"><span><i class="fa-solid fa-star"></i></span> Sakib Sizan</div>
-        <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
+        <div class="footer-logo">
+            <span><i class="fa-solid fa-star"></i></span> Sakib Sizan
+        </div>
+        <div class="footer-copy">
+            © 2025 Najmus Sakib Sizan · All rights reserved.
+        </div>
         <div class="footer-socials">
             <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
                 title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
@@ -315,12 +382,21 @@
             <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
                     class="fa-solid fa-envelope"></i></a>
         </div>
-        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i>
-            Back to top</div>
+        <div class="back-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+            <i class="fa-solid fa-arrow-up"></i> Back to top
+        </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Render all Lucide icons
+    lucide.createIcons();
+    // Auto-update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 
 </html>

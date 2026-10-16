@@ -4,18 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Certificates — Najmus Sakib Sizan</title>
+  <meta name="theme-color" content="#050d1a" />
 
-  <!-- Fonts -->
+  <title>Certificates — Najmus Sakib Sizan</title>
+  <meta name="description"
+    content="Certificates and courses completed by Najmus Sakib Sizan — Senior Software Support Engineer & Researcher in AI, Machine Learning, Blockchain & Post-Quantum Cryptography. Background, skills, experience & achievements." />
+  <meta name="author" content="Najmus Sakib Sizan" />
+  <link rel="canonical" href="https://nsakibsizan.github.io/certificates.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Certificates — Najmus Sakib Sizan" />
+  <meta property="og:description"
+    content="Researcher & Software Engineer building intelligent systems at the intersection of IoT, Blockchain & ML." />
+  <meta property="og:image" content="assets/images/sizan.png" />
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+  <!-- Fonts (only used families) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
-    rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
@@ -36,11 +47,15 @@
       <li><a href="about.html">About</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="project.html">Projects</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="certificates.html" class="active">Certificates</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download" style="margin-right:0.45rem;"></i>CV</a></li>
+      <li>
+        <a href="cv.html" class="nav-cv">
+          <i data-lucide="download" style="width: 16px; height: 16px; margin-right: 0.45rem"></i>CV
+        </a>
+      </li>
     </ul>
     <div class="hamburger" id="hamburger" onclick="openMenu()">
       <span></span><span></span><span></span>
@@ -49,14 +64,18 @@
 
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
-    <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
+    <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
+      <i data-lucide="x"></i>
+    </button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
     <a href="about.html" onclick="closeMenu()">About</a>
     <a href="research.html" onclick="closeMenu()">Research</a>
     <a href="project.html" onclick="closeMenu()">Projects</a>
-    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
     <a href="certificates.html" onclick="closeMenu()">Certificates</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
     <a href="blog.html" onclick="closeMenu()">Blog</a>
     <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="cv.html" onclick="closeMenu()">CV</a>
   </div>
 
   <!-- PAGE HERO -->

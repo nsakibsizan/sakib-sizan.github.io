@@ -4,50 +4,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050d1a" />
+
   <title>Gallery — Najmus Sakib Sizan</title>
+  <meta name="description"
+    content="Research publications & academic impact of Najmus Sakib Sizan — AI, Machine Learning, Blockchain, Post-Quantum Cryptography, IoT & Smart Agriculture. 130+ citations, h-index 5." />
+  <meta name="author" content="Najmus Sakib Sizan" />
+  <link rel="canonical" href="https://nsakibsizan.github.io/gallery.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gallery — Najmus Sakib Sizan" />
+  <meta property="og:description" content="Snapshots from conferences, workshops, university events, and the moments in between — a visual record of the journey so far." />
+  <meta property="og:image" content="assets/images/sizan.png" />
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Amarante&family=Aref+Ruqaa+Ink:wght@400;700&family=Baloo+2:wght@400..800&family=Limelight&display=swap"
-    rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/gallery.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
-
+  <link rel="stylesheet" href="assets/css/gallery.css" />
 </head>
 
 <body>
+  <!-- SCROLL PROGRESS -->
   <div id="progress-bar"></div>
 
-  <!-- NAVBAR -->
+  <!-- LOADER (kept off; JS guards against it) -->
+  <!-- <div id="loader"><div class="loader-text">NSS</div></div> -->
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav id="navbar">
-    <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan">Sakib Sizan</a>
+    <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
+      <span class="logo-text">Sakib Sizan</span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="project.html">Projects</a></li>
+      <li><a href="project.html" >Projects</a></li>
       <li><a href="certificates.html">Certificates</a></li>
       <li><a href="gallery.html" class="active">Gallery</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="cv.html" class="nav-cv"><i class="fa-solid fa-download" style="margin-right:0.45rem;"></i>CV</a></li>
+      <li>
+        <a href="cv.html" class="nav-cv">
+          <i data-lucide="download" style="width: 16px; height: 16px; margin-right: 0.45rem"></i>CV
+        </a>
+      </li>
     </ul>
-    <div class="hamburger" id="hamburger" onclick="openMenu()">
+    <button class="hamburger" id="hamburger" onclick="openMenu()" aria-label="Open menu">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </nav>
 
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
-    <span id="mobile-close" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></span>
+    <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
+      <i data-lucide="x"></i>
+    </button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
     <a href="about.html" onclick="closeMenu()">About</a>
     <a href="research.html" onclick="closeMenu()">Research</a>
     <a href="project.html" onclick="closeMenu()">Projects</a>
@@ -55,15 +77,16 @@
     <a href="gallery.html" onclick="closeMenu()">Gallery</a>
     <a href="blog.html" onclick="closeMenu()">Blog</a>
     <a href="contact.html" onclick="closeMenu()">Contact</a>
+    <a href="cv.html" onclick="closeMenu()">CV</a>
   </div>
 
   <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="page-hero-inner">
+  <div class="gallery_page-hero">
+    <div class="gallery_page-hero-inner">
       <div>
-        <div class="page-hero-label">// moments &amp; memories</div>
-        <h1 class="page-hero-title">Event <span class="accent">Gallery</span></h1>
-        <p class="page-hero-desc">
+        <div class="gallery_page-hero-label">// moments &amp; memories</div>
+        <h1 class="gallery_page-hero-title">Event <span class="gallery_accent">Gallery</span></h1>
+        <p class="gallery_page-hero-desc">
           Snapshots from conferences, workshops, university events, and the moments in between —
           a visual record of the journey so far.
         </p>
@@ -73,15 +96,15 @@
   </div>
 
   <!-- FILTER BAR -->
-  <div class="gallery-filter-bar">
-    <div class="filter-inner">
-      <span class="filter-label">Filter</span>
-      <button class="gal-filter-btn active" data-filter="all">All</button>
-      <button class="gal-filter-btn" data-filter="conference">Conference</button>
-      <button class="gal-filter-btn" data-filter="workshop">Workshop</button>
-      <button class="gal-filter-btn" data-filter="university">University</button>
-      <button class="gal-filter-btn" data-filter="award">Award</button>
-      <button class="gal-filter-btn" data-filter="personal">Personal</button>
+  <div class="gallery_gallery-filter-bar">
+    <div class="gallery_filter-inner">
+      <span class="gallery_filter-label">Filter</span>
+      <button class="gallery_gal-filter-btn gallery_active" data-filter="all">All</button>
+      <button class="gallery_gal-filter-btn" data-filter="conference">Conference</button>
+      <button class="gallery_gal-filter-btn" data-filter="workshop">Workshop</button>
+      <button class="gallery_gal-filter-btn" data-filter="university">University</button>
+      <button class="gallery_gal-filter-btn" data-filter="award">Award</button>
+      <button class="gallery_gal-filter-btn" data-filter="personal">Personal</button>
     </div>
   </div>
 
@@ -89,132 +112,132 @@
   <div style="max-width:1200px;margin:0 auto;padding:60px 5%;">
 
     <!-- ── 2025 ── -->
-    <div class="year-group" data-categories="conference,workshop">
-      <div class="year-heading fade-up">
-        <span class="year-label">// year</span>
-        <span class="year-title">2025</span>
-        <span class="year-divider"></span>
-        <span class="year-count">6 photos</span>
+    <div class="gallery_year-group" data-categories="conference,workshop">
+      <div class="gallery_year-heading fade-up">
+        <span class="gallery_year-label">// year</span>
+        <span class="gallery_year-title">2025</span>
+        <span class="gallery_year-divider"></span>
+        <span class="gallery_year-count">6 photos</span>
       </div>
-      <div class="photo-grid">
-        <div class="photo-item fade-up" data-cat="conference" data-title="ICICC 2025 — Paper Presentation" data-idx="0">
-          <img src="/assets/images/sizan.png" alt="ICICC 2025 — Paper Presentation" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">ICICC 2025 — Paper Presentation</div>
-            <div class="photo-overlay-tag">Conference</div>
+      <div class="gallery_photo-grid">
+        <div class="gallery_photo-item fade-up" data-cat="conference" data-title="ICICC 2025 — Paper Presentation" data-idx="0">
+          <img src="/assets/images/sizan.png" alt="ICICC 2025 — Paper Presentation" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">ICICC 2025 — Paper Presentation</div>
+            <div class="gallery_photo-overlay-tag">Conference</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
-        <div class="photo-item fade-up fd1" data-cat="conference" data-title="ICICC 2025 — Conference Hall"
+        <div class="gallery_photo-item fade-up gallery_fd1" data-cat="conference" data-title="ICICC 2025 — Conference Hall"
           data-idx="1">
-          <img src="/assets/images/sizan.png" alt="ICICC 2025 — Conference Hall" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">ICICC 2025 — Conference Hall</div>
-            <div class="photo-overlay-tag">Conference</div>
+          <img src="/assets/images/sizan.png" alt="ICICC 2025 — Conference Hall" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">ICICC 2025 — Conference Hall</div>
+            <div class="gallery_photo-overlay-tag">Conference</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
-        <div class="photo-item fade-up fd2" data-cat="workshop" data-title="AI Workshop — Jagannath University"
+        <div class="gallery_photo-item fade-up gallery_fd2" data-cat="workshop" data-title="AI Workshop — Jagannath University"
           data-idx="2">
-          <img src="/assets/images/sizan.png" alt="AI Workshop — Jagannath University" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">AI Workshop — Jagannath University</div>
-            <div class="photo-overlay-tag">Workshop</div>
+          <img src="/assets/images/sizan.png" alt="AI Workshop — Jagannath University" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">AI Workshop — Jagannath University</div>
+            <div class="gallery_photo-overlay-tag">Workshop</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
-        <div class="photo-item fade-up" data-cat="conference" data-title="STI 2023 Proceedings Launch" data-idx="3">
-          <img src="/assets/images/sizan.png" alt="STI 2023 Proceedings Launch" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">STI 2023 Proceedings Launch</div>
-            <div class="photo-overlay-tag">Conference</div>
+        <div class="gallery_photo-item fade-up" data-cat="conference" data-title="STI 2023 Proceedings Launch" data-idx="3">
+          <img src="/assets/images/sizan.png" alt="STI 2023 Proceedings Launch" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">STI 2023 Proceedings Launch</div>
+            <div class="gallery_photo-overlay-tag">Conference</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
-        <div class="photo-item fade-up fd1" data-cat="workshop" data-title="Blockchain Research Session" data-idx="4">
-          <img src="/assets/images/sizan.png" alt="Blockchain Research Session" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">Blockchain Research Session</div>
-            <div class="photo-overlay-tag">Workshop</div>
+        <div class="gallery_photo-item fade-up gallery_fd1" data-cat="workshop" data-title="Blockchain Research Session" data-idx="4">
+          <img src="/assets/images/sizan.png" alt="Blockchain Research Session" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">Blockchain Research Session</div>
+            <div class="gallery_photo-overlay-tag">Workshop</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
-        <div class="photo-item fade-up fd2" data-cat="award" data-title="Best Paper Award — ICICC 2025" data-idx="5">
-          <img src="/assets/images/sizan.png" alt="Best Paper Award — ICICC 2025" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">Best Paper Award — ICICC 2025</div>
-            <div class="photo-overlay-tag">Award</div>
+        <div class="gallery_photo-item fade-up gallery_fd2" data-cat="award" data-title="Best Paper Award — ICICC 2025" data-idx="5">
+          <img src="/assets/images/sizan.png" alt="Best Paper Award — ICICC 2025" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">Best Paper Award — ICICC 2025</div>
+            <div class="gallery_photo-overlay-tag">Award</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
       </div>
     </div>
 
     <!-- ── 2024 ── -->
-    <div class="year-group" data-categories="university,personal">
-      <div class="year-heading fade-up">
-        <span class="year-label">// year</span>
-        <span class="year-title">2024</span>
-        <span class="year-divider"></span>
-        <span class="year-count">4 photos</span>
+    <div class="gallery_year-group" data-categories="university,personal">
+      <div class="gallery_year-heading fade-up">
+        <span class="gallery_year-label">// year</span>
+        <span class="gallery_year-title">2024</span>
+        <span class="gallery_year-divider"></span>
+        <span class="gallery_year-count">4 photos</span>
       </div>
-      <div class="photo-grid">
+      <div class="gallery_photo-grid">
 
-        <div class="photo-item fade-up" data-cat="university" data-title="MPhil Admission Ceremony" data-idx="6">
-          <img src="/assets/images/sizan.png" alt="MPhil Admission Ceremony" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">MPhil Admission Ceremony</div>
-            <div class="photo-overlay-tag">University</div>
+        <div class="gallery_photo-item fade-up" data-cat="university" data-title="MPhil Admission Ceremony" data-idx="6">
+          <img src="/assets/images/sizan.png" alt="MPhil Admission Ceremony" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">MPhil Admission Ceremony</div>
+            <div class="gallery_photo-overlay-tag">University</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
-        <div class="photo-item fade-up fd1" data-cat="university" data-title="Lab Research Group Photo" data-idx="7">
-          <img src="/assets/images/sizan.png" alt="Lab Research Group Photo" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">Lab Research Group Photo</div>
-            <div class="photo-overlay-tag">University</div>
+        <div class="gallery_photo-item fade-up gallery_fd1" data-cat="university" data-title="Lab Research Group Photo" data-idx="7">
+          <img src="/assets/images/sizan.png" alt="Lab Research Group Photo" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">Lab Research Group Photo</div>
+            <div class="gallery_photo-overlay-tag">University</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
-        <div class="photo-item fade-up fd2" data-cat="personal" data-title="BJIT Office — First Day" data-idx="8">
-          <img src="/assets/images/sizan.png" alt="BJIT Office — First Day" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">BJIT Office — First Day</div>
-            <div class="photo-overlay-tag">Personal</div>
+        <div class="gallery_photo-item fade-up gallery_fd2" data-cat="personal" data-title="BJIT Office — First Day" data-idx="8">
+          <img src="/assets/images/sizan.png" alt="BJIT Office — First Day" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">BJIT Office — First Day</div>
+            <div class="gallery_photo-overlay-tag">Personal</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
 
-        <div class="photo-item fade-up" data-cat="personal" data-title="Team Lunch — BJIT" data-idx="9">
-          <img src="/assets/images/sizan.png" alt="Team Lunch — BJIT" class="photo-placeholder" />
-          <div class="photo-overlay">
-            <div class="photo-overlay-title">Team Lunch — BJIT</div>
-            <div class="photo-overlay-tag">Personal</div>
+        <div class="gallery_photo-item fade-up" data-cat="personal" data-title="Team Lunch — BJIT" data-idx="9">
+          <img src="/assets/images/sizan.png" alt="Team Lunch — BJIT" class="gallery_photo-placeholder" />
+          <div class="gallery_photo-overlay">
+            <div class="gallery_photo-overlay-title">Team Lunch — BJIT</div>
+            <div class="gallery_photo-overlay-tag">Personal</div>
           </div>
-          <div class="photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
+          <div class="gallery_photo-zoom-icon"><i class="fa-solid fa-expand"></i></div>
         </div>
       </div>
     </div>
 
     <!-- EMPTY STATE -->
-    <div class="gallery-empty" id="galleryEmpty">
-      <div class="gallery-empty-icon"><i class="fa-regular fa-images"></i></div>
-      <div class="gallery-empty-text">No photos found for this category.</div>
+    <div class="gallery_gallery-empty" id="galleryEmpty">
+      <div class="gallery_gallery-empty-icon"><i class="fa-regular fa-images"></i></div>
+      <div class="gallery_gallery-empty-text">No photos found for this category.</div>
     </div>
 
   </div><!-- end gallery wrapper -->
 
   <!-- UPLOAD CTA -->
-  <div class="gallery-upload-cta">
-    <div class="upload-cta-inner fade-up">
+  <div class="gallery_gallery-upload-cta">
+    <div class="gallery_upload-cta-inner fade-up">
       <div class="section-label"
         style="color:var(--teal);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;margin-bottom:12px;">
         // add your photos</div>
@@ -226,14 +249,14 @@
 
   <!-- LIGHTBOX -->
   <div id="lightbox">
-    <div class="lightbox-content">
-      <span class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></span>
-      <span class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></span>
-      <span class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></span>
+    <div class="gallery_lightbox-content">
+      <span class="gallery_lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></span>
+      <span class="gallery_lightbox-nav gallery_lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></span>
+      <span class="gallery_lightbox-nav gallery_lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></span>
       <img id="lightboxImg" src="" alt="" />
-      <div class="lightbox-caption">
-        <div class="cap-title" id="lightboxTitle"></div>
-        <div class="cap-tag" id="lightboxTag"></div>
+      <div class="gallery_lightbox-caption">
+        <div class="gallery_cap-title" id="lightboxTitle"></div>
+        <div class="gallery_cap-tag" id="lightboxTag"></div>
       </div>
     </div>
   </div>
@@ -269,7 +292,7 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('appeared');
+          entry.target.classList.add('gallery_appeared');
         }
       });
     });
