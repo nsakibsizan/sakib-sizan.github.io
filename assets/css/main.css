@@ -365,7 +365,7 @@ section.alt {
     font-weight: 700;
     font-size: clamp(25.6px, 3vw, 35.2px);
     letter-spacing: 0.05em;
-    margin-bottom: -15px;
+    margin-bottom: -20px;
 }
 
 .divider {
@@ -373,7 +373,8 @@ section.alt {
     height: 3px;
     background: linear-gradient(90deg, var(--teal), transparent);
     border-radius: 6px;
-    margin: 13px 0px;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 
 .fade-up {

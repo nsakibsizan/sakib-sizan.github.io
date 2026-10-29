@@ -8,25 +8,7 @@
 
   <!-- Primary Meta -->
   <title>Najmus Sakib Sizan — Researcher & Engineer</title>
-  <meta name="description"
-    content="Najmus Sakib Sizan — Senior Software Support Engineer at BJIT Limited & Graduate Researcher in AI, Machine Learning, Blockchain & Post-Quantum Cryptography." />
-  <meta name="author" content="Najmus Sakib Sizan" />
-  <link rel="canonical" href="https://nsakibsizan.github.io/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Najmus Sakib Sizan — Researcher & Engineer" />
-  <meta property="og:description"
-    content="130+ Citations · 8 Publications · Senior Software Support Engineer @ BJIT Limited" />
-  <meta property="og:url" content="https://nsakibsizan.github.io/" />
-  <meta property="og:image" content="assets/images/sizan.png" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Najmus Sakib Sizan — Researcher & Engineer" />
-  <meta name="twitter:description"
-    content="130+ Citations · 8 Publications · Senior Software Support Engineer @ BJIT Limited" />
-  <meta name="twitter:image" content="assets/images/sizan.png" />
+ <meta name="author" content="Najmus Sakib Sizan" />
 
   <!-- Favicon (add your file) -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
@@ -50,9 +32,6 @@
 
   <!-- SCROLL PROGRESS -->
   <div id="progress-bar"></div>
-
-  <!-- LOADER (kept off; JS guards against it) -->
-  <!-- <div id="loader"><div class="loader-text">NSS</div></div> -->
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav id="navbar">
@@ -134,7 +113,7 @@
         <div class="hero-photo-wrap">
           <div class="hero-photo-ring"></div>
           <div class="hero-photo-ring2"></div>
-          <img src="assets/images/sizan.png" alt="Portrait of Najmus Sakib Sizan" class="hero-photo" width="300" height="300" />
+          <img src="assets/images/13977.jpeg" alt="Portrait of Najmus Sakib Sizan" class="hero-photo" width="300" height="300" />
         </div>
       </div>
     </div>
@@ -513,8 +492,20 @@
   <script>
     // Render all Lucide icons
     lucide.createIcons();
-    // Auto-update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scale bars relative to the biggest value, so it still works past 100
+    const bars = document.querySelectorAll('.chart-bar-fill');
+    const max = Math.max(...[...bars].map(b => parseFloat(b.dataset.width)));
+
+    requestAnimationFrame(() => {
+      bars.forEach(bar => {
+        const value = parseFloat(bar.dataset.width);
+        bar.style.width = (value / max * 100) + '%';
+      });
+    });
+
+    lucide.createIcons(); 
   </script>
 
 </body>

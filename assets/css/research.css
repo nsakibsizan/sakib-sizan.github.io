@@ -1,7 +1,3 @@
-/* ══════════════════════════════════════════════════════════════
-   RESEARCH.CSS — Research Page-Only Styles
-   Najmus Sakib Sizan · Portfolio · Production build
-   ══════════════════════════════════════════════════════════════ */
 
 /* ══════════════════════════════════════════════════════════════
    PAGE HERO — SCHOLAR CARD
@@ -423,14 +419,16 @@
 
 .pub-number {
   font-family: var(--font-mono);
-  font-size: 38px;
+  font-size: 60px;
   font-weight: 800;
   color: var(--teal);
-  opacity: 0.15;
+  opacity: 0.35;
   line-height: 1;
   flex-shrink: 0;
   min-width: 40px;
   transition: opacity var(--transition);
+  margin-bottom: -40px;
+  text-align: right;
 }
 
 .pub-card:hover .pub-number {
@@ -467,6 +465,33 @@
   color: #ffb74d;
   border-color: rgba(255, 183, 77, 0.25);
 }
+
+.pub-badge.journal {
+  background: rgba(183, 6, 6, 0.1);
+  color: #d04a4a;
+  border-color: rgba(222, 74, 74, 0.25);
+}
+
+
+.pub-year {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background: var(--teal-glow2);
+  color: var(--teal);
+  border: 1px solid var(--card-border);
+  margin-left: 5px;
+}
+
+
+
+
 
 .pub-title {
   font-family: var(--font-display);

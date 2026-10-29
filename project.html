@@ -7,16 +7,7 @@
   <meta name="theme-color" content="#050d1a" />
 
   <title>Project — Najmus Sakib Sizan</title>
-  <meta name="description"
-    content="Research publications & academic impact of Najmus Sakib Sizan — AI, Machine Learning, Blockchain, Post-Quantum Cryptography, IoT & Smart Agriculture. 130+ citations, h-index 5." />
-  <meta name="author" content="Najmus Sakib Sizan" />
-  <link rel="canonical" href="https://nsakibsizan.github.io/project.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Projects — Najmus Sakib Sizan" />
-  <meta property="og:description" content="Practical implementations of my research ideas alongside personal engineering builds and developer tools." />
-  <meta property="og:image" content="assets/images/sizan.png" />
+ <meta name="author" content="Najmus Sakib Sizan" />
 
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
@@ -36,9 +27,6 @@
 
   <!-- SCROLL PROGRESS -->
   <div id="progress-bar"></div>
-
-  <!-- LOADER (kept off; JS guards against it) -->
-  <!-- <div id="loader"><div class="loader-text">NSS</div></div> -->
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav id="navbar">
@@ -371,8 +359,8 @@
                 <div class="project-card p-research visible fade-up fade-delay-1" data-cat="research">
                     <div class="project-img"><i class="fa-solid fa-link"></i></div>
                     <div class="project-body">
-                        <div class="project-type">Research · Blockchain</div>
-                        <div class="project-title">Blockchain Platform Evaluator for IoT</div>
+                        <div class="project-type">Project · ML</div>
+                        <div class="project-title">Crop Prediction - Web Application using Django</div>
                         <div class="project-desc">Comprehensive review and evaluation framework for blockchain platforms
                             in Industry 5.0 IoT applications. Benchmarks performance, security, and scalability.</div>
                         <div class="project-tags">
@@ -665,8 +653,7 @@
         </div>
     </section>
 
-    <!-- ═══════════════ FOOTER ═══════════════ -->
-    <!-- ═══════════════ FOOTER ═══════════════ -->
+  <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
     <div class="footer-logo">
       <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
@@ -693,8 +680,20 @@
   <script>
     // Render all Lucide icons
     lucide.createIcons();
-    // Auto-update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scale bars relative to the biggest value, so it still works past 100
+    const bars = document.querySelectorAll('.chart-bar-fill');
+    const max = Math.max(...[...bars].map(b => parseFloat(b.dataset.width)));
+
+    requestAnimationFrame(() => {
+      bars.forEach(bar => {
+        const value = parseFloat(bar.dataset.width);
+        bar.style.width = (value / max * 100) + '%';
+      });
+    });
+
+    lucide.createIcons(); 
   </script>
 
 

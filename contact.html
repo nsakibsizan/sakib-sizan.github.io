@@ -7,19 +7,9 @@
   <meta name="theme-color" content="#050d1a" />
 
   <title>Contact — Najmus Sakib Sizan</title>
-  <meta name="description"
-    content="Contact Najmus Sakib Sizan — Reach out for research collaboration, job opportunities, speaking invites, or just a friendly hello." />
-  <meta name="author" content="Najmus Sakib Sizan" />
-  <link rel="canonical" href="https://nsakibsizan.github.io/contact.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Contact — Najmus Sakib Sizan" />
-  <meta property="og:description"
-    content="Researcher & Software Engineer building intelligent systems at the intersection of IoT, Blockchain & ML." />
-  <meta property="og:image" content="assets/images/sizan.png" />
-
-  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+ <meta name="author" content="Najmus Sakib Sizan" />
+  
+ <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
   <!-- Fonts (only used families) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,9 +27,6 @@
 
   <!-- SCROLL PROGRESS -->
   <div id="progress-bar"></div>
-
-  <!-- LOADER (kept off; JS guards against it) -->
-  <!-- <div id="loader"><div class="loader-text">NSS</div></div> -->
 
   <!-- ═══════════════ NAVBAR ═══════════════ -->
   <nav id="navbar">
@@ -398,31 +385,51 @@
             </div>
         </div>
     </section>
-    <!-- ═══════════════ FOOTER ═══════════════ -->
-    <footer>
-        <div class="footer-logo"><span><i class="fa-solid fa-star"></i></span> Sakib Sizan</div>
-        <div class="footer-copy">© 2025 Najmus Sakib Sizan · All rights reserved.</div>
-        <div class="footer-socials">
-            <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" class="footer-social"
-                title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-            <a href="https://github.com/nsakibsizan" target="_blank" class="footer-social" title="GitHub"><i
-                    class="fa-brands fa-github"></i></a>
-            <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email"><i
-                    class="fa-solid fa-envelope"></i></a>
-        </div>
-        <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i>
-            Back to top</div>
-    </footer>
 
-    <!-- Scripts -->
+      <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="footer-logo">
+      <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
+        <span class="logo-text">Sakib Sizan</span>
+      </a>
+    </div>
+
+    <div class="footer-copy">© <span id="year">2025</span> Najmus Sakib Sizan · All rights reserved.</div>
+
+    <div class="footer-socials">
+      <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" rel="noopener noreferrer" class="footer-social" title="Google Scholar" aria-label="Google Scholar"><i data-lucide="graduation-cap"></i></a>
+      <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer" class="footer-social" title="GitHub" aria-label="GitHub"><i data-lucide="GitCompareArrows"></i></a>
+      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email" aria-label="Email"><i data-lucide="mail"></i></a>
+    </div>
+
+    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <i data-lucide="arrow-up"></i> Back to top
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="assets/js/main.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     // Render all Lucide icons
     lucide.createIcons();
-    // Auto-update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scale bars relative to the biggest value, so it still works past 100
+    const bars = document.querySelectorAll('.chart-bar-fill');
+    const max = Math.max(...[...bars].map(b => parseFloat(b.dataset.width)));
+
+    requestAnimationFrame(() => {
+      bars.forEach(bar => {
+        const value = parseFloat(bar.dataset.width);
+        bar.style.width = (value / max * 100) + '%';
+      });
+    });
+
+    lucide.createIcons(); 
   </script>
+
+  
 </body>
 
 </html>
