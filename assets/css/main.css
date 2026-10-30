@@ -445,6 +445,7 @@ section.alt {
     line-height: 1.75;
 }
 
+
 footer {
     border-top: 1px solid var(--card-border);
     padding: 40px 5%;
@@ -455,14 +456,29 @@ footer {
     gap: 16px;
 }
 
+/* ---- LOGO ---- */
 .footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo .nav-logo {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-logo .logo-text {
     font-family: var(--font-display);
     font-weight: 800;
     font-size: 19.2px;
+    line-height: 1;
     color: var(--gray3);
+    transition: color var(--transition);
 }
 
-.footer-logo span {
+/* optional: teal accent on hover */
+.footer-logo .nav-logo:hover .logo-text {
     color: var(--teal);
 }
 
@@ -485,8 +501,9 @@ footer {
     border: 1px solid var(--gray4);
     border-radius: var(--radius-sm);
     color: var(--gray3);
-    font-size: 14px;
-    transition: border-color var(--transition), transform var(--transition), color var(--transition), background var(--transition);
+    font-size: 16px;               /* controls Font Awesome icon size */
+    transition: border-color var(--transition), transform var(--transition),
+                color var(--transition), background var(--transition);
 }
 
 .footer-social:hover {
@@ -496,10 +513,15 @@ footer {
     background: var(--teal-glow2);
 }
 
-.footer-social i {
+/* Lucide SVG icons (e.g. the "back to top" arrow) */
+.footer-social svg,
+.back-top svg {
     width: 18px;
     height: 18px;
 }
+
+
+
 
 .back-top {
     display: flex;
