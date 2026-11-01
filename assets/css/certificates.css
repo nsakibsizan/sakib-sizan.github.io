@@ -310,6 +310,10 @@
     color: var(--gray3);
     display: flex;
     align-items: center;
+}
+
+.cert-date i {
+    font-size: inherit;
     gap: 5px;
 }
 

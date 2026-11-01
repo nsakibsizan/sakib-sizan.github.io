@@ -335,6 +335,7 @@
 .what-icon i {
   width: 28px;
   height: 28px;
+  font-size: 28px;
 }
 
 .what-title {
@@ -595,6 +596,7 @@
 .cert-icon i {
   width: 28px;
   height: 28px;
+  font-size: 28px;
 }
 
 .cert-title {
@@ -616,6 +618,10 @@
   font-family: var(--font-mono);
   font-size: 14px;
   color: var(--teal);
+}
+
+.cert-date i {
+  font-size: inherit;
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -653,6 +659,7 @@
 .achieve-icon i {
   width: 26px;
   height: 26px;
+  font-size: 26px;
 }
 
 .achieve-title {
@@ -740,6 +747,7 @@
 .testimonial-avatar i {
   width: 20px;
   height: 20px;
+  font-size: 20px;
 }
 
 .testimonial-name {
@@ -796,6 +804,7 @@
 .funfact-emoji i {
   width: 32px;
   height: 32px;
+  font-size: 32px;
 }
 
 .funfact-text {

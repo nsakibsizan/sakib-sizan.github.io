@@ -313,6 +313,7 @@
 .about-card-icon i {
   width: 26px;
   height: 26px;
+  font-size: 26px;
 }
 
 .about-card-title {
@@ -506,7 +507,6 @@
   opacity: 1;
 }
 
-
 .pub-type {
   display: inline-flex;
   align-items: center;
@@ -619,7 +619,6 @@
   transform: translateX(3px);
 }
 
-
 @media (max-width: 768px) {
   .pub-card {
     padding: 18px 18px 18px 21px;
@@ -674,8 +673,6 @@
     font-size: 11.5px;
   }
 }
-
-
 
 /* ══════════════════════════════════════════════════════════════
    JOURNEY / TIMELINE SECTION
@@ -794,6 +791,7 @@
 .proj-icon i {
   width: 28px;
   height: 28px;
+  font-size: 28px;
 }
 
 .proj-title {
@@ -922,6 +920,7 @@
 .contact-icon i {
   width: 18px;
   height: 18px;
+  font-size: 18px;
 }
 
 .contact-link-item:hover .contact-icon {
@@ -1069,7 +1068,7 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
-   METRICS BAR — INDEX PAGE (optional / commented in HTML)
+   METRICS BAR — INDEX PAGE
    ══════════════════════════════════════════════════════════════ */
 #metrics-bar {
   background: var(--teal-glow2);

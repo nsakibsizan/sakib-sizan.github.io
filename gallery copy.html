@@ -19,6 +19,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
   <link rel="stylesheet" href="assets/css/gallery.css" />
 </head>
@@ -43,7 +44,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li>
         <a href="cv.html" class="nav-cv">
-          <i data-lucide="download" style="width: 16px; height: 16px; margin-right: 0.45rem"></i>CV
+          <i class="fa-solid fa-download" style="width: 16px; height: 16px;font-size:16px; margin-right: 0.45rem"></i>CV
         </a>
       </li>
     </ul>
@@ -55,7 +56,7 @@
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
     <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
-      <i data-lucide="x"></i>
+      <i class="fa-solid fa-xmark"></i>
     </button>
     <a href="index.html" onclick="closeMenu()">Home</a>
     <a href="about.html" onclick="closeMenu()">About</a>
@@ -215,9 +216,9 @@
   <!-- LIGHTBOX -->
   <div id="lightbox">
     <div class="gallery_lightbox-content">
-      <span class="gallery_lightbox-close" id="lightboxClose"><i data-lucide="circle-x"></i></span>
-      <span class="gallery_lightbox-nav gallery_lightbox-prev" id="lightboxPrev"><i data-lucide="chevron-left"></i></span>
-      <span class="gallery_lightbox-nav gallery_lightbox-next" id="lightboxNext"><i data-lucide="chevron-right"></i></span>
+      <span class="gallery_lightbox-close" id="lightboxClose"><i class="fa-solid fa-circle-xmark"></i></span>
+      <span class="gallery_lightbox-nav gallery_lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></span>
+      <span class="gallery_lightbox-nav gallery_lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></span>
       <img id="lightboxImg" src="" alt="" />
       <div class="gallery_lightbox-caption">
         <div class="gallery_cap-title" id="lightboxTitle"></div>
@@ -237,22 +238,20 @@
     <div class="footer-copy">© <span id="year">2025</span> Najmus Sakib Sizan · All rights reserved.</div>
 
     <div class="footer-socials">
-      <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" rel="noopener noreferrer" class="footer-social" title="Google Scholar" aria-label="Google Scholar"><i data-lucide="graduation-cap"></i></a>
-      <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer" class="footer-social" title="GitHub" aria-label="GitHub"><i data-lucide="GitCompareArrows"></i></a>
-      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email" aria-label="Email"><i data-lucide="mail"></i></a>
+      <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" rel="noopener noreferrer" class="footer-social" title="Google Scholar" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+      <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer" class="footer-social" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
     </div>
 
     <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-      <i data-lucide="arrow-up"></i> Back to top
+      <i class="fa-solid fa-arrow-up"></i> Back to top
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     // Render all Lucide icons
-    lucide.createIcons();
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Scale bars relative to the biggest value, so it still works past 100
@@ -265,8 +264,6 @@
         bar.style.width = (value / max * 100) + '%';
       });
     });
-
-    lucide.createIcons(); 
   </script>
 
 

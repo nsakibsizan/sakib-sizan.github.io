@@ -45,7 +45,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li>
         <a href="cv.html" class="nav-cv">
-          <i data-lucide="download" style="width: 16px; height: 16px; margin-right: 0.45rem"></i>CV
+          <i class="fa-solid fa-download" style="width: 16px; height: 16px;font-size:16px; margin-right: 0.45rem"></i>CV
         </a>
       </li>
     </ul>
@@ -57,7 +57,7 @@
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
     <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
-      <i data-lucide="x"></i>
+      <i class="fa-solid fa-xmark"></i>
     </button>
     <a href="index.html" onclick="closeMenu()">Home</a>
     <a href="about.html" onclick="closeMenu()">About</a>
@@ -81,13 +81,7 @@
         A collection of events, research milestones, people, places — and the
         quieter beauty found in nature along the way.
       </p>
-      <div class="gx-hero-foot">
-        <div class="gx-hero-stat"><strong>01</strong> Nature</div>
-        <div class="gx-hero-stat"><strong>02</strong> Events</div>
-        <div class="gx-scroll-cue"><span></span> scroll to explore</div>
-      </div>
     </div>
-    <div class="gx-bigword" aria-hidden="true">GALLERY</div>
   </header>
 
   <!-- ═══════════════ NATURE SHOWCASE ═══════════════ -->
@@ -195,7 +189,7 @@
             <span>Conference</span>
             <strong>Conference Hall</strong>
           </figcaption>
-          <div class="gx-tile-corner"><i data-lucide="maximize-2"></i></div>
+          <div class="gx-tile-corner"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
         </figure>
 
         <figure class="gx-tile" data-cat="workshop" data-title="AI Workshop — Jagannath University" data-tag="Workshop">
@@ -290,9 +284,9 @@
 
   <!-- ═══════════════ LIGHTBOX ═══════════════ -->
   <div class="gx-lightbox" id="gxLightbox">
-    <button class="gx-lb-close" id="gxLbClose" aria-label="Close"><i data-lucide="x"></i></button>
-    <button class="gx-lb-nav gx-lb-prev" id="gxLbPrev" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
-    <button class="gx-lb-nav gx-lb-next" id="gxLbNext" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+    <button class="gx-lb-close" id="gxLbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <button class="gx-lb-nav gx-lb-prev" id="gxLbPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="gx-lb-nav gx-lb-next" id="gxLbNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
     <figure class="gx-lb-figure">
       <img id="gxLbImg" src="" alt="" />
       <figcaption>
@@ -328,15 +322,15 @@
     </div>
 
     <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-      <i data-lucide="arrow-up"></i> Back to top
+      <i class="fa-solid fa-arrow-up"></i> Back to top
     </div>
+
+
   </footer>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
-    lucide.createIcons();
     document.getElementById('year').textContent = new Date().getFullYear();
 
     /* ============ NATURE PANELS (click to expand on mobile) ============ */
@@ -414,8 +408,6 @@
       entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('in'); });
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-up, .gx-tile, .gx-panel').forEach(el => io.observe(el));
-
-    lucide.createIcons();
   </script>
 
 </body>

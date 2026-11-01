@@ -169,6 +169,7 @@
 .interest-tag i {
   width: 16px;
   height: 16px;
+  font-size: 16px;
   color: var(--teal);
 }
 
@@ -203,6 +204,7 @@
 .impact-block-label i {
   width: 20px;
   height: 20px;
+  font-size: 20px;
   color: var(--teal);
 }
 
@@ -313,6 +315,7 @@
 .impact-compact-icon i {
   width: 22px;
   height: 22px;
+  font-size: 22px;
 }
 
 .impact-compact-num {
@@ -541,6 +544,7 @@
 .pub-cite-badge i {
   width: 13px;
   height: 13px;
+  font-size: 13px;
 }
 
 .pub-doi {
@@ -751,6 +755,7 @@
 .collab-detail-icon i {
   width: 14px;
   height: 14px;
+  font-size: 14px;
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -789,6 +794,7 @@
 .service-icon i {
   width: 24px;
   height: 24px;
+  font-size: 24px;
 }
 
 .service-role {

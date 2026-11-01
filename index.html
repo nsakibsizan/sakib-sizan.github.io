@@ -8,7 +8,7 @@
 
   <!-- Primary Meta -->
   <title>Najmus Sakib Sizan — Researcher & Engineer</title>
- <meta name="author" content="Najmus Sakib Sizan" />
+  <meta name="author" content="Najmus Sakib Sizan" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
@@ -22,8 +22,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
   <link rel="preload" href="assets/images/sizan.png" as="image" />
 </head>
@@ -49,7 +48,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li>
         <a href="cv.html" class="nav-cv">
-          <i data-lucide="download" style="width:16px;height:16px;margin-right:0.45rem;"></i>CV
+          <i class="fa-solid fa-download" style="width:16px;height:16px;font-size:16px;margin-right:0.45rem;"></i>CV
         </a>
       </li>
     </ul>
@@ -61,7 +60,7 @@
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
     <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
-      <i data-lucide="x"></i>
+      <i class="fa-solid fa-xmark"></i>
     </button>
     <a href="index.html" onclick="closeMenu()">Home</a>
     <a href="about.html" onclick="closeMenu()">About</a>
@@ -87,10 +86,12 @@
         </div>
         <p class="hero-desc">
           I'm <strong>Najmus Sakib Sizan</strong>, a <strong>Senior Software Support Engineer</strong>
-          at <strong>BJIT Limited</strong> and a <strong>MPhil</strong> Student in Computer Science and Engineering at <strong>Jagannath University</strong>, Dhaka, Bangladesh.</p>
+          at <strong>BJIT Limited</strong> and a <strong>MPhil</strong> Student in Computer Science and Engineering at
+          <strong>Jagannath University</strong>, Dhaka, Bangladesh.
+        </p>
         <div class="hero-btns">
           <a href="research.html" class="hero-btn filled">
-            View Research <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+            View Research <i class="fa-solid fa-arrow-right" style="width:18px;height:18px;font-size:18px;"></i>
           </a>
           <a href="contact.html" class="hero-btn">Get in Touch</a>
         </div>
@@ -113,7 +114,8 @@
         <div class="hero-photo-wrap">
           <div class="hero-photo-ring"></div>
           <div class="hero-photo-ring2"></div>
-          <img src="assets/images/13977.jpeg" alt="Portrait of Najmus Sakib Sizan" class="hero-photo" width="300" height="300" />
+          <img src="assets/images/13977.jpeg" alt="Portrait of Najmus Sakib Sizan" class="hero-photo" width="300"
+            height="300" />
         </div>
       </div>
     </div>
@@ -132,7 +134,8 @@
             background in Product Data Management (PDM) and technical support. I also have a solid research background
             in Machine Learning, Blockchain, and Post-Quantum Cryptography. I hold an
             <strong>M.Sc. in Computer Science and Engineering</strong> from <strong>Jagannath University</strong> and am
-            currently pursuing my <strong>MPhil in Computer Science</strong> at the same university. I'm passionate about
+            currently pursuing my <strong>MPhil in Computer Science</strong> at the same university. I'm passionate
+            about
             bridging the gap between academic research and real-world engineering.
           </p>
           <p>
@@ -140,27 +143,28 @@
             Machine Learning, Blockchain, and Post-Quantum Cryptography in the Smart Agriculture sector.
           </p>
           <a href="about.html" class="btn-ghost">
-            Learn more about me <i data-lucide="arrow-right"></i>
+            Learn more about me <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
         <div class="about-cards fade-up fade-delay-2">
           <div class="about-card">
-            <div class="about-card-icon"><i data-lucide="microscope"></i></div>
+            <div class="about-card-icon"><i class="fa-solid fa-microscope"></i></div>
             <div class="about-card-title">Research &amp; Publications</div>
             <div class="about-card-desc">ML, Blockchain &amp; PQC with published academic work.</div>
           </div>
           <div class="about-card">
-            <div class="about-card-icon"><i data-lucide="laptop"></i></div>
+            <div class="about-card-icon"><i class="fa-solid fa-laptop"></i></div>
             <div class="about-card-title">Software Engineering</div>
-            <div class="about-card-desc">Product Lifecycle &amp; Data Management, and data migration in enterprise environments.</div>
+            <div class="about-card-desc">Product Lifecycle &amp; Data Management, and data migration in enterprise
+              environments.</div>
           </div>
           <div class="about-card">
-            <div class="about-card-icon"><i data-lucide="brain"></i></div>
+            <div class="about-card-icon"><i class="fa-solid fa-brain"></i></div>
             <div class="about-card-title">Intelligent Systems</div>
             <div class="about-card-desc">Applied Machine Learning, AI, and data-driven research solutions.</div>
           </div>
           <div class="about-card">
-            <div class="about-card-icon"><i data-lucide="database"></i></div>
+            <div class="about-card-icon"><i class="fa-solid fa-database"></i></div>
             <div class="about-card-title">Data Analysis &amp; Processing</div>
             <div class="about-card-desc">Excel-based analytics, large-scale data cleaning &amp; transformation.</div>
           </div>
@@ -278,9 +282,12 @@
 
           <div class="pub-card visible fade-up" data-type="conference">
             <div class="pub-type">Conference · 2025</div>
-            <div class="pub-title">Automated Black-Box Detection of Insecure Direct Object Reference (IDOR) Vulnerabilities in Web Applications</div>
-            <div class="pub-authors">Ayemun Hossain, <strong>Najmus Sakib Sizan</strong>, Bibi Kawsar and Tanusree Saha Tanny</div>
-            <div class="pub-venue">2025 IEEE 4th International Conference on Robotics, Automation, Artificial-Intelligence and Internet-of-Things (RAAICON)</div>
+            <div class="pub-title">Automated Black-Box Detection of Insecure Direct Object Reference (IDOR)
+              Vulnerabilities in Web Applications</div>
+            <div class="pub-authors">Ayemun Hossain, <strong>Najmus Sakib Sizan</strong>, Bibi Kawsar and Tanusree Saha
+              Tanny</div>
+            <div class="pub-venue">2025 IEEE 4th International Conference on Robotics, Automation,
+              Artificial-Intelligence and Internet-of-Things (RAAICON)</div>
             <div class="pub-meta">
               <a href="https://doi.org/10.1109/RAAICON69033.2025.11502030" target="_blank">DOI</a>
             </div>
@@ -288,8 +295,10 @@
 
           <div class="pub-card visible fade-up" data-type="review">
             <div class="pub-type">Review · 2025</div>
-            <div class="pub-title">Evaluating Blockchain Platforms for IoT Applications in Industry 5.0: A Comprehensive Review</div>
-            <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Diganta Dey, Md. Abu Layek, Md Ashraf Uddin and Eui-Nam Huh</div>
+            <div class="pub-title">Evaluating Blockchain Platforms for IoT Applications in Industry 5.0: A Comprehensive
+              Review</div>
+            <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Diganta Dey, Md. Abu Layek, Md Ashraf Uddin
+              and Eui-Nam Huh</div>
             <div class="pub-venue">Blockchain: Research and Applications, Elsevier</div>
             <div class="pub-meta">
               <a href="https://doi.org/10.1016/j.bcra.2025.100276" target="_blank">DOI</a>
@@ -298,9 +307,11 @@
 
           <div class="pub-card visible fade-up fade-delay-1" data-type="conference">
             <div class="pub-type">Conference · 2025</div>
-            <div class="pub-title">A Secured Triad of IoT, Machine Learning, and Blockchain for Crop Forecasting in Agriculture</div>
+            <div class="pub-title">A Secured Triad of IoT, Machine Learning, and Blockchain for Crop Forecasting in
+              Agriculture</div>
             <div class="pub-authors"><strong>Najmus Sakib Sizan</strong>, Md. Abu Layek and Khondokar Fida Hasan</div>
-            <div class="pub-venue">8th International Conference on Innovative Computing and Communications (ICICC 2025)</div>
+            <div class="pub-venue">8th International Conference on Innovative Computing and Communications (ICICC 2025)
+            </div>
             <div class="pub-meta">
               <a href="https://doi.org/10.1007/978-981-96-6883-0_13" target="_blank">DOI</a>
             </div>
@@ -318,7 +329,7 @@
 
         </div>
         <div style="margin-top:2rem;" class="fade-up">
-          <a href="research.html" class="btn-primary">View All Publications <i data-lucide="arrow-right"></i></a>
+          <a href="research.html" class="btn-primary">View All Publications <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -333,23 +344,26 @@
       <div class="projects-grid">
 
         <div class="project-card-home fade-up">
-          <div class="proj-icon"><i data-lucide="sprout"></i></div>
+          <div class="proj-icon"><i class="fa-solid fa-seedling"></i></div>
           <div class="proj-title">Crop Prediction — Web Application using Django</div>
-          <div class="proj-desc">Blockchain-secured IoT platform for real-time crop monitoring with sensor data analytics.</div>
+          <div class="proj-desc">Blockchain-secured IoT platform for real-time crop monitoring with sensor data
+            analytics.</div>
           <div class="proj-tags">
             <span class="tag">IoT</span>
             <span class="tag">HTML/CSS</span>
             <span class="tag">Python</span>
           </div>
           <div class="pub-meta">
-            <a href="https://github.com/nsakibsizan/Crop-Prediction-Web-Application---Django" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/nsakibsizan/Crop-Prediction-Web-Application---Django" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
 
         <div class="project-card-home fade-up fade-delay-1">
-          <div class="proj-icon"><i data-lucide="line-chart"></i></div>
+          <div class="proj-icon"><i class="fa-solid fa-chart-line"></i></div>
           <div class="proj-title">Harvesting the Future: Predicting Optimal Crops with Machine Learning</div>
-          <div class="proj-desc">ML-driven crop recommendation using classification models on agricultural datasets.</div>
+          <div class="proj-desc">ML-driven crop recommendation using classification models on agricultural datasets.
+          </div>
           <div class="proj-tags">
             <span class="tag">Python</span>
             <span class="tag">ML</span>
@@ -360,7 +374,7 @@
         </div>
 
         <div class="project-card-home fade-up fade-delay-2">
-          <div class="proj-icon"><i data-lucide="shield-check"></i></div>
+          <div class="proj-icon"><i class="fa-solid fa-shield-halved"></i></div>
           <div class="proj-title">Building an Intelligent Defense: ML for Credit Card Fraud Detection</div>
           <div class="proj-desc">Multi-model fraud detection for credit card transactions using Machine Learning.</div>
           <div class="proj-tags">
@@ -374,7 +388,7 @@
 
       </div>
       <div style="margin-top:2.5rem;text-align:center;" class="fade-up">
-        <a href="project.html" class="btn-primary">View All Projects <i data-lucide="arrow-right"></i></a>
+        <a href="project.html" class="btn-primary">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
@@ -390,24 +404,27 @@
         <div class="blog-card-home fade-up">
           <div class="blog-date">Dec 2024</div>
           <div class="blog-title-home">Understanding Transformer Architecture from Scratch</div>
-          <div class="blog-excerpt">A beginner-friendly deep dive into the attention mechanism that powers modern NLP models.</div>
+          <div class="blog-excerpt">A beginner-friendly deep dive into the attention mechanism that powers modern NLP
+            models.</div>
         </div>
 
         <div class="blog-card-home fade-up fade-delay-1">
           <div class="blog-date">Nov 2024</div>
           <div class="blog-title-home">Blockchain for IoT: Why It Matters</div>
-          <div class="blog-excerpt">How decentralized ledgers can solve trust and security challenges in IoT ecosystems.</div>
+          <div class="blog-excerpt">How decentralized ledgers can solve trust and security challenges in IoT ecosystems.
+          </div>
         </div>
 
         <div class="blog-card-home fade-up fade-delay-2">
           <div class="blog-date">Oct 2024</div>
           <div class="blog-title-home">My Research Workflow: Tools &amp; Tips</div>
-          <div class="blog-excerpt">A practical guide on how I manage literature reviews, experiments, and paper writing.</div>
+          <div class="blog-excerpt">A practical guide on how I manage literature reviews, experiments, and paper
+            writing.</div>
         </div>
 
       </div>
       <div style="margin-top:2.5rem;text-align:center;" class="fade-up">
-        <a href="blog.html" class="btn-primary">Read All Articles <i data-lucide="arrow-right"></i></a>
+        <a href="blog.html" class="btn-primary">Read All Articles <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
@@ -420,22 +437,24 @@
       <div class="divider fade-up"></div>
       <div class="contact-row">
         <div class="contact-info fade-up">
-          <p>Interested in collaboration, research opportunities, or just want to say hello? Feel free to reach out — I'd love to connect.</p>
+          <p>Interested in collaboration, research opportunities, or just want to say hello? Feel free to reach out —
+            I'd love to connect.</p>
           <div class="contact-links">
             <div class="contact-link-item">
-              <span class="contact-icon"><i data-lucide="mail"></i></span>
+              <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
               <a href="mailto:nsakibsizan115@gmail.com">nsakibsizan115@gmail.com</a>
             </div>
             <div class="contact-link-item">
-              <span class="contact-icon"><i data-lucide="map-pin"></i></span>
+              <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
               Dhaka, Bangladesh
             </div>
             <div class="contact-link-item">
-              <span class="contact-icon"><i data-lucide="graduation-cap"></i></span>
-              <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar Profile</a>
+              <span class="contact-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+              <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank"
+                rel="noopener noreferrer">Google Scholar Profile</a>
             </div>
             <div class="contact-link-item">
-              <span class="contact-icon "><i data-lucide="GitCompareArrows" ></i></span>
+              <span class="contact-icon "><i class="fa-brands fa-github"></i></span>
               <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer">GitHub @nsakibsizan</a>
             </div>
           </div>
@@ -456,8 +475,8 @@
           <textarea id="cf-message" name="message" placeholder="Your Message..." required></textarea>
 
           <!-- Honeypot (spam trap — hidden from users) -->
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
-                 style="position:absolute;left:-9999px;" aria-hidden="true" />
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;"
+            aria-hidden="true" />
 
           <button type="submit" class="btn-primary">Send Message →</button>
         </form>
@@ -466,32 +485,79 @@
   </section>
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
-  <footer>
-    <div class="footer-logo">
-      <a href="index.html" class="nav-logo" aria-label="Najmus Sakib Sizan — Home">
-        <span class="logo-text">Sakib Sizan</span>
-      </a>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-top">
+      <div class="footer-who">
+        <a class="footer-name" href="#top">Najmus Sakib Sizan</a>
+        <p>Software support engineer and MPhil researcher in Dhaka, working on post-quantum cryptography, blockchain and
+          machine learning.</p>
+      </div>
+      <a class="back-top" href="#top">Back to top</a>
     </div>
 
-    <div class="footer-copy">© <span id="year">2025</span> Najmus Sakib Sizan · All rights reserved.</div>
+    <ul class="chain" aria-label="Site sections">
+      <li class="block">
+        <a class="block-link" href="/about">
+          <span class="block-title">About</span>
+          <span class="block-desc">Background, education and work</span>
+        </a>
+        <div class="block-hash" data-label="about">
+          <span>prev <code data-prev>00000000</code></span>
+          <span>hash <code data-hash>00000000</code></span>
+        </div>
+      </li>
+      <li class="block">
+        <a class="block-link" href="https://research.example.com">
+          <span class="block-title">Research</span>
+          <span class="block-desc">Papers, thesis and citations</span>
+        </a>
+        <div class="block-hash" data-label="research">
+          <span>prev <code data-prev>00000000</code></span>
+          <span>hash <code data-hash>00000000</code></span>
+        </div>
+      </li>
+      <li class="block">
+        <a class="block-link" href="https://projects.example.com">
+          <span class="block-title">Projects</span>
+          <span class="block-desc">Tools and web apps I have built</span>
+        </a>
+        <div class="block-hash" data-label="projects">
+          <span>prev <code data-prev>00000000</code></span>
+          <span>hash <code data-hash>00000000</code></span>
+        </div>
+      </li>
+      <li class="block">
+        <a class="block-link" href="https://blog.example.com">
+          <span class="block-title">Blog</span>
+          <span class="block-desc">Notes on PLM, crypto and code</span>
+        </a>
+        <div class="block-hash" data-label="blog">
+          <span>prev <code data-prev>00000000</code></span>
+          <span>hash <code data-hash>00000000</code></span>
+        </div>
+      </li>
+    </ul>
 
-    <div class="footer-socials">
-      <a href="https://scholar.google.com/citations?user=F2WbGhUAAAAJ" target="_blank" rel="noopener noreferrer" class="footer-social" title="Google Scholar" aria-label="Google Scholar"><i data-lucide="graduation-cap"></i></a>
-      <a href="https://github.com/nsakibsizan" target="_blank" rel="noopener noreferrer" class="footer-social" title="GitHub" aria-label="GitHub"><i data-lucide="GitCompareArrows"></i></a>
-      <a href="mailto:nsakibsizan115@gmail.com" class="footer-social" title="Email" aria-label="Email"><i data-lucide="mail"></i></a>
-    </div>
-
-    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-      <i data-lucide="arrow-up"></i> Back to top
+    <div class="footer-meta">
+      <ul class="footer-links">
+        <li><a href="https://github.com/">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li><a href="https://scholar.google.com/">Google Scholar</a></li>
+        <li><a href="mailto:you@example.com">Email</a></li>
+      </ul>
+      <p class="footer-note">
+        <span>&copy; <span id="footer-year">2026</span> Sakib</span>
+        <span class="footer-clock">Dhaka <time id="footer-time">--:--</time></span>
+      </p>
     </div>
   </footer>
 
+
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     // Render all Lucide icons
-    lucide.createIcons();
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Scale bars relative to the biggest value, so it still works past 100
@@ -504,8 +570,69 @@
         bar.style.width = (value / max * 100) + '%';
       });
     });
+  </script>
+  <script>
+    (() => {
+      const footer = document.getElementById('site-footer');
+      if (!footer) return;
 
-    lucide.createIcons(); 
+      const blocks = [...footer.querySelectorAll('.block-hash')];
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const HEX = '0123456789abcdef';
+
+      async function sha256(text) {
+        if (window.crypto && crypto.subtle) {
+          const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+          return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        let h = 2166136261;
+        for (const c of text) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0; }
+        return h.toString(16).padStart(8, '0').repeat(8);
+      }
+
+      async function buildChain() {
+        let prev = '0'.repeat(64);
+        const out = [];
+        for (const el of blocks) {
+          const hash = await sha256(prev + el.dataset.label);
+          out.push({ el, prev: prev.slice(0, 8), hash: hash.slice(0, 8) });
+          prev = hash;
+        }
+        return out;
+      }
+
+      function resolve(node, target, delay) {
+        if (reduce) { node.textContent = target; return; }
+        const start = performance.now() + delay;
+        const step = now => {
+          const t = Math.max(0, (now - start) / 700);
+          const fixed = Math.floor(t * target.length);
+          node.textContent = target.slice(0, fixed) +
+            Array.from({ length: target.length - fixed }, () => HEX[Math.random() * 16 | 0]).join('');
+          if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }
+
+      buildChain().then(chain => {
+        const run = () => chain.forEach(({ el, prev, hash }, i) => {
+          resolve(el.querySelector('[data-prev]'), prev, i * 160);
+          resolve(el.querySelector('[data-hash]'), hash, i * 160);
+        });
+        if (!('IntersectionObserver' in window)) return run();
+        const io = new IntersectionObserver(entries => {
+          if (entries.some(e => e.isIntersecting)) { io.disconnect(); run(); }
+        }, { threshold: 0.4 });
+        io.observe(footer);
+      });
+
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+      const clock = document.getElementById('footer-time');
+      const fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Dhaka', hour: '2-digit', minute: '2-digit' });
+      const tick = () => { clock.textContent = fmt.format(new Date()); };
+      tick();
+      setInterval(tick, 30000);
+    })();
   </script>
 
 </body>

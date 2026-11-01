@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
 <body>
@@ -44,7 +45,7 @@
       <li><a href="contact.html" class="active">Contact</a></li>
       <li>
         <a href="cv.html" class="nav-cv">
-          <i data-lucide="download" style="width: 16px; height: 16px; margin-right: 0.45rem"></i>CV
+          <i class="fa-solid fa-download" style="width: 16px; height: 16px;font-size:16px; margin-right: 0.45rem"></i>CV
         </a>
       </li>
     </ul>
@@ -56,7 +57,7 @@
   <!-- MOBILE MENU -->
   <div id="mobile-menu">
     <button id="mobile-close" onclick="closeMenu()" aria-label="Close menu">
-      <i data-lucide="x"></i>
+      <i class="fa-solid fa-xmark"></i>
     </button>
     <a href="index.html" onclick="closeMenu()">Home</a>
     <a href="about.html" onclick="closeMenu()">About</a>
@@ -411,16 +412,14 @@
     </div>
 
     <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-      <i data-lucide="arrow-up"></i> Back to top
+      <i class="fa-solid fa-arrow-up"></i> Back to top
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     // Render all Lucide icons
-    lucide.createIcons();
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Scale bars relative to the biggest value, so it still works past 100
@@ -433,8 +432,6 @@
         bar.style.width = (value / max * 100) + '%';
       });
     });
-
-    lucide.createIcons(); 
   </script>
 
   
